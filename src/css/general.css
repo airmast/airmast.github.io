@@ -1,0 +1,184 @@
+*,*::after,*::before {
+  box-sizing:inherit
+}
+html {
+  box-sizing:border-box
+}
+body {
+  -webkit-font-feature-settings: "kern", "liga", "pnum";
+  -moz-font-feature-settings: "kern", "liga", "pnum";
+  -ms-font-feature-settings: "kern", "liga", "pnum";
+  font-feature-settings: "kern", "liga", "pnum";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+ul,ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+table {
+  -webkit-font-feature-settings: "kern", "liga", "tnum";
+  -moz-font-feature-settings: "kern", "liga", "tnum";
+  -ms-font-feature-settings: "kern", "liga", "tnum";
+  font-feature-settings: "kern", "liga", "tnum";
+  border-collapse: collapse;
+  margin: 0.75em 0;
+  width: 100%;
+}
+thead {
+  background-color: #F5F5F5;
+}
+th {
+  vertical-align: bottom;
+  border-bottom: 3px solid #DDD;
+  font-weight: 600;
+  text-align: left;
+}
+td {
+  border-bottom: 1px solid #DDD;
+}
+th,td {
+  padding: 0.75em;
+}
+tr,td,th {
+  vertical-align: middle;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1rem;
+  line-height: 1.2;
+  margin: 0 0 0.75em;
+  font-weight: bold;
+  color: #333;
+}
+h1 code,h2 code,h3 code,h4 code,h5 code,h6 code {
+  text-transform: none;
+}
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1.66667em;
+}
+h3 {
+  font-size: 1.38889em;
+}
+h4 {
+  font-size: 1.15741em;
+}
+h5 {
+  font-size: 0.96451em;
+}
+p {
+  margin: 1.5em 0 0.75em;
+  line-height: 1.5em;
+}
+a {
+  color: #225500;
+  text-decoration: none;
+}
+a:active,a:focus,a:hover {
+  color: #338000;
+  text-decoration: underline;
+}
+a:active {
+  outline:none
+}
+a.ext {
+  border-style: solid;
+  border-color: #DDD;
+  border-width: 1px;
+  border-radius: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+hr {
+  border-bottom:1px solid #DDD;
+  border-left:none;
+  border-right:none;
+  border-top:none;
+  margin:1.5em 0
+}
+img {
+  margin: 0;
+  max-width: 100%;
+}
+em {
+  font-style:italic
+}
+strong {
+  font-weight:bold
+}
+@media only screen and (min-width: 53.75em) {
+  .container {
+    display:flex
+  }
+}
+@media only screen and (min-width: 53.75em) {
+  main {
+    display:flex
+  }
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em 1em;
+}
+.container::after {
+  clear:both;
+  content:"";
+  display:table
+}
+.visually-hidden {
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+}
+code {
+  background-color: #F5F5F5;
+  border-radius:3px;
+  font-family:Menlo, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", Courier, monospace;
+  padding:0.2em 0.5em;
+  margin:0 0.1em;
+  -webkit-font-feature-settings:"kern", "tnum";
+  -moz-font-feature-settings:"kern", "tnum";
+  -ms-font-feature-settings:"kern", "tnum";
+  font-feature-settings:"kern", "tnum"
+}
+pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  color: #333;
+  background-color: #F5F5F5;
+  border: 1px solid #CCC;
+  border-radius: 4px;
+  font-family:Menlo, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", Courier, monospace;
+  white-space: pre-wrap;       /* css-3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;
+}
+pre>code {
+  padding: 0;
+}
+pre.terminal {
+  background-color: #091D38;
+  border-color: black;
+  color: white;
+}
+.spaced {
+  margin: 10px;
+}

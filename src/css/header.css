@@ -1,0 +1,133 @@
+.navbar {
+	padding-right: 15px;
+	padding-left: 15px;
+}
+.nav-main {
+	top: 0;
+	width: 100%;
+  border-bottom: 5px solid #E5E5E5;
+}
+.nav-main:after {
+	content:"";
+	display:table;
+	clear:both
+}
+.nav-right {
+  float: right !important;
+}
+@media only screen and (max-width: 53.75em) {
+}
+.nav-main img {
+  margin: 10px;
+}
+.nav-main a {
+	text-decoration:none
+}
+.nav-main .nav-site {
+	display: inline-flex;
+	flex: 1;
+}
+.nav-main .nav-site li {
+	margin: 0;
+}
+.nav-main .nav-site li>a {
+	box-sizing: content-box;
+	padding: 0 10px;
+	line-height: 80px;
+	display: inline-block;
+	white-space: nowrap;
+}
+@media only screen and (max-width: 53.75em) {
+	.nav-main .nav-site li>a {
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		padding:0 5px;
+		line-height:inherit
+	}
+	.nav-right {
+		float: inherit;
+	}
+}
+.nav-main .nav-site li>a.active:after {
+	content:"";
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+}
+@media only screen and (max-width: 53.75em) {
+	.nav-main .nav-site li>a.active {
+		background:inherit
+	}
+}
+@media only screen and (max-width: 53.75em) {
+	.nav-main .nav-site .nav-site-item--hidden-sm {
+		display:none
+	}
+}
+.nav-main .nav-site-internal {
+	margin:0 0 0 20px
+}
+@media only screen and (max-width: 53.75em) {
+	.nav-main .nav-site-internal {
+		margin:0
+	}
+}
+.nav-main .nav-site-external {
+	float: right;
+	margin: 0;
+}
+.nav-main .nav-home {
+	font-size:24px;
+	line-height: 50px;
+	height: 80px;
+	display: inline-block;
+}
+@media only screen and (max-width: 53.75em) {
+	.nav-main .nav-home {
+		font-size: 20px;
+	}
+}
+.nav-main .nav-logo {
+	vertical-align:middle;
+	display:inline-block
+}
+@media only screen and (max-width: 53.75em) {
+	.nav-main .nav-logo {
+		width: 3em;
+	}
+}
+.nav-main ul {
+	display: inline-block;
+	vertical-align: top;
+}
+.nav-main li {
+	display: inline;
+}
+.nav-lists {
+	display: inline-block;
+	vertical-align: top;
+}
+@media only screen and (max-width: 53.75em) {
+	.nav-lists {
+		display:flex;
+		margin: 0 -10px;
+		font-size: 0.9em;
+	}
+	.nav-lists li {
+		display: flex;
+		flex: 1 0 auto;
+		align-items: center;
+	}
+	.nav-lists li a {
+		flex: 1;
+		text-align: center;
+		line-height: 1.2;
+	}
+}
+@media only screen and (max-width: 53.75em) {
+	.nav-main {
+		position: relative;
+	}
+}

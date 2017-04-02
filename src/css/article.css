@@ -1,0 +1,35 @@
+article {
+  padding: 1em 0;
+}
+article ul {
+	list-style-type: disc;
+	margin-bottom: 0.75em;
+	padding-left: 1.5em;
+}
+article ol {
+	list-style-type: decimal;
+	margin-bottom: 1.5em;
+}
+@media only screen and (min-width: 53.75em) {
+  article {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 75.14568%;
+  }
+  article:last-child {
+    margin-right: 0;
+  }
+}
+article h2,article h3 {
+  margin-top: 1.5em;
+}
+article hr+h2,article hr+h3 {
+  margin-top: 0;
+}
+article h4 {
+  margin-top: 1.5em;
+}
+.chapter li {
+	margin: 0.75em 0;
+}
