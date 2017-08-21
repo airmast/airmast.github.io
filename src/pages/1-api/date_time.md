@@ -9,7 +9,7 @@ Set date and time
     
   * **URL Params**  
     * `dt : String`  
-       Set date and time ("yyyy-MM-ddThh:mm:ss", T - delimiter)
+       Set date and time ("yyyy-MM-ddThh:mm:ss", T &mdash; delimiter)
       
   * **Command example:**
     * `/api/v1/date_time/2017-08-05T11:30:15`

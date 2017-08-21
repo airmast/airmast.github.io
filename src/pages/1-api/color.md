@@ -16,8 +16,8 @@ Color mode
       
        Model X3:
     
-      `none` - None (default after power up)  
-      `art` - Art  
+      `none` &mdash; None (default after power up)  
+      `art` &mdash; Art  
       `bw` — Black White  
       `d-cinelike` — D-Cinelike  
       `vivid` — Vivid  

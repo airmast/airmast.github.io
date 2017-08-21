@@ -1,6 +1,6 @@
-scene_sso
+isotherm
 =====
-Set smart scene optimization
+Enable or disable isotherm
 
 * **POST**
 
@@ -8,15 +8,17 @@ Set smart scene optimization
     * Xt
 
   * **URL**  
-    `scene_sso/<sso>`
+    `isotherm/<enable>`
     
   * **URL Params**  
-    * `sso : Integer`  
+    * `enable : String`  
     
-      Model Xt: `sso` - SSO is a percent from 0 to 100
+      Model Xt:
+      
+      `on`, `off` &mdash; Enable or disable isotherm
       
   * **Command example:**
-    * `/api/v1/scene_sso/75`
+    * `/api/v1/isotherm/on`
     * ```javascript
       {
         "success": true

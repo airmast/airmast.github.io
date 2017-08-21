@@ -13,8 +13,8 @@ Set video resolution and FPS
   * **URL Params**  
     Model X3:
     
-    * `resolution : String` - "4096x2160", "3840x2160", "2704x1520", "1920x1080", "1280x720"
-    * `fps : Integer` - "24", "25", "30", "48", "50", "60", "120"
+    * `resolution : String` &mdash; "4096x2160", "3840x2160", "2704x1520", "1920x1080", "1280x720"
+    * `fps : Integer` &mdash; "24", "25", "30", "48", "50", "60", "120"
       
   * **Command example:**
     * `/api/v1/video_size/1920x1080p30`

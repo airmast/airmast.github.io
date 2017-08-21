@@ -18,7 +18,7 @@ Set used Zenmuse camera
       `xt`  
       `z3`  
       `z30`  
-      `detect` - Auto detect camera type  
+      `detect` &mdash; Auto detect camera type  
       
   * **Command example:**
     * `/api/v1/zenmuse/x3`

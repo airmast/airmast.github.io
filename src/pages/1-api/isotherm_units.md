@@ -15,8 +15,8 @@ Set isotherm units
     
       Model Xt:
       
-      `celsius` - Celsius degrees  
-      `percentage` - Use percents for isotherm values  
+      `celsius` &mdash; Celsius degrees  
+      `percentage` &mdash; Use percents for isotherm values  
       
   * **Command example:**
     * `/api/v1/isotherm_units/celsius`

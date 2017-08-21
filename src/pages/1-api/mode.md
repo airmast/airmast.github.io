@@ -10,9 +10,9 @@ Camera mode
   * **URL Params**  
     * `mode : String`  
     
-      `photo` - Photo  
-      `video` - Video  
-      `playback` - Playback
+      `photo` &mdash; Photo  
+      `video` &mdash; Video  
+      `playback` &mdash; Playback
       
   * **Command example:**
     * `/api/v1/mode/photo`

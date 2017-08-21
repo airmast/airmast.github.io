@@ -15,9 +15,9 @@ Set image format
     
       Model Xt:
       
-      `rjpeg` - Radiometric JPEG image  
-      `tiff` - Tiff 14 bit image format  
-      `jpeg` - JPEG image format  
+      `rjpeg` &mdash; Radiometric JPEG image  
+      `tiff` &mdash; Tiff 14 bit image format  
+      `jpeg` &mdash; JPEG image format  
       
   * **Command example:**
     * `/api/v1/image_format/rjpeg`

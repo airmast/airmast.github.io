@@ -1,6 +1,6 @@
-scene_contrast
+scene_sso
 =====
-Set scene contrast
+Set smart scene optimization
 
 * **POST**
 
@@ -8,15 +8,15 @@ Set scene contrast
     * Xt
 
   * **URL**  
-    `scene_contrast/<contrast>`
+    `scene_sso/<sso>`
     
   * **URL Params**  
-    * `contrast : Integer`  
+    * `sso : Integer`  
     
-      Model Xt: `contrast` - contrast value from 0 to 255
+      Model Xt: `sso` &mdash; SSO is a percent from 0 to 100
       
   * **Command example:**
-    * `/api/v1/scene_contrast/100`
+    * `/api/v1/scene_sso/75`
     * ```javascript
       {
         "success": true

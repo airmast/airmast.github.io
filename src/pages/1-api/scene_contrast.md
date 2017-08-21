@@ -1,6 +1,6 @@
-ffc_mode
+scene_contrast
 =====
-Set flat-field correction mode
+Set scene contrast
 
 * **POST**
 
@@ -8,18 +8,15 @@ Set flat-field correction mode
     * Xt
 
   * **URL**  
-    `ffc_mode/<mode>`
+    `scene_contrast/<contrast>`
     
   * **URL Params**  
-    * `mode : String`  
+    * `contrast : Integer`  
     
-      Model Xt:
-      
-      `auto`  
-      `manual`  
+      Model Xt: `contrast` &mdash; contrast value from 0 to 255
       
   * **Command example:**
-    * `/api/v1/ffc_mode/auto`
+    * `/api/v1/scene_contrast/100`
     * ```javascript
       {
         "success": true

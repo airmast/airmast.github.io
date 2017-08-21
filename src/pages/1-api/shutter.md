@@ -1,6 +1,6 @@
-ev
+shutter
 =====
-Set exposure value
+Set shutter value
 
 * **POST**
 
@@ -8,17 +8,19 @@ Set exposure value
     * X3
 
   * **URL**  
-    `ev/<exposure>`
+    `shutter/<numerator>d<denominator>`
     
   * **URL Params**  
-    * `exposure:Float`  
+    Model X3:
+    
+    * `numerator : Int`  
+    * `denominator : Int`  
       
   * **Command example:**
-    * `/api/v1/ev/1.2`
+    * `/api/v1/shutter/1d125`
     * ```javascript
       {
         "success": true
       }
       ```
-
 

@@ -10,9 +10,9 @@ Zoom
   * **URL Params**  
     * `action : String` 
   
-      `in` - Start zooming in (Tele)  
-      `out` - Start zooming out (Wide)  
-      `stop` - Stop zooming  
+      `in` &mdash; Start zooming in (Tele)  
+      `out` &mdash; Start zooming out (Wide)  
+      `stop` &mdash; Stop zooming  
       
       **Note**: Zoom in or out command need to be stopped by stop command.
       

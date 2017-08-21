@@ -1,26 +1,26 @@
-shooting
+scene_ace
 =====
-Set shutter value
+Set active contrast enhancement
 
 * **POST**
 
   * **Camera models**
-    * X3
+    * Xt
 
   * **URL**  
-    `shutter/<numerator>d<denominator>`
+    `scene_ace/<ace>`
     
   * **URL Params**  
-    Model X3:
+    * `ace : Integer`  
     
-    * `numerator : Int`  
-    * `denominator : Int`  
+      Model Xt: `ace` &mdash; integer from -8 to +8
       
   * **Command example:**
-    * `/api/v1/shutter/1d125`
+    * `/api/v1/scene_ace/2`
     * ```javascript
       {
         "success": true
       }
       ```
+
 

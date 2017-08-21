@@ -13,7 +13,7 @@ Set digital detail enhancement
   * **URL Params**  
     * `dde : Integer`  
     
-      Model Xt: `dde` - DDE is a value from -20 to 100,
+      Model Xt: `dde` &mdash; DDE is a value from -20 to 100,
       negative values soften the image and positive values
       sharpen it
       

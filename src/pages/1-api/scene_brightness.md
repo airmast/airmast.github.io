@@ -13,7 +13,7 @@ Set scene brightness
   * **URL Params**  
     * `brightness : Integer`  
     
-      Model Xt: `brightness` - integer from 0 to 16383
+      Model Xt: `brightness` &mdash; integer from 0 to 16383
       
   * **Command example:**
     * `/api/v1/scene_brightness/7000`
