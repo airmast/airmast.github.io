@@ -1,4 +1,0 @@
-Mars
-====
-
-Mars is cool.
