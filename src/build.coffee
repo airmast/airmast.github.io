@@ -77,8 +77,9 @@ tableOfContents = (currentPage, pages) ->
       firstDisplayLevel = if (currentPage.level == 0) then 1 else 2
 
       number = ''
-      for i in [1..page.level]
-        number += numbers[i] + '.'
+      if page.level > 1
+        for i in [2..page.level]
+          number += numbers[i] + '.'
       classTag = "class=\"toc-level-#{page.level - firstDisplayLevel}\""
       
       if page.level > level
