@@ -3,6 +3,8 @@ marked = require 'marked'
 pug = require 'pug'
 uglifycss = require 'uglifycss'
 
+SECTION_REGEX = /[\/.\\]*([^\/\\]*)(.*)/
+
 #
 # Pages tree
 #
@@ -67,24 +69,36 @@ tableOfContents = (currentPage, pages) ->
   level = 0
   numbers = []
   uls = ['', '<ul class="chapter">', '<ul class="section">', '<ul class="subsection">']
-  for page in pages
-    numbers[page.level] ?= 0
-    numbers[page.level + 1] = 0
-    numbers[page.level]++
+  for page in pages    
+      numbers[page.level] ?= 0
+      numbers[page.level + 1] = 0
+      numbers[page.level]++
+      
+      firstDisplayLevel = if (currentPage.level == 0) then 1 else 2
 
-    number = ''
-    for i in [1..page.level]
-      number += numbers[i] + '.'
-    classTag = "class=\"toc-level-#{page.level - 1}\""
-    if page.level > level
-      toc += "<ol #{classTag}>"
-    else if page.level < level
-      toc += '</ol>'
-    level = page.level
-    if page.src is currentPage.src
-      toc += "<li #{classTag}><strong>#{number}&nbsp;#{page.title}</strong></li>"
-    else
-      toc += "<li #{classTag}><a href=\"/#{page.path}/\"><strong>#{number}</strong>&nbsp;#{page.title}</a></li>"
+      number = ''
+      for i in [1..page.level]
+        number += numbers[i] + '.'
+      classTag = "class=\"toc-level-#{page.level - firstDisplayLevel}\""
+      
+      if page.level > level
+        toc += "<ol #{classTag}>" if ++level >= firstDisplayLevel
+        
+      while page.level < level
+        toc += '</ol>' if --level >= firstDisplayLevel
+      
+      currentPageSection = SECTION_REGEX.exec(currentPage.path)[1]
+      pageSection = SECTION_REGEX.exec(page.path)[1]
+      
+      shouldDisplay = (currentPage.level == 0 and page.level <= 2) or
+        (currentPage.level > 0 and page.level >= 2 and 
+        currentPageSection == pageSection)
+      
+      if shouldDisplay
+        if page.src is currentPage.src
+          toc += "<li #{classTag}><strong>#{number}&nbsp;#{page.title}</strong></li>"
+        else
+          toc += "<li #{classTag}><a href=\"/#{page.path}/\"><strong>#{number}</strong>&nbsp;#{page.title}</a></li>"
 
   while level--
     toc += '</ol>'
@@ -99,12 +113,13 @@ render = (page, pages) ->
     fs.mkdirSync page.path
   pugRender = pug.compileFile 'src/template.pug'
   pageBody = parseMarkdown page.src
-  if page.childs?
+  if page.childs? and page.childs.length > 0
     pageBody += '<h2>Contents</h2><ul>'
     for child in page.childs
       pageBody += "<li><a href=\"/#{child.path}/\">#{child.title}</a></li>"
     pageBody += '</ul>'
   html = pugRender
+    section: SECTION_REGEX.exec(page.path)[1]
     title: page.title
     body: pageBody
     toc: tableOfContents page, pages

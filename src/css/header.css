@@ -74,6 +74,10 @@
 		margin:0
 	}
 }
+.nav-site-internal-element--current a {
+	color: black;
+	font-weight: bold;
+}
 .nav-main .nav-site-external {
 	float: right;
 	margin: 0;

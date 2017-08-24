@@ -1,0 +1,267 @@
+<!DOCTYPE html><html lang="en"><head><title>camera</title><link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" sizes="16x16 32x32 48x48"></head><body><div class="nav-main"><div class="navbar"><a class="nav-home" href="/"><img class="nav-logo" src="/img/logo.svg" width="40"><strong>AirMast</strong> Documentation</a><div class="nav-lists"><ul class="nav-site nav-site-internal"><li class="nav-site-internal-element--current"><a href="/camadapter">CamAdapter</a></li><li><a href="/head">Head</a></li></ul></div><div class="nav-lists nav-right"><ul class="nav-site nav-site-internal"><li><a href="http://airmast.com/">Back to main site</a></li></ul><ul class="nav-site nav-site-external"><li><a href="https://github.com/airmast/airmast.github.io">GitHub</a></li></ul></div></div></div><main class="container"><article class="chapter"><div class="toc-toggle" id="top"><a href="#toc">Table of Contents</a></div><div class="contents"><h1 id="camera">camera</h1>
+<p>Camera status</p>
+<ul>
+<li><p><strong>POST</strong></p>
+<ul>
+<li><p><strong>URL</strong><br><code>camera/&lt;action&gt;</code></p>
+</li>
+<li><p><strong>URL Params</strong>  </p>
+<ul>
+<li><code>action : String</code><br><code>reset</code> &mdash; reset zenmuse camera settings<br><code>trigger_ffc</code> &mdash; trigger flat-field correction of the camera</li>
+</ul>
+</li>
+<li><p><strong>Command example:</strong></p>
+<ul>
+<li><code>/api/v1/camera/reset</code></li>
+<li><pre><code class="lang-javascript">{
+  &quot;success&quot;: true
+}
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>GET</strong></p>
+<ul>
+<li><p><strong>URL</strong><br><code>camera/</code></p>
+</li>
+<li><p><strong>Info</strong></p>
+<p>Common:  </p>
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>color</td>
+      <td>String</td>
+      <td>current color mode   </td>
+    </tr>
+    <tr>
+      <td>color_system</td>
+      <td>String</td>
+      <td>&quot;ntsc&quot; or &quot;pal&quot;   </td>
+    </tr>
+    <tr>
+      <td>image_format</td>
+      <td>String</td>
+      <td>current image format   </td>
+    </tr>
+    <tr>
+      <td>mode</td>
+      <td>String</td>
+      <td>&quot;video&quot;, &quot;photo&quot; or &quot;playback&quot; mode   </td>
+    </tr>
+  </tbody>
+<table>
+
+Model Xt (Rev A,B):<br>
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ffc_mode</td>
+      <td>String</td>
+      <td>&quot;auto&quot; or &quot;manual&quot; mode   </td>
+    </tr>
+    <tr>
+      <td>isotherm</td>
+      <td>String</td>
+      <td>&quot;on&quot; or &quot;off&quot;   </td>
+    </tr>
+    <tr>
+      <td>isotherm_units</td>
+      <td>String</td>
+      <td>&quot;celsius&quot; or &quot;percentage&quot;   </td>
+    </tr>
+    <tr>
+      <td>isotherm_lower</td>
+      <td>Int</td>
+      <td>lower isotherm value   </td>
+    </tr>
+    <tr>
+      <td>isotherm_middle</td>
+      <td>Int</td>
+      <td>middle isotherm value   </td>
+    </tr>
+    <tr>
+      <td>isotherm_upper</td>
+      <td>Int</td>
+      <td>upper isotherm value   </td>
+    </tr>
+    <tr>
+      <td>gain_mode</td>
+      <td>String</td>
+      <td>&quot;auto&quot;, &quot;low&quot; or &quot;high&quot;   </td>
+    </tr>
+    <tr>
+      <td>magnification</td>
+      <td>Double</td>
+      <td>magnification value </td>
+    </tr>
+    <tr>
+      <td>measure_temperature</td>
+      <td>String</td>
+      <td>&quot;off&quot; or &quot;on&quot;   </td>
+    </tr>
+    <tr>
+      <td>roi</td>
+      <td>String</td>
+      <td>&quot;full&quot;, &quot;skyex33&quot; or &quot;skyex50&quot;   </td>
+    </tr>
+    <tr>
+      <td>scene</td>
+      <td>String</td>
+      <td>&quot;linear&quot;, &quot;default&quot;, &quot;seasky&quot;, &quot;outdoor&quot;, &quot;indoor&quot;, &quot;manual&quot;, &quot;user1&quot;, &quot;user2&quot; or &quot;user3&quot;   </td>
+    </tr>
+    <tr>
+      <td>scene_ace</td>
+      <td>Int</td>
+      <td>scene ACE value   </td>
+    </tr>
+    <tr>
+      <td>scene_brightness</td>
+      <td>Int</td>
+      <td>scene brightness value   </td>
+    </tr>
+    <tr>
+      <td>scene_contrast</td>
+      <td>Int</td>
+      <td>scene contrast value   </td>
+    </tr>
+    <tr>
+      <td>scene_dde</td>
+      <td>Int</td>
+      <td>scene DDE value   </td>
+    </tr>
+    <tr>
+      <td>scene_sso</td>
+      <td>Int</td>
+      <td>scene SSO value   </td>
+    </tr>
+    <tr>
+      <td>temperature</td>
+      <td>Float</td>
+      <td>temperature value (in centigrades)   </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Models X3, Z3:  </p>
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ev</td>
+      <td>Double</td>
+      <td>current EV value   </td>
+    </tr>
+    <tr>
+      <td>digital_zoom</td>
+      <td>Double</td>
+      <td>current value of digital zoom   </td>
+    </tr>
+    <tr>
+      <td>exposure_mode</td>
+      <td>String</td>
+      <td>current exposure mode (&quot;auto&quot;, &quot;shutter&quot; or &quot;manual&quot;)   </td>
+    </tr>
+    <tr>
+      <td>iso</td>
+      <td>Int</td>
+      <td>current ISO value   </td>
+    </tr>
+    <tr>
+      <td>shutter</td>
+      <td>String</td>
+      <td>current shutter value   </td>
+    </tr>
+    <tr>
+      <td>video_format</td>
+      <td>String</td>
+      <td>current video format   </td>
+    </tr>
+    <tr>
+      <td>video_size</td>
+      <td>String</td>
+      <td>current video size setting   </td>
+    </tr>
+    <tr>
+      <td>white_balance</td>
+      <td>String</td>
+      <td>current white balance mode and value   </td>
+    </tr>
+    <tr>
+      <td>color_temperature</td>
+      <td>Int</td>
+      <td>color temperature in Kelvins   </td>
+    </tr>
+  </tbody>
+</table>
+</li>
+<li><p><strong>Command example:</strong><br><code>/api/v1/camera/</code>  </p>
+<pre><code class="lang-javascript">  /* Models Xt */
+  {
+    &quot;color&quot;:&quot;None&quot;,
+    &quot;color_system&quot;: &quot;ntsc&quot;,
+    &quot;image_format&quot;:&quot;JPEG&quot;,
+    &quot;mode&quot;: &quot;video&quot;,
+    &quot;ffc_mode&quot;: &quot;auto&quot;,
+    &quot;isotherm&quot;: &quot;on&quot;,
+    &quot;isotherm_units&quot;:&quot;percentage&quot;,
+    &quot;isotherm_lower&quot;:90,
+    &quot;isotherm_middle&quot;:95,
+    &quot;isotherm_upper&quot;:100,
+    &quot;gain_mode&quot;:&quot;auto&quot;,
+    &quot;magnification&quot;:2.0,
+    &quot;measure_temperature&quot;:&quot;on&quot;,
+    &quot;roi&quot;:&quot;full&quot;,
+    &quot;scene&quot;:&quot;default&quot;,
+    &quot;scene_ace&quot;:1,
+    &quot;scene_brightness&quot;:5000,
+    &quot;scene_contrast&quot;:111,
+    &quot;scene_dde&quot;: 33,
+    &quot;scene_sso&quot;: 75,
+    &quot;temperature&quot;: 25
+    }
+</code></pre>
+<pre><code class="lang-javascript">  /* Models X3, Z3 */
+  {
+    &quot;color&quot;:&quot;None&quot;,
+    &quot;color_system&quot;: &quot;ntsc&quot;,
+    &quot;image_format&quot;:&quot;JPEG&quot;,
+    &quot;mode&quot;: &quot;video&quot;,
+    &quot;ev&quot;:&quot;0.0&quot;,
+    &quot;digital_zoom&quot;:&quot;X1&quot;,
+    &quot;exposure_mode&quot;:&quot;auto&quot;,
+    &quot;iso&quot;:&quot;200&quot;,
+    &quot;shutter&quot;:&quot;0.0&quot;,
+    &quot;video_format&quot;:&quot;MOV&quot;,
+    &quot;video_size&quot;:&quot;3840x2160 (30fps)&quot;,
+    &quot;white_balance&quot;:&quot;Auto (3700K)&quot;,
+    &quot;color_temperature&quot;: 3700,
+    &quot;success&quot;:true
+  }
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</div></article><aside class="sidebar"><div class="toc-toggle" id="toc"><a href="#top">Back to Top</a></div><div class="toc-container"><ol class="toc-level-0"><li class="toc-level-0"><a href="/camadapter/description/"><strong>1.1.</strong>&nbsp;Description</a></li><li class="toc-level-0"><a href="/camadapter/api/"><strong>1.2.</strong>&nbsp;API</a></li><ol class="toc-level-1"><li class="toc-level-1"><a href="/camadapter/api/app/"><strong>1.2.1.</strong>&nbsp;app</a></li><li class="toc-level-1"><strong>1.2.2.&nbsp;camera</strong></li><li class="toc-level-1"><a href="/camadapter/api/color/"><strong>1.2.3.</strong>&nbsp;color</a></li><li class="toc-level-1"><a href="/camadapter/api/color_system/"><strong>1.2.4.</strong>&nbsp;color_system</a></li><li class="toc-level-1"><a href="/camadapter/api/color_temperature/"><strong>1.2.5.</strong>&nbsp;color_temperature</a></li><li class="toc-level-1"><a href="/camadapter/api/date_time/"><strong>1.2.6.</strong>&nbsp;date_time</a></li><li class="toc-level-1"><a href="/camadapter/api/ev/"><strong>1.2.7.</strong>&nbsp;ev</a></li><li class="toc-level-1"><a href="/camadapter/api/exposure_mode/"><strong>1.2.8.</strong>&nbsp;exposure_mode</a></li><li class="toc-level-1"><a href="/camadapter/api/ffc_mode/"><strong>1.2.9.</strong>&nbsp;ffc_mode</a></li><li class="toc-level-1"><a href="/camadapter/api/gain_mode/"><strong>1.2.10.</strong>&nbsp;gain_mode</a></li><li class="toc-level-1"><a href="/camadapter/api/gimbal/"><strong>1.2.11.</strong>&nbsp;gimbal</a></li><li class="toc-level-1"><a href="/camadapter/api/gimbal_mode/"><strong>1.2.12.</strong>&nbsp;gimbal_mode</a></li><li class="toc-level-1"><a href="/camadapter/api/gimbal_velocity/"><strong>1.2.13.</strong>&nbsp;gimbal_velocity</a></li><li class="toc-level-1"><a href="/camadapter/api/image_format/"><strong>1.2.14.</strong>&nbsp;image_format</a></li><li class="toc-level-1"><a href="/camadapter/api/imu_all/"><strong>1.2.15.</strong>&nbsp;imu_all</a></li><li class="toc-level-1"><a href="/camadapter/api/imu_pitch/"><strong>1.2.16.</strong>&nbsp;imu_pitch</a></li><li class="toc-level-1"><a href="/camadapter/api/imu_roll/"><strong>1.2.17.</strong>&nbsp;imu_roll</a></li><li class="toc-level-1"><a href="/camadapter/api/imu_yaw/"><strong>1.2.18.</strong>&nbsp;imu_yaw</a></li><li class="toc-level-1"><a href="/camadapter/api/iso/"><strong>1.2.19.</strong>&nbsp;iso</a></li><li class="toc-level-1"><a href="/camadapter/api/isotherm/"><strong>1.2.20.</strong>&nbsp;isotherm</a></li><li class="toc-level-1"><a href="/camadapter/api/isotherm_lower/"><strong>1.2.21.</strong>&nbsp;isotherm_lower</a></li><li class="toc-level-1"><a href="/camadapter/api/isotherm_middle/"><strong>1.2.22.</strong>&nbsp;isotherm_middle</a></li><li class="toc-level-1"><a href="/camadapter/api/isotherm_units/"><strong>1.2.23.</strong>&nbsp;isotherm_units</a></li><li class="toc-level-1"><a href="/camadapter/api/isotherm_upper/"><strong>1.2.24.</strong>&nbsp;isotherm_upper</a></li><li class="toc-level-1"><a href="/camadapter/api/magnification/"><strong>1.2.25.</strong>&nbsp;magnification</a></li><li class="toc-level-1"><a href="/camadapter/api/measure_temperature/"><strong>1.2.26.</strong>&nbsp;measure_temperature</a></li><li class="toc-level-1"><a href="/camadapter/api/mode/"><strong>1.2.27.</strong>&nbsp;mode</a></li><li class="toc-level-1"><a href="/camadapter/api/roi/"><strong>1.2.28.</strong>&nbsp;roi</a></li><li class="toc-level-1"><a href="/camadapter/api/scene/"><strong>1.2.29.</strong>&nbsp;scene</a></li><li class="toc-level-1"><a href="/camadapter/api/scene_ace/"><strong>1.2.30.</strong>&nbsp;scene_ace</a></li><li class="toc-level-1"><a href="/camadapter/api/scene_brightness/"><strong>1.2.31.</strong>&nbsp;scene_brightness</a></li><li class="toc-level-1"><a href="/camadapter/api/scene_contrast/"><strong>1.2.32.</strong>&nbsp;scene_contrast</a></li><li class="toc-level-1"><a href="/camadapter/api/scene_dde/"><strong>1.2.33.</strong>&nbsp;scene_dde</a></li><li class="toc-level-1"><a href="/camadapter/api/scene_sso/"><strong>1.2.34.</strong>&nbsp;scene_sso</a></li><li class="toc-level-1"><a href="/camadapter/api/shooting/"><strong>1.2.35.</strong>&nbsp;shooting</a></li><li class="toc-level-1"><a href="/camadapter/api/shutter/"><strong>1.2.36.</strong>&nbsp;shutter</a></li><li class="toc-level-1"><a href="/camadapter/api/video_format/"><strong>1.2.37.</strong>&nbsp;video_format</a></li><li class="toc-level-1"><a href="/camadapter/api/video_size/"><strong>1.2.38.</strong>&nbsp;video_size</a></li><li class="toc-level-1"><a href="/camadapter/api/white_balance/"><strong>1.2.39.</strong>&nbsp;white_balance</a></li><li class="toc-level-1"><a href="/camadapter/api/zenmuse/"><strong>1.2.40.</strong>&nbsp;zenmuse</a></li><li class="toc-level-1"><a href="/camadapter/api/zoom/"><strong>1.2.41.</strong>&nbsp;zoom</a></li></ol><ol class="toc-level-0"><ol class="toc-level-1"></ol></ol></ol></div></aside></main></body><link href="/css/airmast.min.css" rel="stylesheet"></html>

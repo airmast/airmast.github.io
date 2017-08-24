@@ -2,24 +2,24 @@ doctype html
 html(lang="en")
   head
     title #{title}
-    link(rel='shortcut icon' href='/img/favicon.ico' type='image/x-icon' sizes='16x16 24x24 32x32 64x64 128x128 256x256 512x512')
+    link(rel='shortcut icon' href='/img/favicon.ico' type='image/x-icon' sizes='16x16 32x32 48x48')
 
   body
     .nav-main
       .navbar
         a.nav-home(href='/')
           img.nav-logo(src='/img/logo.svg' width=40)
-          | <strong>AirMuss</strong> Documentation
+          | <strong>AirMast</strong> Documentation
         .nav-lists
           ul.nav-site.nav-site-internal
-            li
-              a(href='/mars/') Mars
-            li
-              a(href='/magic-box/') Magic Box
+            - var items = {camadapter : 'CamAdapter', head : 'Head'}
+            for name,item in items
+              li(class=section == item ? 'nav-site-internal-element--current' : '')
+                a(href='/'+item)= name
         .nav-lists.nav-right
           ul.nav-site.nav-site-internal
             li
-              a(href='http://airmuss.com/') Back to main site
+              a(href='http://airmast.com/') Back to main site
           ul.nav-site.nav-site-external
             li
               a(href='https://github.com/airmast/airmast.github.io') GitHub
