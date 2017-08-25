@@ -2,7 +2,9 @@ doctype html
 html(lang="en")
   head
     title #{title}
+    meta(name='viewport' content='initial-scale=1')
     link(rel='shortcut icon' href='/img/favicon.ico' type='image/x-icon' sizes='16x16 32x32 48x48')
+    link(href='/css/airmast.min.css', rel='stylesheet')
 
   body
     .nav-main
@@ -36,5 +38,3 @@ html(lang="en")
         .toc-container
           | !{toc}
 
-
-  link(href='/css/airmast.min.css', rel='stylesheet')
