@@ -1,12 +1,14 @@
 Documentation
 =============
 
-Documentation for AirMuss project.
+Documentation for AirMast products.
 
-Available on: http://docs.airmuss.com
+Available on: http://docs.airmast.com
 
 Building
 ========
+
+You are assumed to have [Node.js](https://nodejs.org) installed.
 
     make
 
