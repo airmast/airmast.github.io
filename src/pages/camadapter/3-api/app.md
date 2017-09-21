@@ -1,15 +1,16 @@
 app
-=====
+===
+
 Get application info or reset application video stream
 
 * **POST**
 
   * **URL**  
     `app/reset_video`
-    
+
   * **URL Params**  
     None
-  
+
   * **Command example:**
     * `/api/v1/app/`
     * ```javascript
@@ -22,9 +23,9 @@ Get application info or reset application video stream
 
   * **URL**  
     `app/`
-  
+
   * **Info**
-  
+
     <table>
       <thead>
         <tr>
@@ -86,7 +87,7 @@ Get application info or reset application video stream
         </tr>
       </tbody>
     </table>
-    
+
   * **Command example:**  
     `/api/v1/app/`  
     ```javascript
@@ -106,5 +107,3 @@ Get application info or reset application video stream
         "version": "v0.1.0 build 41"
       }
     ```
-
-
