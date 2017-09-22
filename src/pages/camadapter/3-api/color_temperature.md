@@ -1,26 +1,27 @@
 color_temperature
-=====
-Set color temperature value
+=================
 
-* **POST**
+Set color temperature
+---------------------
 
-  * **Camera models**
-    * X3
+Request Type | URL | Supported DJI Zenmuse
+-------------|-----|-----------------------
+POST | **/api/v1/color_temperature/`<value>`** | X3, Z3
 
-  * **URL**  
-    `color_temperature/<temp>`
-    
-  * **URL Params**  
-    * `temp : UInt`  
-      
-       Model X3: set color temperature in Kelvins
-      
-  * **Command example:**
-    * `/api/v1/color_temperature/2700`
-    * ```javascript
-      {
-        "success": true
-      }
-      ```
+`<value>` is an integer value of color temperature expressed in kelvin.
 
+### Sample Request
 
+```http
+POST http://localhost:8123/api/v1/color_temperature/2700
+```
+
+### Sample Response
+
+Status code: **200**
+
+```javascript
+{
+    "success": true
+}
+```

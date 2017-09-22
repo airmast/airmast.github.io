@@ -4,16 +4,16 @@ color_system
 Set NTSC/PAL color system
 -------------------------
 
-Type | URL | Supported DJI Zenmuse
------|-----|-----------------------
-POST |  /api/v1/color_system/`<value>` | XT
+Request Type | URL
+-------------|----
+POST | **/api/v1/color_system/[`<value>`](#-value-)**
 
-### `<value>` (XT)
+### `<value>`
 
-Option | Description
--------|------------
-ntsc   | Set color system to **NTSC**
-pal    | Set color system to **PAL**
+Option | Supported DJI Zenmuse | Description
+-------|-----------------------|------------
+**ntsc** | XT | Set color system to NTSC
+**pal** | XT | Set color system to PAL
 
 ### Sample Request
 
