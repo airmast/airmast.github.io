@@ -1,26 +1,36 @@
 zoom
 =====
+
 Zoom
+------------------
 
-* **POST**
+Request Type | URL 
+-------------|-----
+POST | **/api/v1/zoom/[`<action>`](#-action-)**
 
-  * **URL**  
-    `zoom/<action>`
-    
-  * **URL Params**  
-    * `action : String` 
-  
-      `in` &mdash; Start zooming in (Tele)  
-      `out` &mdash; Start zooming out (Wide)  
-      `stop` &mdash; Stop zooming  
-      
-      **Note**: Zoom in or out command need to be stopped by stop command.
-      
-  * **Command example:**
-    * `/api/v1/zoom/stop`
-    * ```javascript
-      {
-        "success": true
-      }
-      ```
+### `<action>`
+
+Option  | Supported DJI Zenmuse | Description
+--------|-----------------------|--------------
+**in**    | Any | Zoom in (Tele)
+**out**   | Any | Zoom out (Wide)
+**stop**  | Any | Stop zooming
+
+**Note**: Zoom in or out command need to be stopped by stop command.
+
+### Sample Request
+
+```http
+POST http://localhost:8123/api/v1/zoom/stop
+```
+
+### Sample Response
+
+Status code: **200**
+
+```javascript
+{
+    "success": true
+}
+```
 

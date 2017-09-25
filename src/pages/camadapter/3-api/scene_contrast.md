@@ -1,26 +1,28 @@
 scene_contrast
 =====
+
 Set scene contrast
+------------------
 
-* **POST**
+Request Type | URL | Supported DJI Zenmuse
+-------------|-----|------------------------
+POST | **/api/v1/scene_contrast/`<contrast>`** | XT
 
-  * **Camera models**
-    * Xt
+`<contrast>` &mdash; contrast value from 0 to 255
 
-  * **URL**  
-    `scene_contrast/<contrast>`
-    
-  * **URL Params**  
-    * `contrast : Integer`  
-    
-      Model Xt: `contrast` &mdash; contrast value from 0 to 255
-      
-  * **Command example:**
-    * `/api/v1/scene_contrast/100`
-    * ```javascript
-      {
-        "success": true
-      }
-      ```
+### Sample Request
 
+```http
+POST http://localhost:8123/api/v1/scene_contrast/100
+```
+
+### Sample Response
+
+Status code: **200**
+
+```javascript
+{
+    "success": true
+}
+```
 

@@ -1,28 +1,28 @@
 isotherm
 =====
+
 Enable or disable isotherm
+-----------------
 
-* **POST**
+Request Type | URL | Supported DJI Zenmuse
+-------------|-----|-----------------------
+POST | **/api/v1/isotherm/`<enable>`** | XT
 
-  * **Camera models**
-    * Xt
+`<enable>` &mdash; `on` or `off` to enable or disable isotherm
 
-  * **URL**  
-    `isotherm/<enable>`
-    
-  * **URL Params**  
-    * `enable : String`  
-    
-      Model Xt:
-      
-      `on`, `off` &mdash; Enable or disable isotherm
-      
-  * **Command example:**
-    * `/api/v1/isotherm/on`
-    * ```javascript
-      {
-        "success": true
-      }
-      ```
+### Sample Request
 
+```http
+POST http://localhost:8123/api/v1/isotherm/on
+```
+
+### Sample Response
+
+Status code: **200**
+
+```javascript
+{
+    "success": true
+}
+```
 

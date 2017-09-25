@@ -1,30 +1,35 @@
 exposure_mode
 =====
+
 Set exposure mode
+-----------------
 
-* **POST**
+Request Type | URL
+-------------|----
+POST | **/api/v1/exposure_mode/[`<mode>`](#-mode-)**
 
-  * **Camera models**
-    * X3
 
-  * **URL**  
-    `exposure_mode/<mode>`
-    
-  * **URL Params**  
-    * `mode : String`  
-    
-      Model X3:
-      
-      `auto`  
-      `shutter`  
-      `manual`  
-      
-  * **Command example:**
-    * `/api/v1/exposure_mode/auto`
-    * ```javascript
-      {
-        "success": true
-      }
-      ```
+### `<mode>`
 
+Option | Supported DJI Zenmuse | Description
+-------|-----------------------|------------
+**auto**    | X3, Z3, Z30 | Set exposure mode to auto
+**shutter** | X3, Z3, Z30 | Set exposure mode to shutter
+**manual**  | X3, Z3, Z30 | Set exposure mode to manual
+
+### Sample Request
+
+```http
+POST http://localhost:8123/api/v1/exposure_mode/auto
+```
+
+### Sample Response
+
+Status code: **200**
+
+```javascript
+{
+    "success": true
+}
+```
 

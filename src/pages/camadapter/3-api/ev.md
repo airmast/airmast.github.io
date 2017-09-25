@@ -8,7 +8,7 @@ Request Type | URL | Supported DJI Zenmuse
 -------------|-----|-----------------------
 POST | **/api/v1/exposure/`<value>`** | X3, Z3
 
-`<value>` is the floating point value of exposure.
+`<value>` is the floating point value of exposure (from -3 to +3).
 
 **Note:** This setting takes effect in appropriate [exposure mode](/camadapter/api/exposure_mode/) only.
 

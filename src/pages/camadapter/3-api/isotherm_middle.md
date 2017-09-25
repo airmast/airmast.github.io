@@ -1,24 +1,30 @@
 isotherm_middle
 =====
+
 Set isotherm middle value
+-----------------
 
-* **POST**
+Request Type | URL | Supported DJI Zenmuse
+-------------|-----|-----------------------
+POST | **/api/v1/isotherm_middle/`<value>`** | XT
 
-  * **Camera models**
-    * Xt
+`<value>` &mdash; integer value of isotherm (from -40 to 1000)
 
-  * **URL**  
-    `isotherm_middle/<value>`
-    
-  * **URL Params**  
-    * `value : Integer`  
-      
-  * **Command example:**
-    * `/api/v1/isotherm_middle/95`
-    * ```javascript
-      {
-        "success": true
-      }
-      ```
+**Note:** This setting takes effect only if [isotherm](/camadapter/api/isotherm/) is enabled.
 
+### Sample Request
+
+```http
+POST http://localhost:8123/api/v1/isotherm_middle/95
+```
+
+### Sample Response
+
+Status code: **200**
+
+```javascript
+{
+    "success": true
+}
+```
 

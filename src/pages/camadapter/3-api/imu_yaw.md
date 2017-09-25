@@ -1,37 +1,29 @@
 imu_yaw
 =====
 IMU yaw angle
+-----------------
 (used for gimbal positioning in some modes)
 
-* **POST**
+Request Type | URL 
+-------------|-----
+POST | **/api/v1/imu_yaw/`<yaw>`**
 
-  * **URL**  
-    `imu_yaw/<yaw>`
-    
-  * **URL Params**  
-    <table>
-      <thead>
-        <tr>
-          <th>Parameter</th>
-          <th>Type</th>
-          <th>Description </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>yaw</td>
-          <td>Float</td>
-          <td>Yaw angle value (rad) </td>
-        </tr>
-      </tbody>
-    </table>
-      
-  * **Command example:**
-    * `/api/v1/imu_yaw/0.5`
-    * ```javascript
-      {
-        "success": true
-      }
-      ```
 
+`<yaw>` &mdash; float point yaw angle value (rad) (from -pi to +pi)
+
+### Sample Request
+
+```http
+POST http://localhost:8123/api/v1/imu_yaw/0.5
+```
+
+### Sample Response
+
+Status code: **200**
+
+```javascript
+{
+    "success": true
+}
+```
 

@@ -1,26 +1,28 @@
 scene_brightness
 =====
+
 Set scene brightness
+------------------
 
-* **POST**
+Request Type | URL | Supported DJI Zenmuse
+-------------|-----|------------------------
+POST | **/api/v1/scene_brightness/`<brightness>`** | XT
 
-  * **Camera models**
-    * Xt
+`<brightness>` &mdash; integer from 0 to 16383
 
-  * **URL**  
-    `scene_brightness/<brightness>`
-    
-  * **URL Params**  
-    * `brightness : Integer`  
-    
-      Model Xt: `brightness` &mdash; integer from 0 to 16383
-      
-  * **Command example:**
-    * `/api/v1/scene_brightness/7000`
-    * ```javascript
-      {
-        "success": true
-      }
-      ```
+### Sample Request
 
+```http
+POST http://localhost:8123/api/v1/scene_brightness/7000
+```
+
+### Sample Response
+
+Status code: **200**
+
+```javascript
+{
+    "success": true
+}
+```
 

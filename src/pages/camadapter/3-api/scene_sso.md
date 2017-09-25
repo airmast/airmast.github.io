@@ -1,26 +1,28 @@
 scene_sso
 =====
+
 Set smart scene optimization
+------------------
 
-* **POST**
+Request Type | URL | Supported DJI Zenmuse
+-------------|-----|------------------------
+POST | **/api/v1/scene_sso/`<sso>`** | XT
 
-  * **Camera models**
-    * Xt
+`<sso>` &mdash; SSO is a percent from 0 to 100
 
-  * **URL**  
-    `scene_sso/<sso>`
-    
-  * **URL Params**  
-    * `sso : Integer`  
-    
-      Model Xt: `sso` &mdash; SSO is a percent from 0 to 100
-      
-  * **Command example:**
-    * `/api/v1/scene_sso/75`
-    * ```javascript
-      {
-        "success": true
-      }
-      ```
+### Sample Request
 
+```http
+POST http://localhost:8123/api/v1/scene_sso/75
+```
+
+### Sample Response
+
+Status code: **200**
+
+```javascript
+{
+    "success": true
+}
+```
 

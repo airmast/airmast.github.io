@@ -1,26 +1,34 @@
 measure_temperature
 =====
+
 Enable or disable temperature measurement
+------------------
 
-* **POST**
+Request Type | URL 
+-------------|-----
+POST | **/api/v1/measure_temperature/[`<enable>`](#-enable-)**
 
-  * **Camera models**
-    * Xt
 
-  * **URL**  
-    `measure_temperature/<enable>`
-    
-  * **URL Params**  
-    * `enable : String`  
-    
-      Model Xt: `on`, `off`
-      
-  * **Command example:**
-    * `/api/v1/measure_temperature/on`
-    * ```javascript
-      {
-        "success": true
-      }
-      ```
+### `<enable>`
 
+Option | Supported DJI Zenmuse | Description
+-------|-----------------------|------------
+**on**    | XT | Enable temperature measurement
+**off** | XT | Disable temperature measurement
+
+### Sample Request
+
+```http
+POST http://localhost:8123/api/v1/measure_temperature/on
+```
+
+### Sample Response
+
+Status code: **200**
+
+```javascript
+{
+    "success": true
+}
+```
 

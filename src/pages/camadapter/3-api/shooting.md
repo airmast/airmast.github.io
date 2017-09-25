@@ -1,92 +1,76 @@
 shooting
 =====
-Recording video (or photo) to card
 
-* **POST**
+Start recording video (or photo) to card
+------------------
 
-  * **URL**  
-    `shooting/<action>`
-    
-  * **URL Params**  
-    * `action : String`  
-    
-      `photo` &mdash; Make a photo  
-      `start` &mdash; Start a recording  
-      `stop` &mdash; Stop recording
-      
-  * **Command example:**
-    * `/api/v1/shooting/photo`
-    * ```javascript
-      {
-        "success": true
-      }
-      ```
+Request Type | URL 
+-------------|-----
+POST | **/api/v1/shooting/[`<action>`](#-action-)**
 
-* **GET**
+### `<action>`
 
-  * **URL**  
-    `shooting/`
-  
-  * **Info**
-    <table>
-      <thead>
-        <tr>
-          <th>Parameter</th>
-          <th>Type</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>video</td>
-          <td>String</td>
-          <td>video recording status ("on", "off", "starting", "stopping") </td>
-        </tr>
-        <tr>
-          <td>photo</td>
-          <td>String</td>
-          <td>photo recording status ("storing" or "idle")   </td>
-        </tr>
-        <tr>
-          <td>duration_seconds</td>
-          <td>Int</td>
-          <td>duration in seconds since recording start   </td>
-        </tr>
-        <tr>
-          <td>duration</td>
-          <td>String</td>
-          <td>formated time since recording start ("hh:mm:ss")   </td>
-        </tr>
-        <tr>
-          <td>remaining_seconds</td>
-          <td>Int</td>
-          <td>remaining seconds till memory card is full   </td>
-        </tr>
-        <tr>
-          <td>remaining_time</td>
-          <td>String</td>
-          <td>remaining time till memory card is full ("hh:mm:ss")   </td>
-        </tr>
-        <tr>
-          <td>remaining_space</td>
-          <td>Int</td>
-          <td>remaining space in MiB on memory card   </td>
-        </tr>
-      </tbody>
-    </table>
-    
-  * **Command example:**  
-    `/api/v1/shooting/`  
-    ```javascript
-      {
-        "video": "starting",
-        "photo": "idle",
-        "duration": "00:00:00",
-        "duration_seconds": 0,
-        "remaining_seconds": 1839,
-        "remaining_space": 13153,
-        "remaining_time": "00:30:39",
-        "success": true
-      }
-    ```
+Option    | Supported DJI Zenmuse | Description
+----------|-----------------------|------------
+**photo** | Any | Make a photo
+**start** | Any | Start recording
+**stop**  | Any | Stop recording
+
+### Sample Request
+
+```http
+POST http://localhost:8123/api/v1/shooting/photo
+```
+
+### Sample Response
+
+Status code: **200**
+
+```javascript
+{
+    "success": true
+}
+```
+
+Get current recording status
+----------------------------
+
+Request Type | URL | Supported DJI Zenmuse
+-------------|-----|-----------------------
+GET |  **/api/v1/shooting** | Any
+
+### JSON Response
+
+Parameter | Type | Description
+----------|------|------------
+**video** | string | video recording status ("on", "off", "starting", "stopping") 
+**photo** | string | photo recording status ("storing" or "idle") 
+**duration_seconds** | number | duration in seconds since recording start 
+**duration** | string | formated time since recording start ("hh:mm:ss") 
+**remaining_seconds** | number | remaining seconds till memory card is full 
+**remaining_time** | string	| remaining time till memory card is full ("hh:mm:ss") 
+**remaining_space** | number | remaining space in MiB on memory card 
+
+### Sample Request
+
+```http
+GET http://localhost:8123/api/v1/shooting
+```
+
+### Sample Response
+
+Status code: **200**
+
+```javascript
+{
+  "video": "starting",
+  "photo": "idle",
+  "duration": "00:00:00",
+  "duration_seconds": 0,
+  "remaining_seconds": 1839,
+  "remaining_space": 13153,
+  "remaining_time": "00:30:39",
+  "success": true
+}
+```
 

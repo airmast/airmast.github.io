@@ -1,28 +1,28 @@
 iso
 =====
+
 ISO setting
+-----------------
 
-* **POST**
+Request Type | URL | Supported DJI Zenmuse
+-------------|-----|-----------------------
+POST | **/api/v1/iso/`<iso>`** | X3, Z3
 
-  * **Camera models**
-    * X3
+`<iso>` &mdash; `100`, `200`, `400`, `800`, `1600` or `3200` integer value of ISO
 
-  * **URL**  
-    `iso/<iso>`
-    
-  * **URL Params**  
-    * `iso : Integer`  
-    
-      Model X3:
-      
-      `100`, `200`, `400`, `800`, `1600`, `3200` &mdash; Set ISOxxxx
-      
-  * **Command example:**
-    * `/api/v1/iso/800`
-    * ```javascript
-      {
-        "success": true
-      }
-      ```
+### Sample Request
 
+```http
+POST http://localhost:8123/api/v1/iso/800
+```
+
+### Sample Response
+
+Status code: **200**
+
+```javascript
+{
+    "success": true
+}
+```
 

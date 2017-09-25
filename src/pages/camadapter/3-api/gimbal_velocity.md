@@ -1,26 +1,35 @@
 gimbal_velocity
 =====
+
 Gimbal positioning
+-----------------
 
-* **POST**
+Request Type | URL 
+-------------|-----
+POST | **/api/v1/gimbal_velocity/`<pan>`,`<tilt>`**
 
-  * **URL**  
-    `gimbal_velocity/<pan>,<tilt>`
-    
-  * **URL Params**  
-    Positive values for right and top.  
-    
-    * `pan : Integer`  
-      Turn gimbal by pan
-    * `tilt : Integer`  
-      Turn gimbal by tilt
-      
-  * **Command example:**
-    * `/api/v1/gimbal_velocity/-1024,128`
-    * ```javascript
-      {
-        "success": true
-      }
-      ```
+### Parameters
+
+Parameter | Type    | Description
+----------|---------|---------------------
+`<pan>`   | Integer | Turn gimbal by pan
+`<tilt>`  | Integer | Turn gimbal by tilt
+
+### Sample Request
+
+```http
+POST http://localhost:8123/api/v1/gimbal_velocity/-1024,128
+```
+
+### Sample Response
+
+Status code: **200**
+
+```javascript
+{
+    "success": true
+}
+```
+
 
 

@@ -1,26 +1,28 @@
 magnification
 =====
+
 Set magnification
+------------------
 
-* **POST**
+Request Type | URL | Supported DJI Zenmuse
+-------------|-----|-----------------------
+POST | **/api/v1/magnification/`<x>`** | XT
 
-  * **Camera models**
-    * Xt
+`<x>` &mdash; is a floating point value of how many times to magnify (from 1 to 4).
 
-  * **URL**  
-    `magnification/<x>`
-    
-  * **URL Params**  
-    * `x : Float`  
-    
-      Model Xt: magnify x times
-      
-  * **Command example:**
-    * `/api/v1/magnification/1.5`
-    * ```javascript
-      {
-        "success": true
-      }
-      ```
+### Sample Request
 
+```http
+POST http://localhost:8123/api/v1/magnification/1.5
+```
+
+### Sample Response
+
+Status code: **200**
+
+```javascript
+{
+    "success": true
+}
+```
 

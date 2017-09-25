@@ -1,25 +1,35 @@
 mode
 =====
+
 Camera mode
+------------------
 
-* **POST**
+Request Type | URL 
+-------------|-----
+POST | **/api/v1/mode/[`<mode>`](#-mode-)**
 
-  * **URL**  
-    `mode/<mode>`
-    
-  * **URL Params**  
-    * `mode : String`  
-    
-      `photo` &mdash; Photo  
-      `video` &mdash; Video  
-      `playback` &mdash; Playback
-      
-  * **Command example:**
-    * `/api/v1/mode/photo`
-    * ```javascript
-      {
-        "success": true
-      }
-      ```
 
+### `<mode>`
+
+Option | Supported DJI Zenmuse | Description
+-------|-----------------------|------------
+**photo** | XT | Photo
+**video** | XT | Video
+**playback** | XT | Playback
+
+### Sample Request
+
+```http
+POST http://localhost:8123/api/v1/mode/photo
+```
+
+### Sample Response
+
+Status code: **200**
+
+```javascript
+{
+    "success": true
+}
+```
 

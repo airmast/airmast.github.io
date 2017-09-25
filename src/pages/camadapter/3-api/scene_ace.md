@@ -1,26 +1,28 @@
 scene_ace
 =====
+
 Set active contrast enhancement
+------------------
 
-* **POST**
+Request Type | URL | Supported DJI Zenmuse
+-------------|-----|-----------------------
+POST | **/api/v1/scene_ace/`<ace>`** | XT
 
-  * **Camera models**
-    * Xt
+`<ace>` &mdash; integer from -8 to +8
 
-  * **URL**  
-    `scene_ace/<ace>`
-    
-  * **URL Params**  
-    * `ace : Integer`  
-    
-      Model Xt: `ace` &mdash; integer from -8 to +8
-      
-  * **Command example:**
-    * `/api/v1/scene_ace/2`
-    * ```javascript
-      {
-        "success": true
-      }
-      ```
+### Sample Request
 
+```http
+POST http://localhost:8123/api/v1/scene_ace/2
+```
+
+### Sample Response
+
+Status code: **200**
+
+```javascript
+{
+    "success": true
+}
+```
 

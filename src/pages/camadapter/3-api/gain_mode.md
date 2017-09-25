@@ -1,30 +1,35 @@
 gain_mode
 =====
+
 Set gain mode
+-------------
 
-* **POST**
+Request Type | URL
+-------------|----
+POST | **/api/v1/gain_mode/[`<mode>`](#-mode-)**
 
-  * **Camera models**
-    * Xt
 
-  * **URL**  
-    `gain_mode/<mode>`
-    
-  * **URL Params**  
-    * `mode : String`  
-    
-      Model Xt:
-      
-      `auto`  
-      `low`  
-      `hight`
-      
-  * **Command example:**
-    * `/api/v1/gain_mode/auto`
-    * ```javascript
-      {
-        "success": true
-      }
-      ```
+### `<mode>`
 
+Option | Supported DJI Zenmuse | Description
+-------|-----------------------|------------
+**auto**    | XT | Set gain mode to auto
+**low** | XT | Set gain mode to low
+**high**  | XT | Set gain mode to high
+
+### Sample Request
+
+```http
+POST http://localhost:8123/api/v1/gain_mode/auto
+```
+
+### Sample Response
+
+Status code: **200**
+
+```javascript
+{
+    "success": true
+}
+```
 
