@@ -1,95 +1,133 @@
 <!DOCTYPE html><html lang="en"><head><title>shooting</title><meta name="viewport" content="initial-scale=1"><link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" sizes="16x16 32x32 48x48"><link href="/css/airmast.min.css" rel="stylesheet"></head><body><div class="nav-main"><div class="navbar"><a class="nav-home" href="/"><img class="nav-logo" src="/img/logo.svg" height="65"><strong>AirMast</strong> Documentation</a><div class="nav-lists"><ul class="nav-site nav-site-internal"><li class="nav-site-internal-element--current"><a href="/camadapter">CamAdapter</a></li><li><a href="/head">Head</a></li></ul></div><div class="nav-lists nav-right"><ul class="nav-site nav-site-internal"><li><a href="http://airmast.com/">Back to main site</a></li></ul><ul class="nav-site nav-site-external"><li><a href="https://github.com/airmast/airmast.github.io">GitHub</a></li></ul></div></div></div><main class="container"><article class="chapter"><div class="toc-toggle" id="top"><a href="#toc">Table of Contents</a></div><div class="contents"><h1 id="shooting">shooting</h1>
-<p>Recording video (or photo) to card</p>
-<ul>
-<li><p><strong>POST</strong></p>
-<ul>
-<li><p><strong>URL</strong><br><code>shooting/&lt;action&gt;</code></p>
-</li>
-<li><p><strong>URL Params</strong>  </p>
-<ul>
-<li><p><code>action : String</code>  </p>
-<p><code>photo</code> &mdash; Make a photo<br><code>start</code> &mdash; Start a recording<br><code>stop</code> &mdash; Stop recording</p>
-</li>
-</ul>
-</li>
-<li><p><strong>Command example:</strong></p>
-<ul>
-<li><code>/api/v1/shooting/photo</code></li>
-<li><pre><code class="lang-javascript">{
+<h2 id="start-recording-video-or-photo-to-card">Start recording video (or photo) to card</h2>
+<table>
+<thead>
+<tr>
+<th>Request Type</th>
+<th>URL </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST</td>
+<td><strong>/api/v1/shooting/<a href="#-action-"><code>&lt;action&gt;</code></a></strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="-action-"><code>&lt;action&gt;</code></h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Supported DJI Zenmuse</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>photo</strong></td>
+<td>Any</td>
+<td>Make a photo</td>
+</tr>
+<tr>
+<td><strong>start</strong></td>
+<td>Any</td>
+<td>Start recording</td>
+</tr>
+<tr>
+<td><strong>stop</strong></td>
+<td>Any</td>
+<td>Stop recording</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sample-request">Sample Request</h3>
+<pre><code class="lang-http">POST http://localhost:8123/api/v1/shooting/photo
+</code></pre>
+<h3 id="sample-response">Sample Response</h3>
+<p>Status code: <strong>200</strong></p>
+<pre><code class="lang-javascript">{
+    &quot;success&quot;: true
+}
+</code></pre>
+<h2 id="get-current-recording-status">Get current recording status</h2>
+<table>
+<thead>
+<tr>
+<th>Request Type</th>
+<th>URL</th>
+<th>Supported DJI Zenmuse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td><strong>/api/v1/shooting</strong></td>
+<td>Any</td>
+</tr>
+</tbody>
+</table>
+<h3 id="json-response">JSON Response</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>video</strong></td>
+<td>string</td>
+<td>video recording status (&quot;on&quot;, &quot;off&quot;, &quot;starting&quot;, &quot;stopping&quot;) </td>
+</tr>
+<tr>
+<td><strong>photo</strong></td>
+<td>string</td>
+<td>photo recording status (&quot;storing&quot; or &quot;idle&quot;) </td>
+</tr>
+<tr>
+<td><strong>duration_seconds</strong></td>
+<td>number</td>
+<td>duration in seconds since recording start </td>
+</tr>
+<tr>
+<td><strong>duration</strong></td>
+<td>string</td>
+<td>formated time since recording start (&quot;hh:mm:ss&quot;) </td>
+</tr>
+<tr>
+<td><strong>remaining_seconds</strong></td>
+<td>number</td>
+<td>remaining seconds till memory card is full </td>
+</tr>
+<tr>
+<td><strong>remaining_time</strong></td>
+<td>string</td>
+<td>remaining time till memory card is full (&quot;hh:mm:ss&quot;) </td>
+</tr>
+<tr>
+<td><strong>remaining_space</strong></td>
+<td>number</td>
+<td>remaining space in MiB on memory card </td>
+</tr>
+</tbody>
+</table>
+<h3 id="sample-request">Sample Request</h3>
+<pre><code class="lang-http">GET http://localhost:8123/api/v1/shooting
+</code></pre>
+<h3 id="sample-response">Sample Response</h3>
+<p>Status code: <strong>200</strong></p>
+<pre><code class="lang-javascript">{
+  &quot;video&quot;: &quot;starting&quot;,
+  &quot;photo&quot;: &quot;idle&quot;,
+  &quot;duration&quot;: &quot;00:00:00&quot;,
+  &quot;duration_seconds&quot;: 0,
+  &quot;remaining_seconds&quot;: 1839,
+  &quot;remaining_space&quot;: 13153,
+  &quot;remaining_time&quot;: &quot;00:30:39&quot;,
   &quot;success&quot;: true
 }
 </code></pre>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>GET</strong></p>
-<ul>
-<li><p><strong>URL</strong><br><code>shooting/</code></p>
-</li>
-<li><p><strong>Info</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Parameter</th>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>video</td>
-      <td>String</td>
-      <td>video recording status (&quot;on&quot;, &quot;off&quot;, &quot;starting&quot;, &quot;stopping&quot;) </td>
-    </tr>
-    <tr>
-      <td>photo</td>
-      <td>String</td>
-      <td>photo recording status (&quot;storing&quot; or &quot;idle&quot;)   </td>
-    </tr>
-    <tr>
-      <td>duration_seconds</td>
-      <td>Int</td>
-      <td>duration in seconds since recording start   </td>
-    </tr>
-    <tr>
-      <td>duration</td>
-      <td>String</td>
-      <td>formated time since recording start (&quot;hh:mm:ss&quot;)   </td>
-    </tr>
-    <tr>
-      <td>remaining_seconds</td>
-      <td>Int</td>
-      <td>remaining seconds till memory card is full   </td>
-    </tr>
-    <tr>
-      <td>remaining_time</td>
-      <td>String</td>
-      <td>remaining time till memory card is full (&quot;hh:mm:ss&quot;)   </td>
-    </tr>
-    <tr>
-      <td>remaining_space</td>
-      <td>Int</td>
-      <td>remaining space in MiB on memory card   </td>
-    </tr>
-  </tbody>
-</table>
-</li>
-<li><p><strong>Command example:</strong><br><code>/api/v1/shooting/</code>  </p>
-<pre><code class="lang-javascript">  {
-    &quot;video&quot;: &quot;starting&quot;,
-    &quot;photo&quot;: &quot;idle&quot;,
-    &quot;duration&quot;: &quot;00:00:00&quot;,
-    &quot;duration_seconds&quot;: 0,
-    &quot;remaining_seconds&quot;: 1839,
-    &quot;remaining_space&quot;: 13153,
-    &quot;remaining_time&quot;: &quot;00:30:39&quot;,
-    &quot;success&quot;: true
-  }
-</code></pre>
-</li>
-</ul>
-</li>
-</ul>
 </div></article><aside class="sidebar"><div class="toc-toggle" id="toc"><a href="#top">Back to Top</a></div><div class="toc-container"><ol class="toc-level-0"><li class="toc-level-0"><a href="/camadapter/assembly/"><strong>1.</strong>&nbsp;Assembly Instructions</a></li><li class="toc-level-0"><a href="/camadapter/software/"><strong>2.</strong>&nbsp;Software Installation</a></li><li class="toc-level-0"><a href="/camadapter/api/"><strong>3.</strong>&nbsp;API Reference</a></li><ol class="toc-level-1"><li class="toc-level-1"><a href="/camadapter/api/app/"><strong>3.1.</strong>&nbsp;app</a></li><li class="toc-level-1"><a href="/camadapter/api/camera/"><strong>3.2.</strong>&nbsp;camera</a></li><li class="toc-level-1"><a href="/camadapter/api/color/"><strong>3.3.</strong>&nbsp;color</a></li><li class="toc-level-1"><a href="/camadapter/api/color_system/"><strong>3.4.</strong>&nbsp;color_system</a></li><li class="toc-level-1"><a href="/camadapter/api/color_temperature/"><strong>3.5.</strong>&nbsp;color_temperature</a></li><li class="toc-level-1"><a href="/camadapter/api/date_time/"><strong>3.6.</strong>&nbsp;date_time</a></li><li class="toc-level-1"><a href="/camadapter/api/ev/"><strong>3.7.</strong>&nbsp;ev</a></li><li class="toc-level-1"><a href="/camadapter/api/exposure_mode/"><strong>3.8.</strong>&nbsp;exposure_mode</a></li><li class="toc-level-1"><a href="/camadapter/api/ffc_mode/"><strong>3.9.</strong>&nbsp;ffc_mode</a></li><li class="toc-level-1"><a href="/camadapter/api/gain_mode/"><strong>3.10.</strong>&nbsp;gain_mode</a></li><li class="toc-level-1"><a href="/camadapter/api/gimbal/"><strong>3.11.</strong>&nbsp;gimbal</a></li><li class="toc-level-1"><a href="/camadapter/api/gimbal_mode/"><strong>3.12.</strong>&nbsp;gimbal_mode</a></li><li class="toc-level-1"><a href="/camadapter/api/gimbal_velocity/"><strong>3.13.</strong>&nbsp;gimbal_velocity</a></li><li class="toc-level-1"><a href="/camadapter/api/image_format/"><strong>3.14.</strong>&nbsp;image_format</a></li><li class="toc-level-1"><a href="/camadapter/api/imu_all/"><strong>3.15.</strong>&nbsp;imu_all</a></li><li class="toc-level-1"><a href="/camadapter/api/imu_pitch/"><strong>3.16.</strong>&nbsp;imu_pitch</a></li><li class="toc-level-1"><a href="/camadapter/api/imu_roll/"><strong>3.17.</strong>&nbsp;imu_roll</a></li><li class="toc-level-1"><a href="/camadapter/api/imu_yaw/"><strong>3.18.</strong>&nbsp;imu_yaw</a></li><li class="toc-level-1"><a href="/camadapter/api/iso/"><strong>3.19.</strong>&nbsp;iso</a></li><li class="toc-level-1"><a href="/camadapter/api/isotherm/"><strong>3.20.</strong>&nbsp;isotherm</a></li><li class="toc-level-1"><a href="/camadapter/api/isotherm_lower/"><strong>3.21.</strong>&nbsp;isotherm_lower</a></li><li class="toc-level-1"><a href="/camadapter/api/isotherm_middle/"><strong>3.22.</strong>&nbsp;isotherm_middle</a></li><li class="toc-level-1"><a href="/camadapter/api/isotherm_units/"><strong>3.23.</strong>&nbsp;isotherm_units</a></li><li class="toc-level-1"><a href="/camadapter/api/isotherm_upper/"><strong>3.24.</strong>&nbsp;isotherm_upper</a></li><li class="toc-level-1"><a href="/camadapter/api/magnification/"><strong>3.25.</strong>&nbsp;magnification</a></li><li class="toc-level-1"><a href="/camadapter/api/measure_temperature/"><strong>3.26.</strong>&nbsp;measure_temperature</a></li><li class="toc-level-1"><a href="/camadapter/api/mode/"><strong>3.27.</strong>&nbsp;mode</a></li><li class="toc-level-1"><a href="/camadapter/api/roi/"><strong>3.28.</strong>&nbsp;roi</a></li><li class="toc-level-1"><a href="/camadapter/api/scene/"><strong>3.29.</strong>&nbsp;scene</a></li><li class="toc-level-1"><a href="/camadapter/api/scene_ace/"><strong>3.30.</strong>&nbsp;scene_ace</a></li><li class="toc-level-1"><a href="/camadapter/api/scene_brightness/"><strong>3.31.</strong>&nbsp;scene_brightness</a></li><li class="toc-level-1"><a href="/camadapter/api/scene_contrast/"><strong>3.32.</strong>&nbsp;scene_contrast</a></li><li class="toc-level-1"><a href="/camadapter/api/scene_dde/"><strong>3.33.</strong>&nbsp;scene_dde</a></li><li class="toc-level-1"><a href="/camadapter/api/scene_sso/"><strong>3.34.</strong>&nbsp;scene_sso</a></li><li class="toc-level-1"><strong>3.35.&nbsp;shooting</strong></li><li class="toc-level-1"><a href="/camadapter/api/shutter/"><strong>3.36.</strong>&nbsp;shutter</a></li><li class="toc-level-1"><a href="/camadapter/api/video_format/"><strong>3.37.</strong>&nbsp;video_format</a></li><li class="toc-level-1"><a href="/camadapter/api/video_size/"><strong>3.38.</strong>&nbsp;video_size</a></li><li class="toc-level-1"><a href="/camadapter/api/white_balance/"><strong>3.39.</strong>&nbsp;white_balance</a></li><li class="toc-level-1"><a href="/camadapter/api/zenmuse/"><strong>3.40.</strong>&nbsp;zenmuse</a></li><li class="toc-level-1"><a href="/camadapter/api/zoom/"><strong>3.41.</strong>&nbsp;zoom</a></li></ol><ol class="toc-level-0"><ol class="toc-level-1"></ol></ol></ol></div></aside></main></body></html>
