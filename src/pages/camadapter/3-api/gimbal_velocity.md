@@ -10,10 +10,10 @@ POST | **/api/v1/gimbal_velocity/`<pan>`,`<tilt>`**
 
 ### Parameters
 
-Parameter | Type    | Description
-----------|---------|---------------------
-`<pan>`   | Integer | Turn gimbal by pan
-`<tilt>`  | Integer | Turn gimbal by tilt
+Parameter | Supported DJI Zenmuse | Type    | Description
+----------|-----------------------|---------|---------------------
+`<pan>`   | Any | Integer | Turn gimbal by pan
+`<tilt>`  | Any | Integer | Turn gimbal by tilt
 
 ### Sample Request
 

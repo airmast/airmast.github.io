@@ -4,9 +4,9 @@ shutter
 Set shutter value
 ------------------
 
-Request Type | URL 
--------------|-----
-POST | **/api/v1/shutter/`<numerator>`d`<denominator>`**
+Request Type | URL | Supported DJI Zenmuse
+-------------|-----|----------------------------
+POST | **/api/v1/shutter/`<numerator>`d`<denominator>`** | X3, Z3
 
 `<numerator>` and `<denominator>` must be integer values.
 
