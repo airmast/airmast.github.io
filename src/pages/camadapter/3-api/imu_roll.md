@@ -2,7 +2,7 @@ imu_roll
 =====
 IMU roll angle
 -----------------
-(used for gimbal positioning in some modes)
+*Angles are used for gimbal positioning in some modes*
 
 Request Type | URL 
 -------------|-----

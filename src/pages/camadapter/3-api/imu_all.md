@@ -3,7 +3,7 @@ imu_all
 
 Set IMU roll, pitch and yaw angles
 -----------------
-Angles are used for gimbal positioning in some modes
+*Angles are used for gimbal positioning in some modes*
 
 Request Type | URL 
 -------------|-----

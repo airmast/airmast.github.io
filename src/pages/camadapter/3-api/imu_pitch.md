@@ -3,7 +3,7 @@ imu_pitch
 
 IMU pitch angle
 -----------------
-(used for gimbal positioning in some modes)
+*Angles are used for gimbal positioning in some modes*
 
 Request Type | URL 
 -------------|-----
