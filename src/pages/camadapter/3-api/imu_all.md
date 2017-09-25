@@ -5,9 +5,9 @@ Set IMU roll, pitch and yaw angles
 -----------------
 *Angles are used for gimbal positioning in some modes*
 
-Request Type | URL 
--------------|-----
-POST | **/api/v1/imu_all/`<roll>`:`<pitch>`:`<yaw>`**
+Request Type | URL | Supported DJI Zenmuse
+-------------|-----|-----------------------------
+POST | **/api/v1/imu_all/`<roll>`:`<pitch>`:`<yaw>`** | Any
 
 
 ### Parameters
