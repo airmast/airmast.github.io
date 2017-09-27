@@ -1,14 +1,14 @@
 scene_ace
-=====
+=========
 
-Set active contrast enhancement
-------------------
+Set active contrast enhancement (ACE)
+-------------------------------------
 
 Request Type | URL | Supported DJI Zenmuse
 -------------|-----|-----------------------
-POST | **/api/v1/scene_ace/`<ace>`** | XT
+POST | **/api/v1/scene_ace/`<value>`** | XT
 
-`<ace>` &mdash; integer from -8 to +8
+`<value>` is an integer value of ACE (from −8 to +8).
 
 ### Sample Request
 
@@ -25,4 +25,3 @@ Status code: **200**
     "success": true
 }
 ```
-

@@ -1,14 +1,14 @@
 magnification
-=====
+=============
 
 Set magnification
-------------------
+-----------------
 
 Request Type | URL | Supported DJI Zenmuse
 -------------|-----|-----------------------
-POST | **/api/v1/magnification/`<x>`** | XT
+POST | **/api/v1/magnification/`<value>`** | XT
 
-`<x>` &mdash; is a floating point value of how many times to magnify (from 1 to 4).
+`<value>` is a floating point value of magnification (from 1 to 4).
 
 ### Sample Request
 
@@ -25,4 +25,3 @@ Status code: **200**
     "success": true
 }
 ```
-

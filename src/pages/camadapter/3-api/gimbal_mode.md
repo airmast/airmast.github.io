@@ -1,10 +1,10 @@
 gimbal_mode
-=====
+===========
 
 Gimbal mode
------------------
+-----------
 
-Request Type | URL 
+Request Type | URL
 -------------|-----
 POST | **/api/v1/gimbal_mode/[`<mode>`](#-mode-)**
 
@@ -32,4 +32,3 @@ Status code: **200**
     "success": true
 }
 ```
-

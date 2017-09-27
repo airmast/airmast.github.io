@@ -4,17 +4,17 @@ zoom
 Zoom
 ------------------
 
-Request Type | URL 
--------------|-----
-POST | **/api/v1/zoom/[`<action>`](#-action-)**
+Request Type | URL | Supported DJI Zenmuse
+-------------|-----|----------------------
+POST | **/api/v1/zoom/[`<value>`](#-value-)** | Z3, Z30
 
-### `<action>`
+### `<value>`
 
-Option  | Supported DJI Zenmuse | Description
---------|-----------------------|--------------
-**in**    | Any | Zoom in (Tele)
-**out**   | Any | Zoom out (Wide)
-**stop**  | Any | Stop zooming
+Option  | Description
+--------|------------
+**in**  | Start zoom in (Tele)
+**out** | Start zoom out (Wide)
+**stop** | Stop zooming
 
 **Note**: Zoom in or out command need to be stopped by stop command.
 
@@ -33,4 +33,3 @@ Status code: **200**
     "success": true
 }
 ```
-

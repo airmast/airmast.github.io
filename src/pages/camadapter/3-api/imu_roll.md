@@ -1,15 +1,14 @@
-imu_roll
-=====
+imu_roll (deprecated)
+=====================
+
 IMU roll angle
------------------
-*Angles are used for gimbal positioning in some modes*
+--------------
 
 Request Type | URL | Supported DJI Zenmuse
 -------------|-----|------------------------
-POST | **/api/v1/imu_roll/`<roll>`** | Any
+POST | **/api/v1/imu_roll/`<value>`** | Any
 
-
-`<roll>` &mdash; float point roll angle value (rad) (from -pi to +pi)
+`<value>` is a floating point value of roll angle expressed in radian (from -π to +π).
 
 ### Sample Request
 
@@ -26,4 +25,3 @@ Status code: **200**
     "success": true
 }
 ```
-

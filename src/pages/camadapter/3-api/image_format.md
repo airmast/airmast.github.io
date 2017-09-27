@@ -4,12 +4,12 @@ image_format
 Set image format
 -----------------
 
-Request Type | URL 
+Request Type | URL
 -------------|-----
-POST | **/api/v1/image_format/[`<format>`](#-format-)**
+POST | **/api/v1/image_format/[`<value>`](#-value-)**
 
 
-### `<format>`
+### `<value>`
 
 Option | Supported DJI Zenmuse | Description
 -------|-----------------------|------------
@@ -32,4 +32,3 @@ Status code: **200**
     "success": true
 }
 ```
-

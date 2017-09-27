@@ -1,14 +1,14 @@
 video_format
-=====
+============
 
 Set video format
-------------------
+----------------
 
-Request Type | URL 
+Request Type | URL
 -------------|-----
-POST | **/api/v1/video_format/[`<format>`](#-format-)**
+POST | **/api/v1/video_format/[`<value>`](#-value-)**
 
-### `<format>`
+### `<value>`
 
 Option | Supported DJI Zenmuse | Description
 -------|-----------------------|------------
@@ -30,4 +30,3 @@ Status code: **200**
     "success": true
 }
 ```
-

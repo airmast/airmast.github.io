@@ -1,21 +1,21 @@
 gain_mode
-=====
+=========
 
 Set gain mode
 -------------
 
-Request Type | URL
--------------|----
-POST | **/api/v1/gain_mode/[`<mode>`](#-mode-)**
+Request Type | URL | Supported DJI Zenmuse
+-------------|-----|----------------------
+POST | **/api/v1/gain_mode/[`<value>`](#-value-)** | XT
 
 
-### `<mode>`
+### `<value>`
 
-Option | Supported DJI Zenmuse | Description
--------|-----------------------|------------
-**auto**    | XT | Set gain mode to auto
-**low** | XT | Set gain mode to low
-**high**  | XT | Set gain mode to high
+Option | Description
+-------|------------
+**auto** | Set gain mode to auto
+**low** | Set gain mode to low
+**high** | Set gain mode to high
 
 ### Sample Request
 
@@ -32,4 +32,3 @@ Status code: **200**
     "success": true
 }
 ```
-

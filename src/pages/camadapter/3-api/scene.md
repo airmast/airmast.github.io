@@ -1,26 +1,26 @@
 scene
 =====
 
-Set camera's scene type
-------------------
+Set camera's scene mode
+-----------------------
 
-Request Type | URL 
--------------|-----
-POST | **/api/v1/scene/[`<type>`](#-type-)**
+Request Type | URL | Supported DJI Zenmuse
+-------------|-----|----------------------
+POST | **/api/v1/scene/[`<value>`](#-value-)** | XT
 
-### `<type>`
+### `<value>`
 
-Option | Supported DJI Zenmuse | Description
--------|-----------------------|------------
-**linear**    | XT | Linear mode
-**default** | XT | Default mode
-**seasky** | XT | Seasky mode
-**outdoor** | XT | Outdoor mode
-**indoor** | XT | Indoor mode
-**manual** | XT | Manual mode
-**user1** | XT | User1 mode
-**user2** | XT | User2 mode
-**user3** | XT | User3 mode
+Option | Description
+-------|------------
+**default** | Default scene mode
+**indoor** | Indoor scene mode
+**linear** | Linear scene mode
+**manual** | Manual scene mode
+**outdoor** | Outdoor scene mode
+**seasky** | Seasky scene mode
+**user1** | User1 scene mode
+**user2** | User2 scene mode
+**user3** | User3 scene mode
 
 ### Sample Request
 
@@ -37,4 +37,3 @@ Status code: **200**
     "success": true
 }
 ```
-

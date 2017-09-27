@@ -1,15 +1,15 @@
 exposure_mode
-=====
+=============
 
 Set exposure mode
 -----------------
 
 Request Type | URL
 -------------|----
-POST | **/api/v1/exposure_mode/[`<mode>`](#-mode-)**
+POST | **/api/v1/exposure_mode/[`<value>`](#-value-)**
 
 
-### `<mode>`
+### `<value>`
 
 Option | Supported DJI Zenmuse | Description
 -------|-----------------------|------------
@@ -32,4 +32,3 @@ Status code: **200**
     "success": true
 }
 ```
-

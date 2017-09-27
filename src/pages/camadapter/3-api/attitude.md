@@ -1,12 +1,12 @@
-imu_all (deprecated)
-====================
+attitude
+========
 
-Set IMU roll, pitch and yaw angles
-----------------------------------
+Set attitude angles (roll, pitch and yaw)
+-----------------------------------------
 
 Request Type | URL | Supported DJI Zenmuse
 -------------|-----|-----------------------------
-POST | **/api/v1/imu_all/`<roll>`:`<pitch>`:`<yaw>`** | Any
+POST | **/api/v1/attitude/`<roll>`,`<pitch>`,`<yaw>`** | Any
 
 ### Parameters
 
@@ -19,7 +19,7 @@ Parameter | Type | Description
 ### Sample Request
 
 ```http
-POST http://localhost:8123/api/v1/imu_all/0.5:-0.1:-1.57
+POST http://localhost:8123/api/v1/attitude/0.5,-0.1,-1.57
 ```
 
 ### Sample Response

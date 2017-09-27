@@ -1,14 +1,14 @@
 white_balance
-=====
+=============
 
 Set white balance mode
-------------------
+----------------------
 
-Request Type | URL 
+Request Type | URL
 -------------|-----
-POST | **/api/v1/white_balance/[`<mode>`](#-mode-)**
+POST | **/api/v1/white_balance/[`<value>`](#-value-)**
 
-### `<mode>`
+### `<value>`
 
 Option | Supported DJI Zenmuse | Description
 -------|-----------------------|--------------------
@@ -34,4 +34,3 @@ Status code: **200**
     "success": true
 }
 ```
-

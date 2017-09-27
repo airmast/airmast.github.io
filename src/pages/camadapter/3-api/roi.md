@@ -1,20 +1,20 @@
 roi
-=====
+===
 
 Set camera's region of interest
-------------------
+-------------------------------
 
-Request Type | URL 
--------------|-----
-POST | **/api/v1/roi/[`<roi>`](#-roi-)**
+Request Type | URL | Supported DJI Zenmuse
+-------------|-----|----------------------
+POST | **/api/v1/roi/[`<value>`](#-value-)** | XT
 
-### `<roi>`
+### `<value>`
 
-Option | Supported DJI Zenmuse | Description
--------|-----------------------|------------
-**full**    | XT | Full
-**skyex33** | XT | Sky excluded 33%
-**skyex50** | XT | Sky excluded 50%
+Option | Description
+-------|------------
+**full** | Full
+**skyex33** | Sky excluded 33%
+**skyex50** | Sky excluded 50%
 
 ### Sample Request
 
@@ -31,4 +31,3 @@ Status code: **200**
     "success": true
 }
 ```
-

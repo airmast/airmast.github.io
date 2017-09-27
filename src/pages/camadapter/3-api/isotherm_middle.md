@@ -8,7 +8,7 @@ Request Type | URL | Supported DJI Zenmuse
 -------------|-----|-----------------------
 POST | **/api/v1/isotherm_middle/`<value>`** | XT
 
-`<value>` &mdash; integer value of isotherm (from -40 to 1000)
+`<value>` is an integer value of isotherm (from -40 to 1000).
 
 **Note:** This setting takes effect only if [isotherm](/camadapter/api/isotherm/) is enabled.
 
@@ -27,4 +27,3 @@ Status code: **200**
     "success": true
 }
 ```
-

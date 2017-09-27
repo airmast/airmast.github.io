@@ -1,8 +1,8 @@
 gimbal
-=====
+======
 
-Execute gimbal centering (yaw only)
------------------
+Execute gimbal centering by yaw
+-------------------------------
 
 Request Type | URL | Supported DJI Zenmuse
 -------------|-----|-----------------------
@@ -24,28 +24,28 @@ Status code: **200**
 }
 ```
 
-Get gimbal orientation
------------------
+Get gimbal attitude
+-------------------
 
 Request Type | URL | Supported DJI Zenmuse
 -------------|-----|----------------------
-POST | **/api/v1/gimbal** | Any
+GET | **/api/v1/gimbal** | Any
 
 ### JSON Response
 
 Parameter | Type | Description
 ----------|------|------------
-**own_roll** | Float | roll angle referenced to frame(rad)
-**own_pitch** | Float | pitch angle referenced to frame (rad)
-**own_yaw** | Float | yaw angle referenced to frame (rad)
-**stab_roll** | Float | roll angle referenced to ground (rad)
-**stab_pitch** | Float | pitch angle referenced to ground (rad)
-**stab_yaw** | Float | yaw angle referenced to ground (rad)
+**own_roll** | number | Roll angle referenced to frame(rad)
+**own_pitch** | number | Pitch angle referenced to frame (rad)
+**own_yaw** | number | Yaw angle referenced to frame (rad)
+**stab_roll** | number | Roll angle referenced to ground (rad)
+**stab_pitch** | number | Pitch angle referenced to ground (rad)
+**stab_yaw** | number | Yaw angle referenced to ground (rad)
 
 ### Sample Request
 
 ```http
-POST http://localhost:8123/api/v1/gimbal
+GET http://localhost:8123/api/v1/gimbal
 ```
 
 ### Sample Response
@@ -63,4 +63,3 @@ Status code: **200**
     "stab_yaw": 0
 }
 ```
-

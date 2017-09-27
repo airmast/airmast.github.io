@@ -1,20 +1,20 @@
 ffc_mode
-=====
+========
 
 Set flat-field correction mode
 ------------------------------
 
-Request Type | URL
--------------|----
-POST | **/api/v1/ffc_mode/[`<mode>`](#-mode-)**
+Request Type | URL | Supported DJI Zenmuse
+-------------|-----|----------------------
+POST | **/api/v1/ffc_mode/[`<value>`](#-value-)** | XT
 
 
-### `<mode>`
+### `<value>`
 
-Option | Supported DJI Zenmuse | Description
--------|-----------------------|------------
-**auto**    | XT | Set ffc mode to auto
-**manual**  | XT | Set ffc mode to manual
+Option | Description
+-------|------------
+**auto**   | Set FFC mode to auto
+**manual** | Set FFC mode to manual
 
 ### Sample Request
 
@@ -31,4 +31,3 @@ Status code: **200**
     "success": true
 }
 ```
-

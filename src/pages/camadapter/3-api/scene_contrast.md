@@ -1,14 +1,14 @@
 scene_contrast
-=====
+==============
 
 Set scene contrast
 ------------------
 
 Request Type | URL | Supported DJI Zenmuse
 -------------|-----|------------------------
-POST | **/api/v1/scene_contrast/`<contrast>`** | XT
+POST | **/api/v1/scene_contrast/`<value>`** | XT
 
-`<contrast>` &mdash; contrast value from 0 to 255
+`<value>` is an integet value of contrast (from 0 to 255).
 
 ### Sample Request
 
@@ -25,4 +25,3 @@ Status code: **200**
     "success": true
 }
 ```
-

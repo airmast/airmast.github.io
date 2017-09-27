@@ -1,17 +1,18 @@
 zenmuse
-=====
+=======
 
-Set used Zenmuse camera
-------------------
+Choose Zenmuse camera
+---------------------
 
 Request Type | URL | Supported DJI Zenmuse
 -------------|-----|---------------------------
-POST | **/api/v1/zenmuse/[`<model>`](#-model-)** | Any
+POST | **/api/v1/zenmuse/[`<value>`](#-value-)** | Any
 
-### `<model>`
+### `<value>`
 
 Option  | Description
---------|--------------------
+--------|------------
+**detect** | Auto detect camera type
 **x3**  | X3 camera
 **x4s** | X4S camera
 **x5**  | X5 camera
@@ -20,7 +21,6 @@ Option  | Description
 **xt**  | XT camera
 **z3**  | Z3 camera
 **z30** | Z30 camera
-**detect** | Auto detect camera type
 
 ### Sample Request
 
@@ -37,4 +37,3 @@ Status code: **200**
     "success": true
 }
 ```
-

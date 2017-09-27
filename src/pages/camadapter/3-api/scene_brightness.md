@@ -1,14 +1,14 @@
 scene_brightness
-=====
+================
 
 Set scene brightness
-------------------
+--------------------
 
 Request Type | URL | Supported DJI Zenmuse
 -------------|-----|------------------------
-POST | **/api/v1/scene_brightness/`<brightness>`** | XT
+POST | **/api/v1/scene_brightness/`<value>`** | XT
 
-`<brightness>` &mdash; integer from 0 to 16383
+`<value>` is an integer value of brightness (from 0 to 16383).
 
 ### Sample Request
 
@@ -25,4 +25,3 @@ Status code: **200**
     "success": true
 }
 ```
-

@@ -1,21 +1,21 @@
 isotherm_units
-=====
+==============
 
 Set isotherm units
------------------
+------------------
 
 Request Type | URL | Supported DJI Zenmuse
 -------------|-----|-----------------------
-POST | **/api/v1/isotherm_units/[`<units>`](#-units-)** | XT
+POST | **/api/v1/isotherm_units/[`<value>`](#-value-)** | XT
 
 **Note:** This setting takes effect only if [isotherm](/camadapter/api/isotherm/) is enabled.
 
-### `<units>`
+### `<value>`
 
-Option | Supported DJI Zenmuse | Description
--------|-----------------------|------------
-**celsius**    | XT | Use celsius degrees
-**percentage** | XT | Use percentage
+Option | Description
+-------|------------
+**celsius** | Use celsius degrees
+**percentage** | Use percentage
 
 ### Sample Request
 
@@ -32,4 +32,3 @@ Status code: **200**
     "success": true
 }
 ```
-

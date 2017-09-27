@@ -1,19 +1,19 @@
 gimbal_velocity
-=====
+===============
 
 Gimbal positioning
------------------
+------------------
 
-Request Type | URL 
--------------|-----
-POST | **/api/v1/gimbal_velocity/`<pan>`,`<tilt>`**
+Request Type | URL | Supported DJI Zenmuse
+-------------|-----|----------------------
+POST | **/api/v1/gimbal_velocity/`<pan>`,`<tilt>`** | Any
 
 ### Parameters
 
-Parameter | Supported DJI Zenmuse | Type    | Description
-----------|-----------------------|---------|---------------------
-`<pan>`   | Any | Integer | Turn gimbal by pan
-`<tilt>`  | Any | Integer | Turn gimbal by tilt
+Parameter | Type    | Description
+----------|---------|---------------------
+`<pan>`   | number | Gimbal pan velocity, negative to left, positive to right
+`<tilt>`  | number | Gimbal tilt velocity, negative up, positive down
 
 ### Sample Request
 
@@ -30,6 +30,3 @@ Status code: **200**
     "success": true
 }
 ```
-
-
-

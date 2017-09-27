@@ -1,21 +1,20 @@
 mode
-=====
+====
 
-Camera mode
-------------------
+Set camera mode
+---------------
 
-Request Type | URL 
--------------|-----
-POST | **/api/v1/mode/[`<mode>`](#-mode-)**
+Request Type | URL | Supported DJI Zenmuse
+-------------|-----|----------------------
+POST | **/api/v1/mode/[`<value>`](#-value-)** | Any
 
+### `<value>`
 
-### `<mode>`
-
-Option | Supported DJI Zenmuse | Description
--------|-----------------------|------------
-**photo** | XT | Photo
-**video** | XT | Video
-**playback** | XT | Playback
+Option | Description
+-------|------------
+**photo** | Photo mode
+**playback** | Playback mode
+**video** | Video mode
 
 ### Sample Request
 
@@ -32,4 +31,3 @@ Status code: **200**
     "success": true
 }
 ```
-

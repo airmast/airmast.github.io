@@ -1,14 +1,14 @@
 shooting
-=====
+========
 
 Start recording video (or photo) to card
-------------------
+----------------------------------------
 
-Request Type | URL 
+Request Type | URL
 -------------|-----
-POST | **/api/v1/shooting/[`<action>`](#-action-)**
+POST | **/api/v1/shooting/[`<value>`](#-value-)**
 
-### `<action>`
+### `<value>`
 
 Option    | Supported DJI Zenmuse | Description
 ----------|-----------------------|------------
@@ -43,13 +43,13 @@ GET |  **/api/v1/shooting** | Any
 
 Parameter | Type | Description
 ----------|------|------------
-**video** | string | video recording status ("on", "off", "starting", "stopping") 
-**photo** | string | photo recording status ("storing" or "idle") 
-**duration_seconds** | number | duration in seconds since recording start 
-**duration** | string | formated time since recording start ("hh:mm:ss") 
-**remaining_seconds** | number | remaining seconds till memory card is full 
-**remaining_time** | string	| remaining time till memory card is full ("hh:mm:ss") 
-**remaining_space** | number | remaining space in MiB on memory card 
+**video** | string | video recording status ("on", "off", "starting", "stopping")
+**photo** | string | photo recording status ("storing" or "idle")
+**duration_seconds** | number | duration in seconds since recording start
+**duration** | string | formated time since recording start ("hh:mm:ss")
+**remaining_seconds** | number | remaining seconds till memory card is full
+**remaining_time** | string	| remaining time till memory card is full ("hh:mm:ss")
+**remaining_space** | number | remaining space in MiB on memory card
 
 ### Sample Request
 
@@ -73,4 +73,3 @@ Status code: **200**
   "success": true
 }
 ```
-

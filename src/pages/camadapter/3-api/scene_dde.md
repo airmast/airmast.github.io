@@ -1,16 +1,14 @@
 scene_dde
-=====
+=========
 
-Set digital detail enhancement
-------------------
+Set digital detail enhancement (DDE)
+------------------------------------
 
 Request Type | URL | Supported DJI Zenmuse
 -------------|-----|-----------------------
-POST | **/api/v1/scene_dde/`<dde>`** | XT
+POST | **/api/v1/scene_dde/`<value>`** | XT
 
-`<dde>` &mdash; DDE is a value from -20 to 100,
-negative values soften the image and positive values
-sharpen it
+`<value>` is a integer value of DDE (from -20 to 100). Negative values soften the image and positive values sharpen it.
 
 ### Sample Request
 
@@ -27,4 +25,3 @@ Status code: **200**
     "success": true
 }
 ```
-
