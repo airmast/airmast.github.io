@@ -1,83 +1,91 @@
-<!DOCTYPE html><html lang="en"><head><title>CamAdapter</title><meta name="viewport" content="initial-scale=1"><link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" sizes="16x16 32x32 48x48"><link href="/css/airmast.min.css" rel="stylesheet"></head><body><div class="nav-main"><div class="navbar"><a class="nav-home" href="/"><img class="nav-logo" src="/img/logo.svg" height="65"><strong>AirMast</strong> Documentation</a><div class="nav-lists"><ul class="nav-site nav-site-internal"><li class="nav-site-internal-element--current"><a href="/camadapter">CamAdapter</a></li><li><a href="/head">Head</a></li></ul></div><div class="nav-lists nav-right"><ul class="nav-site nav-site-internal"><li><a href="http://airmast.com/">Back to main site</a></li></ul><ul class="nav-site nav-site-external"><li><a href="https://github.com/airmast/airmast.github.io">GitHub</a></li></ul></div></div></div><main class="container"><article class="chapter"><div class="toc-toggle" id="top"><a href="#toc">Table of Contents</a></div><div class="contents"><h1 id="camadapter">CamAdapter</h1>
-<p>AirMast CamAdapter is a device for using with DJI Zenmuse series gimbals. CamAdapter allows to control gimbal and camera using embedded web-application via browser as well as via API requests. Also CamAdapter implements video streaming from camera by Ethernet.</p>
-<center><img src="/img/camadapter.svg" width="50%" alt="AirMast CamAdapter"></center>
-
-<h2 id="supported-gimbals">Supported Gimbals</h2>
-<table>
-<thead>
-<tr>
-<th>DJI Zenmuse Model</th>
-<th>Gimbal control</th>
-<th>Video stream</th>
-<th>Camera settings</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>X3</td>
-<td>Yes</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>X4S</td>
-<td>Not tested</td>
-<td>Not tested</td>
-<td>No</td>
-</tr>
-<tr>
-<td>X5</td>
-<td>Not tested</td>
-<td>Not tested</td>
-<td>No</td>
-</tr>
-<tr>
-<td>X5R</td>
-<td>Not tested</td>
-<td>Not tested</td>
-<td>No</td>
-</tr>
-<tr>
-<td>X5S</td>
-<td>Not tested</td>
-<td>Not tested</td>
-<td>No</td>
-</tr>
-<tr>
-<td>XT</td>
-<td>Yes</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>Z3</td>
-<td>Yes</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>Z30</td>
-<td>Yes</td>
-<td>Yes</td>
-<td>Partially</td>
-</tr>
-</tbody>
-</table>
-<h2 id="software-demo">Software Demo</h2>
-<p>You may run CamAdapter demo application in order to debug your own client software or just go get introduced with embedded web-application.</p>
-<p>Demo application requires <a class="ext" href="https://nodejs.org" target="_blank">Node.js</a> installed.</p>
-<p>Run in command line (<code>sudo</code> may be required in some operating systems):</p>
-<pre><code>npm install -g camadapter-demo
-</code></pre><p>After package installation just run:</p>
-<pre><code>camadapter-demo
-</code></pre><p>Then open in browser: <a class="ext" href="http://localhost:8123/" target="_blank">http://localhost:8123/</a></p>
-<p>Please refer to <a class="ext" href="https://www.npmjs.com/package/camadapter-demo" target="_blank">camadapter-demo NPM package info</a> for details.</p>
-<h2 id="getting-started">Getting Started</h2>
-<p>The device is assumed to be assembled by the user. Here you will find all required information.</p>
-<p>Documentation consists of:</p>
-<ul>
-<li><a href="/camadapter/assembly/">Assembly instructions</a></li>
-<li><a href="/camadapter/software/">Software installation</a></li>
-<li><a href="/camadapter/api/">API Reference</a></li>
-</ul>
-</div></article><aside class="sidebar"><div class="toc-toggle" id="toc"><a href="#top">Back to Top</a></div><div class="toc-container"><ol class="toc-level-0"><li class="toc-level-0"><a href="/camadapter/assembly/"><strong>1.</strong>&nbsp;Assembly Instructions</a></li><li class="toc-level-0"><a href="/camadapter/software/"><strong>2.</strong>&nbsp;Software Installation</a></li><li class="toc-level-0"><a href="/camadapter/api/"><strong>3.</strong>&nbsp;API Reference</a></li><ol class="toc-level-1"><li class="toc-level-1"><a href="/camadapter/api/app/"><strong>3.1.</strong>&nbsp;app</a></li><li class="toc-level-1"><a href="/camadapter/api/attitude/"><strong>3.2.</strong>&nbsp;attitude</a></li><li class="toc-level-1"><a href="/camadapter/api/camera/"><strong>3.3.</strong>&nbsp;camera</a></li><li class="toc-level-1"><a href="/camadapter/api/color/"><strong>3.4.</strong>&nbsp;color</a></li><li class="toc-level-1"><a href="/camadapter/api/color_system/"><strong>3.5.</strong>&nbsp;color_system</a></li><li class="toc-level-1"><a href="/camadapter/api/color_temperature/"><strong>3.6.</strong>&nbsp;color_temperature</a></li><li class="toc-level-1"><a href="/camadapter/api/date_time/"><strong>3.7.</strong>&nbsp;date_time</a></li><li class="toc-level-1"><a href="/camadapter/api/ev/"><strong>3.8.</strong>&nbsp;ev</a></li><li class="toc-level-1"><a href="/camadapter/api/exposure_mode/"><strong>3.9.</strong>&nbsp;exposure_mode</a></li><li class="toc-level-1"><a href="/camadapter/api/ffc_mode/"><strong>3.10.</strong>&nbsp;ffc_mode</a></li><li class="toc-level-1"><a href="/camadapter/api/gain_mode/"><strong>3.11.</strong>&nbsp;gain_mode</a></li><li class="toc-level-1"><a href="/camadapter/api/gimbal/"><strong>3.12.</strong>&nbsp;gimbal</a></li><li class="toc-level-1"><a href="/camadapter/api/gimbal_mode/"><strong>3.13.</strong>&nbsp;gimbal_mode</a></li><li class="toc-level-1"><a href="/camadapter/api/gimbal_velocity/"><strong>3.14.</strong>&nbsp;gimbal_velocity</a></li><li class="toc-level-1"><a href="/camadapter/api/image_format/"><strong>3.15.</strong>&nbsp;image_format</a></li><li class="toc-level-1"><a href="/camadapter/api/iso/"><strong>3.16.</strong>&nbsp;iso</a></li><li class="toc-level-1"><a href="/camadapter/api/isotherm/"><strong>3.17.</strong>&nbsp;isotherm</a></li><li class="toc-level-1"><a href="/camadapter/api/isotherm_lower/"><strong>3.18.</strong>&nbsp;isotherm_lower</a></li><li class="toc-level-1"><a href="/camadapter/api/isotherm_middle/"><strong>3.19.</strong>&nbsp;isotherm_middle</a></li><li class="toc-level-1"><a href="/camadapter/api/isotherm_units/"><strong>3.20.</strong>&nbsp;isotherm_units</a></li><li class="toc-level-1"><a href="/camadapter/api/isotherm_upper/"><strong>3.21.</strong>&nbsp;isotherm_upper</a></li><li class="toc-level-1"><a href="/camadapter/api/magnification/"><strong>3.22.</strong>&nbsp;magnification</a></li><li class="toc-level-1"><a href="/camadapter/api/measure_temperature/"><strong>3.23.</strong>&nbsp;measure_temperature</a></li><li class="toc-level-1"><a href="/camadapter/api/mode/"><strong>3.24.</strong>&nbsp;mode</a></li><li class="toc-level-1"><a href="/camadapter/api/roi/"><strong>3.25.</strong>&nbsp;roi</a></li><li class="toc-level-1"><a href="/camadapter/api/scene/"><strong>3.26.</strong>&nbsp;scene</a></li><li class="toc-level-1"><a href="/camadapter/api/scene_ace/"><strong>3.27.</strong>&nbsp;scene_ace</a></li><li class="toc-level-1"><a href="/camadapter/api/scene_brightness/"><strong>3.28.</strong>&nbsp;scene_brightness</a></li><li class="toc-level-1"><a href="/camadapter/api/scene_contrast/"><strong>3.29.</strong>&nbsp;scene_contrast</a></li><li class="toc-level-1"><a href="/camadapter/api/scene_dde/"><strong>3.30.</strong>&nbsp;scene_dde</a></li><li class="toc-level-1"><a href="/camadapter/api/scene_sso/"><strong>3.31.</strong>&nbsp;scene_sso</a></li><li class="toc-level-1"><a href="/camadapter/api/shooting/"><strong>3.32.</strong>&nbsp;shooting</a></li><li class="toc-level-1"><a href="/camadapter/api/shutter/"><strong>3.33.</strong>&nbsp;shutter</a></li><li class="toc-level-1"><a href="/camadapter/api/video_format/"><strong>3.34.</strong>&nbsp;video_format</a></li><li class="toc-level-1"><a href="/camadapter/api/video_size/"><strong>3.35.</strong>&nbsp;video_size</a></li><li class="toc-level-1"><a href="/camadapter/api/white_balance/"><strong>3.36.</strong>&nbsp;white_balance</a></li><li class="toc-level-1"><a href="/camadapter/api/zenmuse/"><strong>3.37.</strong>&nbsp;zenmuse</a></li><li class="toc-level-1"><a href="/camadapter/api/zoom/"><strong>3.38.</strong>&nbsp;zoom</a></li></ol><ol class="toc-level-0"><ol class="toc-level-1"></ol></ol></ol></div></aside></main></body></html>
+<!DOCTYPE html><html lang="en"><head><title>CamAdapter</title><meta name="viewport" content="initial-scale=1"><link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" sizes="16x16 32x32 48x48"><link href="/css/airmast.min.css" rel="stylesheet"></head><body><div class="nav-main"><div class="navbar"><a class="nav-home" href="/"><img class="nav-logo" src="/img/logo.svg" height="65"><strong>AirMast</strong> Documentation</a><div class="nav-lists"><ul class="nav-site nav-site-internal"><li class="nav-site-internal-element--current"><a href="/camadapter">CamAdapter</a></li><li><a href="/head">Head</a></li></ul></div><div class="nav-lists nav-right"><ul class="nav-site nav-site-internal"><li><a href="http://airmast.com/">Back to main site</a></li></ul><ul class="nav-site nav-site-external"><li><a href="https://github.com/airmast/airmast.github.io">GitHub</a></li></ul></div></div></div><main class="container"><article class="chapter"><div class="toc-toggle" id="top"><a href="#toc">Table of Contents</a></div><div class="contents">
+    <h1>CamAdapter</h1>
+    <p>AirMast CamAdapter is a device for using with DJI Zenmuse series gimbals. CamAdapter allows to control gimbal and camera using embedded web-application via browser as well as via API requests. Also CamAdapter implements video streaming from camera by Ethernet.</p>
+    <figure align="center">
+        <img src="/img/camadapter.svg" alt="AirMast CamAdapter" width="50%" />
+    </figure>
+    <section id="supported-gimbals">
+        <h2>Supported Gimbals</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>DJI Zenmuse Model</th>
+                    <th>Gimbal control</th>
+                    <th>Video stream</th>
+                    <th>Camera settings</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>X3</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>X4S</td>
+                    <td>Not tested</td>
+                    <td>Not tested</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>X5</td>
+                    <td>Not tested</td>
+                    <td>Not tested</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>X5R</td>
+                    <td>Not tested</td>
+                    <td>Not tested</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>X5S</td>
+                    <td>Not tested</td>
+                    <td>Not tested</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>XT</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>Z3</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>Z30</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Partially</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section id="software-demo">
+        <h2>Software Demo</h2>
+        <p>You may run CamAdapter demo application in order to debug your own client software or just go get introduced with embedded web-application.</p>
+        <p>Demo application requires <a class="ext" href="https://nodejs.org" target="_blank">Node.js</a> installed.</p>
+        <p>Run in command line (<code>sudo</code> may be required in some operating systems):</p>
+        <pre>npm install -g camadapter-demo</pre>
+        <p>After package installation just run:</p>
+        <pre>camadapter-demo</pre>
+        <p>Then open in browser: <a class="ext" href="http://localhost:8123/" target="_blank">http://localhost:8123/</a></p>
+        <p>Please refer to <a class="ext" href="https://www.npmjs.com/package/camadapter-demo" target="_blank">camadapter-demo NPM package info</a> for details.</p>
+    </section>
+    <section id="getting-started">
+        <h2>Getting Started</h2>
+        <p>The device is assumed to be assembled by the user. Here you will find all required information.</p>
+        <p>Documentation consists of:</p>
+        <ul>
+            <li><a href="/camadapter/assembly/">Assembly instructions</a></li>
+            <li><a href="/camadapter/software/">Software installation</a></li>
+            <li><a href="/camadapter/api/">API Reference</a></li>
+        </ul>
+    </section>
+</div></article><aside class="sidebar"><div class="toc-toggle" id="toc"><a href="#top">Back to Top</a></div><div class="toc-container"><ol class="toc-level-0"><li class="toc-level-0"><a href="/camadapter/assembly/"><strong>1.</strong>&nbsp;Assembly Instructions</a></li><li class="toc-level-0"><a href="/camadapter/software/"><strong>2.</strong>&nbsp;Software Installation</a></li><li class="toc-level-0"><a href="/camadapter/api/"><strong>3.</strong>&nbsp;API Reference</a></li><ol class="toc-level-1"><li class="toc-level-1"><a href="/camadapter/api/aperture/"><strong>3.1.</strong>&nbsp;aperture</a></li><li class="toc-level-1"><a href="/camadapter/api/app/"><strong>3.2.</strong>&nbsp;app</a></li><li class="toc-level-1"><a href="/camadapter/api/attitude/"><strong>3.3.</strong>&nbsp;attitude</a></li><li class="toc-level-1"><a href="/camadapter/api/camera/"><strong>3.4.</strong>&nbsp;camera</a></li><li class="toc-level-1"><a href="/camadapter/api/color/"><strong>3.5.</strong>&nbsp;color</a></li><li class="toc-level-1"><a href="/camadapter/api/color_system/"><strong>3.6.</strong>&nbsp;color_system</a></li><li class="toc-level-1"><a href="/camadapter/api/color_temperature/"><strong>3.7.</strong>&nbsp;color_temperature</a></li><li class="toc-level-1"><a href="/camadapter/api/date_time/"><strong>3.8.</strong>&nbsp;date_time</a></li><li class="toc-level-1"><a href="/camadapter/api/ev/"><strong>3.9.</strong>&nbsp;ev</a></li><li class="toc-level-1"><a href="/camadapter/api/exposure_mode/"><strong>3.10.</strong>&nbsp;exposure_mode</a></li><li class="toc-level-1"><a href="/camadapter/api/ffc_mode/"><strong>3.11.</strong>&nbsp;ffc_mode</a></li><li class="toc-level-1"><a href="/camadapter/api/gain_mode/"><strong>3.12.</strong>&nbsp;gain_mode</a></li><li class="toc-level-1"><a href="/camadapter/api/gimbal/"><strong>3.13.</strong>&nbsp;gimbal</a></li><li class="toc-level-1"><a href="/camadapter/api/gimbal_mode/"><strong>3.14.</strong>&nbsp;gimbal_mode</a></li><li class="toc-level-1"><a href="/camadapter/api/gimbal_velocity/"><strong>3.15.</strong>&nbsp;gimbal_velocity</a></li><li class="toc-level-1"><a href="/camadapter/api/image_format/"><strong>3.16.</strong>&nbsp;image_format</a></li><li class="toc-level-1"><a href="/camadapter/api/iso/"><strong>3.17.</strong>&nbsp;iso</a></li><li class="toc-level-1"><a href="/camadapter/api/isotherm/"><strong>3.18.</strong>&nbsp;isotherm</a></li><li class="toc-level-1"><a href="/camadapter/api/isotherm_lower/"><strong>3.19.</strong>&nbsp;isotherm_lower</a></li><li class="toc-level-1"><a href="/camadapter/api/isotherm_middle/"><strong>3.20.</strong>&nbsp;isotherm_middle</a></li><li class="toc-level-1"><a href="/camadapter/api/isotherm_units/"><strong>3.21.</strong>&nbsp;isotherm_units</a></li><li class="toc-level-1"><a href="/camadapter/api/isotherm_upper/"><strong>3.22.</strong>&nbsp;isotherm_upper</a></li><li class="toc-level-1"><a href="/camadapter/api/magnification/"><strong>3.23.</strong>&nbsp;magnification</a></li><li class="toc-level-1"><a href="/camadapter/api/measure_temperature/"><strong>3.24.</strong>&nbsp;measure_temperature</a></li><li class="toc-level-1"><a href="/camadapter/api/mode/"><strong>3.25.</strong>&nbsp;mode</a></li><li class="toc-level-1"><a href="/camadapter/api/roi/"><strong>3.26.</strong>&nbsp;roi</a></li><li class="toc-level-1"><a href="/camadapter/api/scene/"><strong>3.27.</strong>&nbsp;scene</a></li><li class="toc-level-1"><a href="/camadapter/api/scene_ace/"><strong>3.28.</strong>&nbsp;scene_ace</a></li><li class="toc-level-1"><a href="/camadapter/api/scene_brightness/"><strong>3.29.</strong>&nbsp;scene_brightness</a></li><li class="toc-level-1"><a href="/camadapter/api/scene_contrast/"><strong>3.30.</strong>&nbsp;scene_contrast</a></li><li class="toc-level-1"><a href="/camadapter/api/scene_dde/"><strong>3.31.</strong>&nbsp;scene_dde</a></li><li class="toc-level-1"><a href="/camadapter/api/scene_sso/"><strong>3.32.</strong>&nbsp;scene_sso</a></li><li class="toc-level-1"><a href="/camadapter/api/shooting/"><strong>3.33.</strong>&nbsp;shooting</a></li><li class="toc-level-1"><a href="/camadapter/api/shutter/"><strong>3.34.</strong>&nbsp;shutter</a></li><li class="toc-level-1"><a href="/camadapter/api/video_format/"><strong>3.35.</strong>&nbsp;video_format</a></li><li class="toc-level-1"><a href="/camadapter/api/video_size/"><strong>3.36.</strong>&nbsp;video_size</a></li><li class="toc-level-1"><a href="/camadapter/api/white_balance/"><strong>3.37.</strong>&nbsp;white_balance</a></li><li class="toc-level-1"><a href="/camadapter/api/zenmuse/"><strong>3.38.</strong>&nbsp;zenmuse</a></li><li class="toc-level-1"><a href="/camadapter/api/zoom/"><strong>3.39.</strong>&nbsp;zoom</a></li></ol><ol class="toc-level-0"><ol class="toc-level-1"></ol></ol></ol></div></aside></main></body></html>

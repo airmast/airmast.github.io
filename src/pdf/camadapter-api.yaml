@@ -1,0 +1,6 @@
+title: CamAdapter
+subtitle: API Reference
+version: 0
+preamble: camadapter-api.rst
+entry: src/pages/camadapter/3-api
+style: stylesheet

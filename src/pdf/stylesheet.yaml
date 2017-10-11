@@ -1,0 +1,94 @@
+embeddedFonts:
+  - PTMono
+  - PTSans
+  - PTSansCaption
+  - PTSansNarrow
+  - PTSerif
+
+fontsAlias:
+  stdMono: PTM55FT
+  stdMonoItalic: PTM55FT
+  stdMonoBold: PTM55FT
+  stdMonoBoldItalic: PTM55FT
+
+pageSetup:
+  margin-top: 10mm
+  margin-bottom: 7mm
+  margin-left: 15mm
+  margin-right: 15mm
+  margin-gutter: 0cm
+  spacing-header: 5mm
+  spacing-footer: 5mm
+
+styles:
+  base:
+    kerning: true
+  normal:
+    fontName: PTSerif
+    fontSize: 12pt
+  literal:
+    fontSize: 10pt
+  code:
+    backColor: '#EEEEEE'
+    borderColor: '#EEEEEE'
+    borderWidth: 2
+    borderRadius: 4
+    borderPadding: 6
+  heading1:
+    fontSize: 36pt
+    textColor: '#72CE36'
+    fontName: PT_Sans-Narrow-Web-Bold
+  heading2:
+    fontSize: 20pt
+    fontName: PT_Sans-Narrow-Web-Bold
+  heading3:
+    fontSize: 18pt
+    fontName: PT_Sans-Narrow-Web-Regular
+  table:
+      alignment: TA_CENTER
+      margin-top: 5mm
+      margin-bottom: 5mm
+      wordWrap: null
+      commands: 
+        - [LINEABOVE, [0, 0], [-1, 0], 2.5, black]
+        - [LINEBELOW, [0, 0], [-1, 0], 2.5, '#72CE36']        
+        - [LINEBELOW, [0, -1], [-1, -1], 2.5, black]  
+        - [VALIGN, [0, 0], [-1, -1], MIDDLE ]
+        - [TOPPADDING, [0, 0], [-1, -1], 6]
+        - [BOTTOMPADDING, [0, 0], [-1, -1], 6]
+  table-heading:
+    alignment : TA_LEFT
+    backColor: '#EEEEEE'
+    fontName: PT_Sans-Web-Bold
+    fontSize: 14pt
+    valign: 
+    wordWrap: null
+  table-body:
+    backColor: white
+    wordWrap: null
+  
+  # Custom styles
+
+  option-table-2:
+    parent: table
+    colWidths: [25%, 75%]
+
+  option-table-3:
+    parent: table
+    colWidths: [25%, 20%, 55%]
+
+  parameter-table-3:
+    parent: table
+    colWidths: [25%, 15%, 60%]
+
+  parameter-table-4:
+    parent: table
+    colWidths: [25%, 15%, 20%, 40%]
+
+  request-table-2:
+    parent: table
+    colWidths: [20%, 80%]
+
+  request-table-3:
+    parent: table
+    colWidths: [20%, 60%, 20%]

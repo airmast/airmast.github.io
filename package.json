@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/airmast/airmast.github.io.git"
+    "url": "git+https://github.com/airmast/docs.git"
   },
   "license": "CC-BY-4.0",
   "dependencies": {
@@ -11,6 +11,7 @@
     "express": "^4.14.0",
     "marked": "^0.3.6",
     "pug": "^2.0.0-rc.4",
-    "uglifycss": "^0.0.25"
+    "uglifycss": "^0.0.25",
+    "js-yaml": "^3.10.0"
   }
 }
