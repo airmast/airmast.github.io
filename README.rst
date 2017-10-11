@@ -5,8 +5,6 @@ Documentation for AirMast products. Source files written on reStructuredText_ se
 
 Available on: http://docs.airmast.com
 
-|attention| **Under development, not for use.**
-
 Building 
 ========
 
@@ -69,10 +67,6 @@ All contents are licensed under `Creative Commons Attribution-NonCommercial-NoDe
 .. _rst2pdf: https://pypi.python.org/pypi/rst2pdf
 .. _svglib: https://pypi.python.org/pypi/svglib
 
-.. |attention| image:: /img/attention.svg
-    :height: 30
-    :align: middle
-    :alt: Attention
 .. |cc| image:: /img/cc.svg
    :width: 30px
    :alt: CC
