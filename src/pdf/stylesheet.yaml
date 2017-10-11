@@ -23,39 +23,51 @@ pageSetup:
 styles:
   base:
     kerning: true
+
   normal:
     fontName: PTSerif
     fontSize: 12pt
+
   literal:
     fontSize: 10pt
+
   code:
     backColor: '#EEEEEE'
     borderColor: '#EEEEEE'
     borderWidth: 2
     borderRadius: 4
     borderPadding: 6
+
+  header:
+    fontName: PT_Sans-Narrow-Web-Regular
+    fontSize: 10pt
+
   heading1:
+    fontName: PT_Sans-Narrow-Web-Bold
     fontSize: 36pt
     textColor: '#72CE36'
-    fontName: PT_Sans-Narrow-Web-Bold
+
   heading2:
-    fontSize: 20pt
     fontName: PT_Sans-Narrow-Web-Bold
+    fontSize: 20pt
+
   heading3:
-    fontSize: 18pt
-    fontName: PT_Sans-Narrow-Web-Regular
+    fontName: PT_Sans-Web-BoldItalic #PT_Sans-Narrow-Web-Regular
+    fontSize: 16pt
+
   table:
-      alignment: TA_CENTER
-      margin-top: 5mm
-      margin-bottom: 5mm
-      wordWrap: null
-      commands: 
-        - [LINEABOVE, [0, 0], [-1, 0], 2.5, black]
-        - [LINEBELOW, [0, 0], [-1, 0], 2.5, '#72CE36']        
-        - [LINEBELOW, [0, -1], [-1, -1], 2.5, black]  
-        - [VALIGN, [0, 0], [-1, -1], MIDDLE ]
-        - [TOPPADDING, [0, 0], [-1, -1], 6]
-        - [BOTTOMPADDING, [0, 0], [-1, -1], 6]
+    alignment: TA_CENTER
+    margin-top: 5mm
+    margin-bottom: 5mm
+    wordWrap: null
+    commands: 
+      - [LINEABOVE, [0, 0], [-1, 0], 2.5, black]
+      - [LINEBELOW, [0, 0], [-1, 0], 2.5, '#72CE36']        
+      - [LINEBELOW, [0, -1], [-1, -1], 2.5, black]  
+      - [VALIGN, [0, 0], [-1, -1], MIDDLE ]
+      - [TOPPADDING, [0, 0], [-1, -1], 6]
+      - [BOTTOMPADDING, [0, 0], [-1, -1], 6]
+
   table-heading:
     alignment : TA_LEFT
     backColor: '#EEEEEE'
@@ -63,11 +75,48 @@ styles:
     fontSize: 14pt
     valign: 
     wordWrap: null
+
   table-body:
     backColor: white
     wordWrap: null
+
+  toc1:
+    fontName: PT_Sans-Narrow-Web-Bold
+    fontSize: 18pt
+
+  toc2:
+    fontName: PTSerif
+    fontSize: 14pt
   
   # Custom styles
+
+  header-table:
+    colWidths: [50%, 50%]
+    commands:     
+      - [LINEBELOW, [0, -1], [-1, -1], 2.5, '#EEEEEE']
+
+  header-title:
+    fontName: PT_Sans-Web-Regular
+    fontSize: 12pt
+    alignment: right
+
+  header-section:
+    fontName: PT_Sans-Web-Bold
+    fontSize: 12pt
+
+  footer-table:
+    colWidths: [50%, 50%]
+    commands:     
+      - [LINEABOVE, [0, 0], [-1, 0], 2.5, '#72CE36']
+
+  footer-copyright:
+    fontName: PT_Sans-Narrow-Web-Regular
+    fontSize: 10pt
+
+  footer-page:
+    fontName: PT_Sans-Narrow-Web-Bold
+    fontSize: 10pt
+    alignment: right
 
   option-table-2:
     parent: table

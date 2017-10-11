@@ -1,6 +1,6 @@
 title: CamAdapter
 subtitle: Assembly Manual
 version: 0
-preamble: camadapter-assembly.rst
+include: preamble.rst
 entry: src/pages/camadapter/1-assembly
 style: stylesheet
