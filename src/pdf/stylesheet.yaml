@@ -1,3 +1,21 @@
+pageSetup:
+  margin-top: 10mm
+  margin-bottom: 7mm
+  margin-left: 15mm
+  margin-right: 15mm
+  margin-gutter: 0cm
+  spacing-header: 5mm
+  spacing-footer: 5mm
+  firstTemplate: coverPage
+
+pageTemplates:
+  coverPage:
+    margin-left: 10mm
+    margin-right: 10mm
+    frames:
+      - [0cm, 0cm, 100%, 100%]
+    background: src/pdf/cover.pdf
+
 embeddedFonts:
   - PTMono
   - PTSans
@@ -11,15 +29,6 @@ fontsAlias:
   stdMonoBold: PTM55FT
   stdMonoBoldItalic: PTM55FT
 
-pageSetup:
-  margin-top: 10mm
-  margin-bottom: 7mm
-  margin-left: 15mm
-  margin-right: 15mm
-  margin-gutter: 0cm
-  spacing-header: 5mm
-  spacing-footer: 5mm
-
 styles:
   base:
     kerning: true
@@ -27,6 +36,19 @@ styles:
   normal:
     fontName: PTSerif
     fontSize: 12pt
+
+  title:
+    fontName: PT_Sans-Web-Bold
+    fontSize: 40pt
+    alignment: right
+    spaceBefore: 5
+
+  subtitle:
+    fontName: PT_Sans-Narrow-Web-Regular
+    fontSize: 30pt
+    textColor: '#72CE36'
+    alignment: left
+    spaceBefore: 0
 
   literal:
     fontSize: 10pt
@@ -52,7 +74,7 @@ styles:
     fontSize: 20pt
 
   heading3:
-    fontName: PT_Sans-Web-BoldItalic #PT_Sans-Narrow-Web-Regular
+    fontName: PT_Sans-Web-BoldItalic
     fontSize: 16pt
 
   table:
@@ -64,9 +86,15 @@ styles:
       - [LINEABOVE, [0, 0], [-1, 0], 2.5, black]
       - [LINEBELOW, [0, 0], [-1, 0], 2.5, '#72CE36']        
       - [LINEBELOW, [0, -1], [-1, -1], 2.5, black]  
-      - [VALIGN, [0, 0], [-1, -1], MIDDLE ]
+      - [VALIGN, [0, 0], [-1, -1], MIDDLE]
       - [TOPPADDING, [0, 0], [-1, -1], 6]
       - [BOTTOMPADDING, [0, 0], [-1, -1], 6]
+      - [ROWBACKGROUNDS, [0, 1], [-1, -1], [white, '#EEEEEE']]
+
+  table-title:
+    fontName: PT_Sans-Web-BoldItalic
+    fontSize: 14pt
+    alignment: left
 
   table-heading:
     alignment : TA_LEFT
@@ -74,10 +102,6 @@ styles:
     fontName: PT_Sans-Web-Bold
     fontSize: 14pt
     valign: 
-    wordWrap: null
-
-  table-body:
-    backColor: white
     wordWrap: null
 
   toc1:
@@ -90,18 +114,65 @@ styles:
   
   # Custom styles
 
+  revision-table:
+    colWidths: [15%, 85%]
+    spaceBefore: 0
+    commands:
+      - [LINEABOVE, [0, 0], [-1, 0], 2.5, black]
+      - [LINEBELOW, [0, 0], [-1, 0], 2.5, '#72CE36']        
+      - [LINEBELOW, [0, -1], [-1, -1], 2.5, black]  
+      - [VALIGN, [0, 0], [-1, -1], TOP]
+      - [TOPPADDING, [0, 0], [-1, -1], 6]
+      - [BOTTOMPADDING, [0, 0], [-1, -1], 6]
+      - [ROWBACKGROUNDS, [0, 1], [-1, -1], [white, '#EEEEEE']]
+
+  revision-list:
+    parent: bullet-list
+    spaceBefore: 0
+    spaceAfter: 8
+
+  cover-table:
+    colWidths: [50%, 50%]
+    spaceBefore: 0
+    commands:
+      - [VALIGN, [0, 0], [-1, -1], MIDDLE]
+      - [RIGHTPADDING, [0, 0], [0, -1], 14]
+      - [LEFTPADDING, [1, 0], [1, -1], 14]
+
+  cover-version-table:
+    parent: table
+    colWidths: [50%, 10%, 40%]
+    commands:
+      - [ALIGN, [0, 0], [-1, -1], CENTER]
+      - [VALIGN, [0, 0], [-1, -1], MIDDLE]
+      - [LEFTPADDING, [1, 0], [1, -1], 20]
+      - [TOPPADDING, [0, 0], [-1, -1], 20]
+
+  cover-date:
+    fontName: PTSans-Web-Bold
+    fontSize: 10pt
+    alignment: left
+
+  cover-version:
+    parent: cover-date
+    borderWidth: 1
+    borderPadding: 5
+    borderColor: black
+    borderRadius: 5
+    alignment: center
+
   header-table:
     colWidths: [50%, 50%]
     commands:     
       - [LINEBELOW, [0, -1], [-1, -1], 2.5, '#EEEEEE']
 
   header-title:
-    fontName: PT_Sans-Web-Regular
+    fontName: PT_Sans-Web-Italic
     fontSize: 12pt
     alignment: right
 
   header-section:
-    fontName: PT_Sans-Web-Bold
+    fontName: PTSans-Web-Bold
     fontSize: 12pt
 
   footer-table:
@@ -141,3 +212,5 @@ styles:
   request-table-3:
     parent: table
     colWidths: [20%, 60%, 20%]
+
+  

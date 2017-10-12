@@ -1,6 +1,14 @@
 title: CamAdapter
 subtitle: API Reference
 version: 0
-include: preamble.rst
+preamble: preamble.rst
+cover: cover.tmpl
 entry: src/pages/camadapter/3-api
-style: stylesheet
+style: stylesheet.yaml
+
+revisions:
+  #- 1:
+  #  - Some update
+  #  - Another update
+  - 0:
+    - Initial version

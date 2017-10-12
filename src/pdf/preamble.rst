@@ -1,22 +1,33 @@
 .. header::
 
-   .. class:: header-table
+   .. list-table::
+      :class: header-table
 
-   +---------------------------+-------------------------+
-   | .. class:: header-section | .. class:: header-title |
-   |                           |                         |
-   | ###Section###             | ###Title###             |
-   +---------------------------+-------------------------+
+      * - .. class:: header-section
+
+          ###Section###
+
+        - .. class:: header-title 
+     
+          #{title} **#{subtitle}**
 
 .. footer::
 
-   .. class:: footer-table
+   .. list-table::
+      :class: footer-table
 
-   +-----------------------------------+------------------------+
-   | .. class:: footer-copyright       | .. class:: footer-page |
-   |                                   |                        |
-   | Copyright © 2017, SPH Engineering | ###Page###             |
-   +-----------------------------------+------------------------+
+      * - .. class:: footer-copyright
+
+          Copyright |copy| |year|, SPH Engineering
+
+        - .. class:: footer-page 
+     
+          ###Page###
+
+.. |copy| unicode:: 0xA9
+.. |year| date:: %Y
+
+.. include:: revisions.rst
 
 .. contents:: Table of Contents
    :depth: 2
