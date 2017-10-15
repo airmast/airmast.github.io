@@ -23,13 +23,11 @@ For generating offline (PDF) documentation:
 * Node.js_
 * rst2pdf_
 * svglib_
-* Inkscape_
 * Fonts:
-    * `PT Mono <https://fonts.google.com/specimen/PT+Mono>`__
-    * `PT Sans <https://fonts.google.com/specimen/PT+Sans>`__
-    * `PT Sans Caption <https://fonts.google.com/specimen/PT+Sans+Caption>`__
-    * `PT Sans Narrow <https://fonts.google.com/specimen/PT+Sans+Narrow>`__
-    * `PT Serif <https://fonts.google.com/specimen/PT+Serif>`__
+   - `PT Mono <https://fonts.google.com/specimen/PT+Mono>`__
+   - `PT Sans <https://fonts.google.com/specimen/PT+Sans>`__
+   - `PT Sans Narrow <https://fonts.google.com/specimen/PT+Sans+Narrow>`__
+   - `PT Serif <https://fonts.google.com/specimen/PT+Serif>`__
 
 Online (HTML)
 -------------
@@ -60,7 +58,6 @@ All contents are licensed under `Creative Commons Attribution-NonCommercial-NoDe
 
 |cc| |by| |nc| |nd|
 
-.. _Inkscape: https://inkscape.org
 .. _Node.js: https://nodejs.org/
 .. _reStructuredText: http://docutils.sourceforge.net/rst.html
 .. _rst2html5: https://pypi.python.org/pypi/rst2html5
