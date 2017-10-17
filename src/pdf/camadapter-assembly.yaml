@@ -5,3 +5,10 @@ preamble: preamble.rst
 cover: cover.tmpl
 entry: src/pages/camadapter/1-assembly
 style: stylesheet.yaml
+
+revisions:
+  #- 1:
+  #  - Some update
+  #  - Another update
+  - 0:
+    - Initial version
