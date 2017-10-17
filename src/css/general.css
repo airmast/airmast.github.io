@@ -7,10 +7,10 @@
   width: extend-to-zoom;
 }
 *,*::after,*::before {
-  box-sizing:inherit
+  box-sizing: inherit
 }
 html {
-  box-sizing:border-box
+  box-sizing: border-box
 }
 body {
   -webkit-font-feature-settings: "kern", "liga", "pnum";
@@ -107,21 +107,26 @@ a.ext {
   padding-right: 5px;
 }
 hr {
-  border-bottom:1px solid #DDD;
-  border-left:none;
-  border-right:none;
-  border-top:none;
-  margin:1.5em 0
+  border-bottom: 1px solid #DDD;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: 1.5em 0
 }
-img {
+img, figure {
   margin: 0;
   max-width: 100%;
 }
+figure {
+  text-align: center;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
 em {
-  font-style:italic
+  font-style: italic
 }
 strong {
-  font-weight:bold
+  font-weight: bold
 }
 @media only screen and (min-width: 53.75em) {
   .container {

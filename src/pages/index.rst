@@ -12,7 +12,7 @@ interface.
 
 `Read more → </camadapter/>`__
 
-.. figure:: /img/camadapter.svg
+.. figure:: /img/camadapter/camadapter.svg
    :width: 50%
    :align: center
    :alt: AirMast CamAdapter
@@ -24,7 +24,7 @@ Head
 
 `Read more → </head/>`__
 
-.. figure:: /img/head.svg
+.. figure:: /img/head/head.svg
    :width: 50%
    :align: center
    :alt: AirMast Head
