@@ -23,7 +23,7 @@ pagesTree = (dir, tree) ->
   tree
 
 pageTreeBranch = (tree, dir, level, list) ->
-  childs = []
+  children = []
   for k, v of tree
     obj =
       path: if dir? then "#{dir}/#{k}" else k
@@ -32,16 +32,16 @@ pageTreeBranch = (tree, dir, level, list) ->
       obj.src = v.index
       obj.title = getTitle obj.src
       list.push obj
-      obj.childs = pageTreeBranch v, obj.path, obj.level, list
+      obj.children = pageTreeBranch v, obj.path, obj.level, list
     else if k isnt 'index'
       obj.src = v
       obj.title = getTitle obj.src
       list.push obj
-      childs.push obj
+      children.push obj
 
-  childs
+  children
 
-pagesList = (tree, dir, level, list, childs) ->
+pagesList = (tree, dir, level, list, children) ->
   list = []
   pageTreeBranch tree, null, 0, list
   list
@@ -133,9 +133,9 @@ render = (page, pages) ->
     fs.mkdirSync page.path
   pugRender = pug.compileFile 'src/template.pug'
   pageBody = parseRst page.src
-  if page.childs? and page.childs.length > 0
+  if page.children? and page.children.length > 0
     pageBody += '<h2>Contents</h2><ul>'
-    for child in page.childs
+    for child in page.children
       pageBody += "<li><a href=\"/#{child.path}/\">#{child.title}</a></li>"
     pageBody += '</ul>'
   html = pugRender

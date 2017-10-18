@@ -8,7 +8,8 @@ article ul {
 }
 article ol {
 	list-style-type: decimal;
-	margin-bottom: 1.5em;
+  margin-bottom: 0.75em;
+  padding-left: 1.5em;
 }
 @media only screen and (min-width: 53.75em) {
   article {

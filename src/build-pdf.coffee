@@ -70,7 +70,12 @@ preprocess = (text, config) ->
     for k, v of config
       re = new RegExp("#\{#{k}\}", 'ig')
       text = text.replace re, v
-  text = text.replace /\.\.\s*\<html\>[\s\S]*\.\.\s*<\/html\>/mg, '' 
+  # Remove HTML specific code
+  text = text.replace /\.\.\s*\<html\>[\s\S]*\.\.\s*<\/html\>/mg, ''
+  # Make path to images absolute
+  text = text.replace /\s+\/img\//mg, ' ' + process.cwd() + '/img/'
+  if text.match /\s+\/img\//g
+    console.log process.cwd()
   text += '\n'
   text
 
@@ -177,5 +182,5 @@ unless fs.existsSync 'pdf'
     fs.mkdirSync 'pdf'
 
 # Documents
-#generatePdf 'camadapter-assembly'
+generatePdf 'camadapter-assembly'
 generatePdf 'camadapter-api'

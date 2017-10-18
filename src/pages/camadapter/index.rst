@@ -6,7 +6,7 @@ gimbals. CamAdapter allows to control gimbal and camera using embedded
 web-application via browser as well as via API requests. Also CamAdapter
 implements video streaming from camera by Ethernet.
 
-.. figure:: /img/camadapter.svg
+.. figure:: /img/camadapter/camadapter.svg
    :width: 50%
    :align: center
    :alt: AirMast CamAdapter
@@ -35,8 +35,6 @@ Supported Gimbals
 +-------------------+----------------+--------------+-----------------+------------+
 | Z30               | Yes            | Yes          | Partially       | Yes        |
 +-------------------+----------------+--------------+-----------------+------------+
-
-
 
 Getting Started
 ---------------
