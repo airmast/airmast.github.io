@@ -53,11 +53,21 @@ script:
   - ls pdf
   - git diff
   - git status
+# Build finished
+  - |
+    if [ -n {TRAVIS_TAG+1} ]; then
+      VER=`echo $TRAVIS_TAG | sed -r "s/v?(.*)/\1/"`
+      echo Version is $VER
+      export VER
+      zip -j airmast-docs-${VER}.zip ./pdf/*
+    fi
 
-#deploy:
-#  provider: releases
-#  api_key: $GITHUB_TOKEN
-#  file:
-#  - ${TRAVIS_BUILD_DIR}/pdf/camadapter-api-v0.pdf
-#  skip_cleanup: true 
+deploy:
+  provider: releases
+  api_key: $GITHUB_TOKEN
+  file:
+  - ${TRAVIS_BUILD_DIR}/airmast-docs-${VER}.zip
+  skip_cleanup: true 
+  on:
+    tags: true
     
