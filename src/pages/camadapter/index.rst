@@ -43,6 +43,32 @@ The device is assumed to be assembled by the user. Here you will find all requir
 
 Documentation consists of:
 
--  `Assembly instructions </camadapter/assembly/>`__
--  `Software installation </camadapter/software/>`__
--  `API Reference </camadapter/api/>`__
+Assembly instructions
+~~~~~~~~~~~~~~~~~~~~~
+
+*  |html| `HTML </camadapter/assembly/>`__
+*  |pdf| `PDF <https://github.com/airmast/airmast.github.io/releases/download/r0/camadapter-assembly-v0.pdf>`__ **V0** *(18.10.2017)*
+
+Software installation
+~~~~~~~~~~~~~~~~~~~~~
+
+*  |html| `HTML </camadapter/software/>`__
+
+API Reference
+~~~~~~~~~~~~~
+
+*  |html| `HTML </camadapter/api/>`__
+*  |pdf| `PDF <https://github.com/airmast/airmast.github.io/releases/download/r0/camadapter-api-v0.pdf>`__ **V0** *(18.10.2017)*
+
+
+.. |html| image:: /img/html.svg
+   :height: 30px
+   :align: middle
+   :class: icon
+   :alt: HTML
+
+.. |pdf| image:: /img/pdf.svg
+   :height: 30px
+   :align: middle
+   :class: icon
+   :alt: PDF

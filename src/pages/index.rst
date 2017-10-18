@@ -1,7 +1,16 @@
 Documentation
 =============
 
-Here you will find the documentation for main AirMast products.
+Here you will find online documentation for main AirMast products.
+
+|pdf| Documentation in PDF format is available here: https://github.com/airmast/airmast.github.io/releases/latest
+
+.. |pdf| image:: /img/pdf.svg
+   :height: 30px
+   :align: middle
+   :class: icon
+   :alt: PDF
+   
 
 CamAdapter
 ----------

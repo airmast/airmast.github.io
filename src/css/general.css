@@ -122,6 +122,9 @@ figure {
   margin-top: 1.5em;
   margin-bottom: 1.5em;
 }
+img.icon {
+  vertical-align: middle;
+}
 em {
   font-style: italic
 }
