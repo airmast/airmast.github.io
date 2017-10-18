@@ -11,7 +11,7 @@ matrix:
     sudo: required
 install:
 # Install required packages
-  - pip install rst2html5
+  - sudo pip install rst2html5
   - sudo pip install rst2pdf
   - sudo pip install svglib
   - npm install js-yaml
