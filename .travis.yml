@@ -53,7 +53,28 @@ script:
   - ls pdf
   - git diff
   - git status
-# Build finished
+# Push back if changes detected
+  - |
+    echo Check for git changes...
+    if git diff-index --no-ext-diff --name-only --exit-code HEAD ./camadapter ./index.html ./css ./head; then
+        echo No changes detected
+    else
+        echo Detected changes
+        echo This commit message is
+        echo ${TRAVIS_COMMIT_MESSAGE}
+        if [[ ${TRAVIS_COMMIT_MESSAGE} != *"norepush"* ]]; then
+          echo Pushing changes back...
+          git config --global user.email "travis@travis-ci.org"
+          git config --global user.name "Travis CI"
+          git commit -a -m "Travis automatic commit (__norepush__)"
+          git remote add origin-pages https://${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG} > /dev/null 2>&1
+          git push --quiet --set-upstream origin-pages
+          echo Pushing finished
+        else
+          echo Looks like it was a travis automatic commit. Don't push back.
+        fi
+    fi
+# Create zip archive for deploy
   - |
     if [ -n {TRAVIS_TAG+1} ]; then
       VER=`echo $TRAVIS_TAG | sed -r "s/v?(.*)/\1/"`

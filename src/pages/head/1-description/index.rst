@@ -1,4 +1,4 @@
 Description
 ===========
 
-*Coming soon.*
+*Coming soon...*
