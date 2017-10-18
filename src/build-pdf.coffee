@@ -23,7 +23,7 @@ pagesTree = (dir, tree) ->
   tree
 
 pageTreeBranch = (tree, dir, level, list) ->
-  childs = []
+  children = []
   for k, v of tree
     obj =
       path: if dir? then "#{dir}/#{k}" else k
@@ -32,16 +32,16 @@ pageTreeBranch = (tree, dir, level, list) ->
       obj.src = v.index
       obj.title = getTitle obj.src
       list.push obj
-      obj.childs = pageTreeBranch v, obj.path, obj.level, list
+      obj.children = pageTreeBranch v, obj.path, obj.level, list
     else if k isnt 'index'
       obj.src = v
       obj.title = getTitle obj.src
       list.push obj
-      childs.push obj
+      children.push obj
 
-  childs
+  children
 
-pagesList = (tree, dir, level, list, childs) ->
+pagesList = (tree, dir, level, list, children) ->
   list = []
   pageTreeBranch tree, null, 0, list
   list
@@ -73,21 +73,30 @@ preprocess = (text, config) ->
   # Remove HTML specific code
   text = text.replace /\.\.\s*\<html\>[\s\S]*\.\.\s*<\/html\>/mg, ''
   # Make path to images absolute
-  text = text.replace /\s+\/img\//mg, ' ' + process.cwd() + '/img/'
-  if text.match /\s+\/img\//g
-    console.log process.cwd()
+  text = text.replace /((figure|image)::\S*\s+)(\/img\/[\w\/-]+\.(jpg|jpeg|png))/mig, "$1#{process.cwd()}$3"
   text += '\n'
   text
+
+#
+# Remove files
+#
+removeFiles = (fileList) ->
+  for fileName in fileList
+    if fs.existsSync fileName
+      console.log "Removing '#{fileName}'"
+      fs.unlinkSync fileName
 
 #
 # Generate output PDF file
 #
 generatePdf = (name) ->
+  generated = []
   config = loadYaml("#{SRC_DIR}/#{name}.yaml")
   # Cover process
   if config.cover?
     coverTmpl = "#{DST_DIR}/#{config.cover}"
     console.log "Generating '#{coverTmpl}'"
+    generated.push coverTmpl
     fd = fs.openSync coverTmpl, 'w'
     fs.writeSync fd, preprocess(fs.readFileSync("#{SRC_DIR}/#{config.cover}").toString(), config)
     fs.closeSync fd
@@ -97,6 +106,7 @@ generatePdf = (name) ->
   fd = fs.openSync revisionsRst, 'w'
   if config.revisions?
     console.log "Generating '#{revisionsRst}'"
+    generated.push revisionsRst
     fs.writeSync     fd, '.. list-table:: Revision History\n'
     fs.writeSync     fd, '   :header-rows: 1\n'
     fs.writeSync     fd, '   :widths: 15 85\n'
@@ -122,12 +132,14 @@ generatePdf = (name) ->
     styleJson = "#{DST_DIR}/#{baseName}.json"
     style = loadYaml(styleYaml)
     console.log "Generating '#{styleJson}'"
+    generated.push styleJson
     fd = fs.openSync styleJson, 'w'
     fs.writeSync fd, JSON.stringify style
     fs.closeSync fd
 
   # Start to create big merged source RST
   mergedRst = "#{DST_DIR}/#{name}-v#{config.version}.rst"
+  generated.push mergedRst
   fd = fs.openSync mergedRst, 'w'
 
   # Add title and subtitle
@@ -146,32 +158,51 @@ generatePdf = (name) ->
 
   # Add content from source RSTs
   tree = pagesTree config.entry
+  pages = []
   if tree.index?
-    fs.writeSync fd, preprocess(fs.readFileSync(tree.index).toString())
-  pages = pagesList tree
+    pages.push { src: tree.index }
+  pages = pages.concat pagesList(tree)
   for page in pages
-    fs.writeSync fd, preprocess(fs.readFileSync(page.src).toString())
+    text = preprocess(fs.readFileSync(page.src).toString())
+    svgRegExp = /((figure|image)::\S*\s+)\/(img\/[\w\/-]+\.svg)/mig
+    svgs = []
+    while cap = svgRegExp.exec(text)
+      svgName = cap[3]
+      unless fs.existsSync svgName
+        console.warning "File '#{svgName}' doesn't exist"
+      svgPdf = "#{DST_DIR}/#{svgName.replace /[\\\/]/g, '-'}.pdf"
+      svgs.push { src: svgName, dst: svgPdf}
+      
+      console.log "Generating '#{svgPdf}'"
+      generated.push svgPdf
+      try
+        child_process.execSync "inkscape -z -A #{svgPdf} #{process.cwd()}/#{svgName}"
+      catch e
+        console.error e.Error
+        removeFiles generated
+        process.exit 1
+
+    for svg in svgs
+      text = text.replace "/#{svg.src}","#{process.cwd()}/#{svg.dst}"
+     
+    fs.writeSync fd, text
   fs.closeSync fd
 
   # Generate PDF
   outputPdf = "#{DST_DIR}/#{name}-v#{config.version}.pdf"
   console.log "Generating '#{outputPdf}'"
-  command = 'rst2pdf --config=rst2pdf.conf -e dotted_toc --fit-background-mode=scale'
+  command = 'rst2pdf --config=rst2pdf.conf -e dotted_toc --fit-background-mode=scale --repeat-table-rows'
   if config.style? then command += " -s #{styleJson}"
-  #if config.cover? then command += " --custom-cover=#{process.cwd()}/#{SRC_DIR}/#{config.cover}"
   command += " #{mergedRst} -o #{outputPdf}"
   try
     child_process.execSync(command)
   catch e
     console.error e.Error
+    removeFiles generated
     process.exit 1
 
   # Clean up
-  console.log "Cleaning up"
-  fs.unlinkSync mergedRst
-  fs.unlinkSync revisionsRst
-  if config.style? then fs.unlinkSync styleJson
-  if config.cover? then fs.unlinkSync coverTmpl
+  removeFiles generated
   
 #
 # Main

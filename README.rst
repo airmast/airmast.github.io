@@ -24,6 +24,7 @@ For generating offline (PDF) documentation:
 * rst2pdf_
 * svglib_
 * js-yaml_
+* Inkscape_
 * Fonts:
    - `PT Mono <https://fonts.google.com/specimen/PT+Mono>`__
    - `PT Sans <https://fonts.google.com/specimen/PT+Sans>`__
@@ -59,6 +60,7 @@ All contents are licensed under `Creative Commons Attribution-NonCommercial-NoDe
 
 |cc| |by| |nc| |nd|
 
+.. _Inkscape: https://inkscape.org/
 .. _Node.js: https://nodejs.org/
 .. _reStructuredText: http://docutils.sourceforge.net/rst.html
 .. _rst2html5: https://pypi.python.org/pypi/rst2html5
