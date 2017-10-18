@@ -45,7 +45,7 @@ install:
   - rm -r PTMono PTSans PTSerif
 
 script:
-  - git checkout master
+  - git checkout -b master
   - ls
   - ls /usr/share/fonts
   - make html
