@@ -9,14 +9,12 @@ matrix:
   - os: linux
     dist: trusty
     sudo: required
-before_install:
-  - sudo apt-get update -qq
 install:
 # Install required packages
   - sudo apt-get install -y inkscape
-  - sudo pip install rst2html5
-  - sudo pip install rst2pdf
-  - sudo pip install svglib
+  - sudo -H pip install rst2html5
+  - sudo -H pip install rst2pdf
+  - sudo -H pip install svglib
 # Install fonts
   - wget https://www.paratype.com/uni/public/PTSans.zip
   - wget https://www.paratype.com/uni/public/PTSerif.zip
