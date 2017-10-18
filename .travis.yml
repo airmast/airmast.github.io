@@ -9,12 +9,14 @@ matrix:
   - os: linux
     dist: trusty
     sudo: required
+before_install:
+  - sudo apt-get update -qq
 install:
 # Install required packages
+  - sudo apt-get install -y inkscape
   - sudo pip install rst2html5
   - sudo pip install rst2pdf
   - sudo pip install svglib
-  - npm install js-yaml
 # Install fonts
   - wget https://www.paratype.com/uni/public/PTSans.zip
   - wget https://www.paratype.com/uni/public/PTSerif.zip
@@ -77,20 +79,12 @@ script:
           echo Looks like it was a travis automatic commit. Don\'t push back.
         fi
     fi
-# Create zip archive for deploy
-  - |
-    if [ -n "${TRAVIS_TAG}" ]; then
-      VER=`echo $TRAVIS_TAG | sed -r "s/v?(.*)/\1/"`
-      echo Version is $VER
-      export VER
-      zip -j airmast-docs-${VER}.zip ./pdf/*
-    fi
 
 deploy:
   provider: releases
   api_key: $GITHUB_TOKEN
-  file:
-  - ${TRAVIS_BUILD_DIR}/airmast-docs-${VER}.zip
+  file_glob: true
+  file: pdf/*
   skip_cleanup: true 
   on:
     tags: true
