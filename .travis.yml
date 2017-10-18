@@ -45,6 +45,7 @@ install:
   - rm -r PTMono PTSans PTSerif
 
 script:
+  - git checkout master
   - ls
   - ls /usr/share/fonts
   - make html
@@ -70,7 +71,7 @@ script:
           git config --global user.name "Travis CI"
           git commit -a -m "Travis automatic commit (__norepush__)"
           git remote add origin-pages https://${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG} > /dev/null 2>&1
-          git push --quiet --set-upstream origin-pages master
+          git push --quiet origin-pages master
           echo Pushing finished
         else
           echo Looks like it was a travis automatic commit. Don\'t push back.
@@ -78,7 +79,7 @@ script:
     fi
 # Create zip archive for deploy
   - |
-    if [ -n ${TRAVIS_TAG+1} ]; then
+    if [ -n "${TRAVIS_TAG}" ]; then
       VER=`echo $TRAVIS_TAG | sed -r "s/v?(.*)/\1/"`
       echo Version is $VER
       export VER
