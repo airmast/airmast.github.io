@@ -36,9 +36,9 @@ install:
   - mv PTSerif/PTF76F.ttf PTSerif/PT_Serif-Web-BoldItalic.ttf
   - cp PTMono/PTM55F.ttf PTMono/PTM55FT.ttf
 # Copy fonts
-  - cp PTSans/*.ttf ~/.local/share/fonts/
-  - cp PTSerif/*.ttf ~/.local/share/fonts/
-  - cp PTMono/*.ttf ~/.local/share/fonts/
+  - cp PTSans/*.ttf /usr/share/fonts/
+  - cp PTSerif/*.ttf /usr/share/fonts/
+  - cp PTMono/*.ttf /usr/share/fonts/
   - fc-cache -f -v
 # Clean-up
   - rm PTSans.zip PTMono.zip PTSerif.zip
