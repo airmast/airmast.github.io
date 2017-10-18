@@ -1,0 +1,62 @@
+language: node_js
+
+node_js:
+  - "node"
+
+matrix:
+  fast_finish: true
+  include:
+  - os: linux
+    dist: trusty
+    sudo: required
+install:
+# Install required packages
+  - pip install rst2html5
+  - sudo pip install rst2pdf
+  - sudo pip install svglib
+  - npm install js-yaml
+# Install fonts
+  - wget https://www.paratype.com/uni/public/PTSans.zip
+  - wget https://www.paratype.com/uni/public/PTSerif.zip
+  - wget https://www.paratype.com/uni/public/PTMono.zip
+  - unzip PTSans.zip -d PTSans
+  - unzip PTSerif.zip -d PTSerif
+  - unzip PTMono.zip -d PTMono
+  - ls
+# Rename fonts
+  - mv PTSans/PTN57F.ttf PTSans/PT_Sans-Narrow-Web-Regular.ttf
+  - mv PTSans/PTN77F.ttf PTSans/PT_Sans-Narrow-Web-Bold.ttf
+  - mv PTSans/PTS55F.ttf PTSans/PT_Sans-Web-Regular.ttf
+  - mv PTSans/PTS56F.ttf PTSans/PT_Sans-Web-Italic.ttf
+  - mv PTSans/PTS75F.ttf PTSans/PT_Sans-Web-Bold.ttf
+  - mv PTSans/PTS76F.ttf PTSans/PT_Sans-Web-BoldItalic.ttf
+  - mv PTSerif/PTF55F.ttf PTSerif/PT_Serif-Web-Regular.ttf
+  - mv PTSerif/PTF56F.ttf PTSerif/PT_Serif-Web-Italic.ttf
+  - mv PTSerif/PTF75F.ttf PTSerif/PT_Serif-Web-Bold.ttf
+  - mv PTSerif/PTF76F.ttf PTSerif/PT_Serif-Web-BoldItalic.ttf
+  - cp PTMono/PTM55F.ttf PTMono/PTM55FT.ttf
+# Copy fonts
+  - cp PTSans/*.ttf ~/.local/share/fonts/
+  - cp PTSerif/*.ttf ~/.local/share/fonts/
+  - cp PTMono/*.ttf ~/.local/share/fonts/
+  - fc-cache -f -v
+# Clean-up
+  - rm PTSans.zip PTMono.zip PTSerif.zip
+  - rm -r PTMono PTSans PTSerif
+
+script:
+  - ls
+  - ls ~/.local/share/fonts
+  - make html
+  - make pdf
+  - ls
+  - ls pdf
+  - git diff
+
+#deploy:
+#  provider: releases
+#  api_key: $GITHUB_TOKEN
+#  file:
+#  - ${TRAVIS_BUILD_DIR}/pdf/camadapter-api-v0.pdf
+#  skip_cleanup: true 
+    
