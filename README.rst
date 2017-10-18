@@ -1,3 +1,7 @@
+.. image:: https://travis-ci.org/airmast/airmast.github.io.svg?branch=master
+   :target: https://travis-ci.org/airmast/airmast.github.io
+   :alt: Travis CI Build Status
+
 Documentation
 =============
 
