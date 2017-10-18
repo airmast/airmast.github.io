@@ -46,12 +46,13 @@ install:
 
 script:
   - ls
-  - ls ~/.local/share/fonts
+  - ls /usr/share/fonts
   - make html
   - make pdf
   - ls
   - ls pdf
   - git diff
+  - git status
 
 #deploy:
 #  provider: releases
