@@ -186,6 +186,11 @@ generatePdf = (name) ->
       text = text.replace "/#{svg.src}","#{process.cwd()}/#{svg.dst}"
      
     fs.writeSync fd, text
+
+  # Add final
+  if config.final?
+    fs.writeSync fd, preprocess(fs.readFileSync("#{SRC_DIR}/#{config.final}").toString(), config)
+
   fs.closeSync fd
 
   # Generate PDF

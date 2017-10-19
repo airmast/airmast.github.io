@@ -79,8 +79,6 @@ styles:
 
   table:
     alignment: TA_CENTER
-    margin-top: 5mm
-    margin-bottom: 5mm
     wordWrap: null
     commands: 
       - [LINEABOVE, [0, 0], [-1, 0], 2.5, black]
@@ -213,4 +211,26 @@ styles:
     parent: table
     colWidths: [20%, 60%, 20%]
 
-  
+  final-table:
+    parent: table
+    colWidths: [70%, 30%]
+    spaceAfter: 0
+    commands:
+      - [VALIGN, [0, 0], [-1, -1], TOP]
+      - [LEFTPADDING, [ 0, 0 ], [ -1, -1 ], 0]
+      - [RIGHTPADDING, [ 0, 0 ], [ -1, -1 ], 0]
+      - [TOPPADDING, [ 0, 0 ], [ -1, -1 ], 0]
+      - [BOTTOMPADDING, [ 0, 0 ], [ -1, -1 ], 0]
+
+  final-left:
+    fontName: PTSans-Web-Bold
+    fontSize: 12pt
+
+  final-right:
+    parent: final-left
+    alignment: right
+
+  final-center:
+    parent: final-left
+    alignment: center
+    spaceAfter: 24
