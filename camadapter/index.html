@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en"><head><title>CamAdapter</title><meta name="viewport" content="initial-scale=1"><link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" sizes="16x16 32x32 48x48"><link href="/css/airmast.min.css" rel="stylesheet"></head><body><div class="nav-main"><div class="navbar"><a class="nav-home" href="/"><img class="nav-logo" src="/img/logo.svg" height="65"><strong>AirMast</strong> Documentation</a><div class="nav-lists"><ul class="nav-site nav-site-internal"><li class="nav-site-internal-element--current"><a href="/camadapter">CamAdapter</a></li><li><a href="/head">Head</a></li></ul></div><div class="nav-lists nav-right"><ul class="nav-site nav-site-internal"><li><a href="http://airmast.com/">Back to main site</a></li></ul><ul class="nav-site nav-site-external"><li><a href="https://github.com/airmast/airmast.github.io">GitHub</a></li></ul></div></div></div><main class="container"><article class="chapter"><div class="toc-toggle" id="top"><a href="#toc">Table of Contents</a></div><div class="contents">
     <h1>CamAdapter</h1>
-    <p>AirMast CamAdapter is a device for using with DJI Zenmuse series gimbals. CamAdapter allows to control gimbal and camera using embedded web-application via browser as well as via API requests. Also CamAdapter implements video streaming from camera by Ethernet.</p>
+    <p>AirMast CamAdapter is a device for operating with DJI Zenmuse series gimbals via Ethernet interface. CamAdapter allows to control gimbal and camera using embedded web-application via browser as well as via API requests. Also CamAdapter implements video streaming from camera by TCP/IP.</p>
     <figure align="center">
         <img src="/img/camadapter/camadapter.svg" alt="AirMast CamAdapter" width="50%" />
     </figure>
@@ -82,6 +82,116 @@
                 </tr>
             </tbody>
         </table>
+    </section>
+    <section id="specifications">
+        <h2>Specifications</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <td colspan="2"><strong>General Specifications</strong></td>
+                </tr>
+                <tr>
+                    <td>Dimensions (case only)</td>
+                    <td><strong>185 x 150 x 20 mm</strong></td>
+                </tr>
+                <tr>
+                    <td>Dimensions (without gimbal, with ears and spacers)</td>
+                    <td><strong>211 x 180 x 35 mm</strong></td>
+                </tr>
+                <tr>
+                    <td>Weight (without gimbal)</td>
+                    <td><strong>360 g</strong></td>
+                </tr>
+                <tr>
+                    <td>Operating temperature</td>
+                    <td><strong>0° to 40°C</strong></td>
+                </tr>
+                <tr>
+                    <td>Storage temperature</td>
+                    <td><strong>−20° to 60°C</strong></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><strong>Electrical Specifications</strong></td>
+                </tr>
+                <tr>
+                    <td>Power voltage</td>
+                    <td><strong>24V (6S) nom.</strong></td>
+                </tr>
+                <tr>
+                    <td>Power consumption</td>
+                    <td><strong>50W max.</strong></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><strong>Embedded Computer Specifications</strong></td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td><strong>NVIDIA Jetson TK1</strong></td>
+                </tr>
+                <tr>
+                    <td>CPU</td>
+                    <td><strong>NVIDIA Tegra K1 (quad-core ARM Cortex-A15)</strong></td>
+                </tr>
+                <tr>
+                    <td>Frequency</td>
+                    <td><strong>2.07 GHz max.</strong></td>
+                </tr>
+                <tr>
+                    <td>RAM</td>
+                    <td><strong>2 GB</strong></td>
+                </tr>
+                <tr>
+                    <td>eMMC</td>
+                    <td><strong>16 GB</strong></td>
+                </tr>
+                <tr>
+                    <td>Ethernet</td>
+                    <td><strong>1 Gbit/s</strong></td>
+                </tr>
+                <tr>
+                    <td>OS</td>
+                    <td><strong>Linux (Ubuntu 14.04 LTS)</strong></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><strong>Video Stream Specifications</strong></td>
+                </tr>
+                <tr>
+                    <td>Format</td>
+                    <td><strong>H.264 (without keyframes)</strong></td>
+                </tr>
+                <tr>
+                    <td>Protocol</td>
+                    <td><strong>TCP</strong></td>
+                </tr>
+                <tr>
+                    <td>Embedded preview</td>
+                    <td><strong>WebP</strong></td>
+                </tr>
+                <tr>
+                    <td>Resolution (depends on camera model)</td>
+                    <td><strong>1280x720 max.</strong></td>
+                </tr>
+                <tr>
+                    <td>Latency (depends on player hardware)</td>
+                    <td><strong>500 ms min.</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section id="faq">
+        <h2>FAQ</h2>
+        <p>
+            <img src="/img/q.svg" align="middle" class="icon" height="25px" />
+         <strong>Which CPU CamAdapter software is compatible with?</strong></p>
+        <p>
+            <img src="/img/a.svg" align="middle" class="icon" alt="A" height="25px" />
+         <em>NVIDIA Tegra K1 at the moment.</em></p>
+        <p>
+            <img src="/img/q.svg" align="middle" class="icon" height="25px" />
+         <strong>Is it possible to output video stream through HDMI?</strong></p>
+        <p>
+            <img src="/img/a.svg" align="middle" class="icon" alt="A" height="25px" />
+         <em>Yes, by running video player on embedded computer (e.g. FFMPEG).</em></p>
     </section>
     <section id="getting-started">
         <h2>Getting Started</h2>
