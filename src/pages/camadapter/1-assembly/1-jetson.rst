@@ -1,7 +1,7 @@
 Jetson Edition
 ==============
 
-This edition of CamAdapter is based on `NVIDIA Jetson TK1 <http://www.nvidia.com/object/jetson-tk1-embedded-dev-kit.html>`_.
+This edition of CamAdapter is based on `NVIDIA Jetson TK1 <http://www.nvidia.com/object/jetson-tk1-embedded-dev-kit.html>`__.
 
 Important notice
 ----------------

@@ -1,8 +1,8 @@
 roi
 ===
 
-Set camera's region of interest
--------------------------------
+Set camera's region of interest (ROI)
+-------------------------------------
 
 .. class:: request-table-3
 

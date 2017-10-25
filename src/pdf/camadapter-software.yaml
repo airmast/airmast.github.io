@@ -1,0 +1,16 @@
+title: CamAdapter
+subtitle: Software Installation
+version: 0
+date: 25.10.2017
+preamble: preamble.rst
+final: final.rst
+cover: cover.tmpl
+entry: src/pages/camadapter/2-software
+style: stylesheet.yaml
+
+revisions:
+  #- 1:
+  #  - Some update
+  #  - Another update
+  - 0:
+    - Preliminary version

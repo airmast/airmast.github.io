@@ -14,8 +14,8 @@ Trademarks
 
 All other trademarks and registered trademarks are the property of their respective owners.
 
-License
--------
+Document License
+----------------
 
 `Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License <https://creativecommons.org/licenses/by-nc-nd/4.0/>`__
 

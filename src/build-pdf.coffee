@@ -219,4 +219,5 @@ unless fs.existsSync 'pdf'
 
 # Documents
 generatePdf 'camadapter-assembly'
+generatePdf 'camadapter-software'
 generatePdf 'camadapter-api'
