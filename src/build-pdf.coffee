@@ -74,7 +74,7 @@ preprocess = (text, config) ->
   text = text.replace /\.\.\s*\<html\>[\s\S]*\.\.\s*<\/html\>/mg, ''
   # Make path to images absolute
   text = text.replace /((figure|image)::\S*\s+)(\/img\/[\w\/-]+\.(jpg|jpeg|png))/mig, "$1#{process.cwd()}$3"
-  text += '\n'
+  text += '\n\n'
   text
 
 #
@@ -196,7 +196,7 @@ generatePdf = (name) ->
   # Generate PDF
   outputPdf = "#{DST_DIR}/#{name}-v#{config.version}.pdf"
   console.log "Generating '#{outputPdf}'"
-  command = 'rst2pdf --config=rst2pdf.conf -e dotted_toc --fit-background-mode=scale --repeat-table-rows'
+  command = 'rst2pdf --config=rst2pdf.conf -e dotted_toc --fit-background-mode=scale --repeat-table-rows --inline-footnotes'
   if config.style? then command += " -s #{styleJson}"
   command += " #{mergedRst} -o #{outputPdf}"
   try

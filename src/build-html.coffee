@@ -66,8 +66,9 @@ parseMarkdown = (src) ->
 # Parse reStructuredText files
 #
 parseRst = (src) ->
+  command = 'rst2html5'
   try
-    body = child_process.execSync('rst2html5 ' + src).toString()
+    body = child_process.execSync(command + ' ' + src).toString()
   catch e
     console.error e.Error
     process.exit 1

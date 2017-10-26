@@ -109,6 +109,16 @@ styles:
   toc2:
     fontName: PTSerif
     fontSize: 14pt
+
+  endnote:
+    colWidths: [10mm, null]
+    commands:
+      - [ALIGN, [0, 0], [0, -1], RIGHT]
+      - [VALIGN, [0, 0], [-1, -1], TOP]
+      - [TOPPADDING, [0, 0], [-1, -1], 0]
+      - [BOTTOMPADDING, [0, 0], [-1, -1], 0]
+      - [RIGHTPADDING, [0, 0], [1, -1], 0]
+
   
   # Custom styles
 
