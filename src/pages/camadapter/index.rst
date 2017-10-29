@@ -16,15 +16,15 @@ Supported Gimbals
 +===================+================+==============+=================+============+
 | X3                | Yes            | Yes          | Yes             | Yes        |
 +-------------------+----------------+--------------+-----------------+------------+
-| X4S               | Not tested     | Not tested   | No              | No         |
+| X4S               | Not tested     | No           | No              | No         |
 +-------------------+----------------+--------------+-----------------+------------+
 | X5                | Not tested     | Not tested   | No              | Not tested |
 +-------------------+----------------+--------------+-----------------+------------+
 | X5R               | Not tested     | Not tested   | No              | Not tested |
 +-------------------+----------------+--------------+-----------------+------------+
-| X5S               | Not tested     | Not tested   | No              | No         |
+| X5S               | Not tested     | No           | No              | No         |
 +-------------------+----------------+--------------+-----------------+------------+
-| X7                | Not tested     | Not tested   | No              | No         |
+| X7                | Not tested     | No           | No              | No         |
 +-------------------+----------------+--------------+-----------------+------------+
 | XT                | Yes            | Yes          | Yes             | Yes        |
 +-------------------+----------------+--------------+-----------------+------------+
@@ -112,8 +112,8 @@ Assembly instructions
 * |html| `HTML </camadapter/assembly/>`__                                                                                             
 * |pdf| `PDF <https://github.com/airmast/airmast.github.io/releases/download/r0/camadapter-assembly-v0.pdf>`__ **V0** *(18.10.2017)* 
 
-Software installation
-~~~~~~~~~~~~~~~~~~~~~
+Software User Guide
+~~~~~~~~~~~~~~~~~~~
 
 *  |html| `HTML </camadapter/software/>`__
 
