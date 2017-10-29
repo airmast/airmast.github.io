@@ -38,15 +38,73 @@ Now you may install the CamAdapter application::
 
    sudo snap install camadapterd
 
+Test whether the software installed succesfully::
+
+   camadapterd --version
+
+Before running ``camadapterd`` some final steps are to be implemented.
+
+CamAdapter Addons
+-----------------
+
+By default JetPack Linux OS image has not built-in CAN bus and GadgetFS support needed for running ``camadapterd``. Therefore one need to rebuild Linux Kernel with correspondent modules.
+
+Linuk Kernel building description is out of scope of this guide but you may download prebuild binaries here:
+
+`github.com/airmast/camadapterd/releases/download/addons/camadapter-addons.tar.gz <https://github.com/airmast/camadapterd/releases/download/addons/camadapter-addons.tar.gz>`__
+
+This package contains required kernel objects and a startup script that combine all commands mentioned below.
+
 CAN Bus Configuration
 ---------------------
 
-Before using ``camadapterd`` one should setup and configure CAN bus on Jetson TK1.
+Install drivers needed (being logged in as root user or using ``sudo``)::
 
-By default built-in default Linux OS image have not CAN bus support. In order to enable it one should build following kernel modules::
+   insmod can.ko
+   insmod can-raw.ko
+   insmod can-dev.ko 
 
-   can.ko
-   can-dev.ko
-   can-raw.ko
+Then setup CAN bus device according to its instructions.
 
- 
+* Format: **SocketCAN**
+* Bitrate: **1 000 000 bps**
+* Default device name: **can0**
+
+GadgetFS Configuration
+----------------------
+
+Install driver and setup device (being logged in as root user or using ``sudo``)::
+
+   insmod gadgetfs.ko
+   mkdir /dev/camgadget
+   mount -t gadgetfs none /dev/camgadget
+
+USB OTG Configuration
+---------------------
+
+Jetson TK1 USB OTG should be switched to Device mode::
+
+   echo 0 > /sys/devices/platform/tegra-otg/enable_host
+   echo 1 > /sys/devices/platform/tegra-otg/enable_device
+
+Usage
+-----
+
+In order to get information about available options run::
+
+   camadapterd --help
+
+By default one may run application without any parameter::
+
+   camadapterd 
+
+Open in your browser: http://192.168.0.17:8123
+
+You should see something like following:
+
+.. figure:: /img/camadapter/software/trial.png
+   :width: 85%
+   :align: center
+   :alt: CamAdapter Application Trial
+
+It is the right time to activate your copy of the application.
