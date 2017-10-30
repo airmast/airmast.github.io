@@ -169,7 +169,7 @@ generatePdf = (name) ->
     while cap = svgRegExp.exec(text)
       svgName = cap[3]
       unless fs.existsSync svgName
-        console.warning "File '#{svgName}' doesn't exist"
+        console.warn "File '#{svgName}' doesn't exist"
       svgPdf = "#{DST_DIR}/#{svgName.replace /[\\\/]/g, '-'}.pdf"
       svgs.push { src: svgName, dst: svgPdf}
       

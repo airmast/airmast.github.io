@@ -16,6 +16,7 @@ Video stream specifications:
 
 Before processing video you are likely to decode the stream. You may use `GStreamer <https://gstreamer.freedesktop.org/>`__ for that purposes::
 
-   gst-launch-1.0 tcpclientsrc host=192.168.0.17 port=9123 ! h264parse ! avdec_h264 ! xvimagesink
+   gst-launch-1.0 tcpclientsrc host=192.168.0.17 port=9123 ! h264parse ! \
+                  avdec_h264 ! xvimagesink
 
-You a free to use any processing software like `OpenCV <https://opencv.org/>`__ etc. both on host or board.
+You a free to use any processing software like `OpenCV <https://opencv.org/>`__ etc. both on the host and board.

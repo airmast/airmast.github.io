@@ -36,6 +36,10 @@ styles:
   normal:
     fontName: PTSerif
     fontSize: 12pt
+    leading: 16
+
+  bodytext:
+    spaceAfter: 5
 
   title:
     fontName: PT_Sans-Web-Bold
