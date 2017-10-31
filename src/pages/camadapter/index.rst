@@ -8,6 +8,14 @@ AirMast CamAdapter is a device for operating with DJI Zenmuse series gimbals via
    :align: center
    :alt: AirMast CamAdapter
 
+Applications
+------------
+
+* Video surveillance
+* Gimbal wired remote control
+* Computer vision
+* Gimbal demonstration
+
 Supported Gimbals
 -----------------
 
@@ -110,19 +118,20 @@ Assembly instructions
 ~~~~~~~~~~~~~~~~~~~~~
 
 * |html| `HTML </camadapter/assembly/>`__                                                                                             
-* |pdf| `PDF <https://github.com/airmast/airmast.github.io/releases/download/r0/camadapter-assembly-v0.pdf>`__ **V0** *(18.10.2017)* 
+* |pdf| `PDF <https://github.com/airmast/airmast.github.io/releases/download/r1/camadapter-assembly-v0.pdf>`__ **V0** *(18.10.2017)* 
 
 Software User Guide
 ~~~~~~~~~~~~~~~~~~~
 
-*  |html| `HTML </camadapter/software/>`__
+* |html| `HTML </camadapter/software/>`__
+* |pdf| `PDF <https://github.com/airmast/airmast.github.io/releases/download/r1/camadapter-software-v0.pdf>`__ **V0** *(31.10.2017)*
+
 
 API Reference
 ~~~~~~~~~~~~~
 
 * |html| `HTML </camadapter/api/>`__
-
-* |pdf| `PDF <https://github.com/airmast/airmast.github.io/releases/download/r0/camadapter-api-v0.pdf>`__ **V0** *(18.10.2017)*
+* |pdf| `PDF <https://github.com/airmast/airmast.github.io/releases/download/r1/camadapter-api-v0.pdf>`__ **V0** *(18.10.2017)*
 
 .. |html| image:: /img/html.svg
    :height: 30px
