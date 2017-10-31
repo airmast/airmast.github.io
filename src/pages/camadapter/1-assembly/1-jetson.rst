@@ -57,42 +57,42 @@ Step-by-step assembling
       :align: center
       :alt: NVIDIA Jetson TK1
 
-2. Remove DJI Mounting Board from bracket.
+2. Remove DJI Mounting Board from the bracket.
 
    .. figure:: /img/camadapter/assembly/dji-board.jpg
       :width: 50%
       :align: center
       :alt: DJI Mounting Board
 
-3. Mount DJI Mounting Board under bottom board using screws (holes are marked red). Pass power cable through hole marked green. Connect video and CAN-bus cables.
+3. Mount DJI Mounting Board under the bottom board using screws (holes are marked red). Pass power cable through the hole marked green. Connect video and CAN-bus cables.
 
    .. figure:: /img/camadapter/assembly/bottom-dji.svg
       :width: 50%
       :align: center
       :alt: Mounting DJI Mounting Board
 
-4. Place box part onto the bottom board then mount Jetson TK1 onto them with M3 screws and bars.
+4. Place box part onto the bottom board then mount Jetson TK1 onto them and fix with M3 screws and bars.
 
    .. figure:: /img/camadapter/assembly/bottom-jetson.svg
       :width: 50%
       :align: center
       :alt: Mounting Jetson TK1
 
-5. Insert EMUC-B202 board to mPCIe slot. Fix it with M3 screws and nuts inserting EMUC spacer between EMUC and bottom board. Connect video cable to micro-USB connector on Jetson and CAN-bus cable to top connector on EMUC-B202.
+5. Insert EMUC-B202 board to mPCIe slot. Fix it with M3 screws and nuts inserting EMUC spacer between EMUC and the bottom board. Connect video cable to micro-USB connector on Jetson and CAN-bus cable to the top connector on EMUC-B202.
 
    .. figure:: /img/camadapter/assembly/bottom-emuc.svg
       :width: 50%
       :align: center
       :alt: Mounting EMUC-B202
 
-6. Mount DC-DC onto top board using M3 screws and nuts. Solder power wires from DJI Mounting Board and input power wires to IN+/IN- pads and Jetson power cable to OUT+/OUT- pads.
+6. Mount DC-DC onto the top board and fix using M3 screws and nuts. Solder power wires from DJI Mounting Board and input power wires to **IN+/IN-** pads and Jetson power cable to **OUT+/OUT-** pads.
 
   .. figure:: /img/camadapter/assembly/top-dcdc.svg
       :width: 50%
       :align: center
       :alt: Mounting DC-DC
 
-7. Close the box with top board and fix it using M3 screws.
+7. Close the box with the top board and fix it using M3 screws.
 
 8. Fix ear boards under the bottom board inserting rubber dampeners.
 
@@ -101,5 +101,5 @@ Step-by-step assembling
 Stabilization
 -------------
 
-In order to stabilize the gimbal against drone's tilt one need to use separate AHRS device. One may use flight controller for that purposes. There is a special software which gets attitude information from autopilot and sends it to CamAdater. See `attitude-feeder
+In order to stabilize the gimbal against drone inclination one need to use separate AHRS device. One may use a flight controller for that purposes. There is a special software which gets attitude information from autopilot and sends it to CamAdater. See `attitude-feeder
 application <https://github.com/airmast/attitude-feeder>`__ for details.

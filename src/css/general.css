@@ -134,6 +134,9 @@ figure {
   margin-top: 1.5em;
   margin-bottom: 1.5em;
 }
+figcaption {
+  font-style: italic;
+}
 img.icon {
   vertical-align: middle;
 }

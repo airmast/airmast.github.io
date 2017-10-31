@@ -41,6 +41,9 @@ styles:
   bodytext:
     spaceAfter: 5
 
+  figure-caption:
+    fontName: PT_Sans-Web-Italic
+
   title:
     fontName: PT_Sans-Web-Bold
     fontSize: 40pt
@@ -108,11 +111,11 @@ styles:
 
   toc1:
     fontName: PT_Sans-Narrow-Web-Bold
-    fontSize: 18pt
+    fontSize: 16pt
 
   toc2:
     fontName: PTSerif
-    fontSize: 14pt
+    fontSize: 12pt
 
   endnote:
     colWidths: [10mm, null]

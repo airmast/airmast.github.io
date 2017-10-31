@@ -3,6 +3,12 @@ Software User Guide
 
 Thank you for purchasing the CamAdapter activation code!
 
+Be sure to read carefully and agree the `End-User License Agreement`_ before using CamAdapter application.
+
+.. <html>
+.. _`End-User License Agreement`: /camadapter/software/license/
+.. </html>
+
 In order to run the CamAdapter software, some preparations are to be implemented and prerequisites are to be met. Here required steps are described.
 
 Also you will find here useful information about activation and using web-application, processing video stream etc.
@@ -33,6 +39,6 @@ You are free to try the CamAdapter software before buy an activation code. There
    | Video stream latency         | 2...3 s       | 500 ms min.\ [2]_         |
    +------------------------------+---------------+---------------------------+
 
-.. [1] Some models support is in progress. See CamAdapter product page for details. 
+.. [1] Some models support is in progress. See `CamAdapter product page <https://airmast.github.io/camadapter/>`__ for details. 
 .. [2] Depends on end user video player and hardware. 
 

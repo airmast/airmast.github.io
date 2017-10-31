@@ -1,7 +1,7 @@
 ffc_mode
 ========
 
-Set flat-field correction mode (FFC)
+Set flat-field correction (FFC) mode
 ------------------------------------
 
 .. class:: request-table-3

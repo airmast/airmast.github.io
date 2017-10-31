@@ -1,8 +1,8 @@
 scene_dde
 =========
 
-Set digital detail enhancement (DDE)
-------------------------------------
+Set scene digital detail enhancement (DDE)
+------------------------------------------
 
 .. class:: request-table-3
 

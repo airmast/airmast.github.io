@@ -17,7 +17,7 @@ Sample Request
 
 .. code:: http
 
-    POST http://localhost:8123/api/v1/gimal/center
+    POST http://localhost:8123/api/v1/gimbal/center
 
 Sample Response
 ~~~~~~~~~~~~~~~
@@ -49,7 +49,7 @@ JSON Response
 +----------------+--------+----------------------------------------+
 |   Parameter    |  Type  |              Description               |
 +================+========+========================================+
-| **own_roll**   | number | Roll angle referenced to frame(rad)    |
+| **own_roll**   | number | Roll angle referenced to frame (rad)   |
 +----------------+--------+----------------------------------------+
 | **own_pitch**  | number | Pitch angle referenced to frame (rad)  |
 +----------------+--------+----------------------------------------+

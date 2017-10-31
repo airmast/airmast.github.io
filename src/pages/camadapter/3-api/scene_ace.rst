@@ -1,8 +1,8 @@
 scene_ace
 =========
 
-Set active contrast enhancement (ACE)
--------------------------------------
+Set scene active contrast enhancement (ACE)
+-------------------------------------------
 
 .. class:: request-table-3
 

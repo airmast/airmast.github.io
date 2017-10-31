@@ -16,9 +16,13 @@ After receiving an activation code complete several steps in order to make your 
    :align: center
    :alt: CamAdapter Activation
 
-After activation is complete main window becomes like following:
+   Application Activation
+
+After the activation is complete main window becomes like following:
 
 .. figure:: /img/camadapter/software/full.png
    :width: 85%
    :align: center
    :alt: CamAdapter Application Full
+
+   Full Version Start Page

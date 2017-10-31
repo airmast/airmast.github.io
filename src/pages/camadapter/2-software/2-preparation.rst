@@ -10,7 +10,7 @@ Become aware about Jetson TK1’s IP-address using standard access to your route
 
 We assume Ubuntu Linux is used on host computer. You may use any other host OS that supports SSH/SCP protocol and FFMPEG.
 
-In order to connect to Jetson TK1 use remote access over SSH. Default user has username ubuntu and password ubuntu. Run on host (substitute IP address with your one)::
+In order to connect to Jetson TK1 use remote access over SSH. Default user has username ``ubuntu`` and password ``ubuntu``. Run on host (substitute IP address with your one)::
 
    ssh ubuntu@192.168.0.17
 
@@ -47,9 +47,9 @@ Before running ``camadapterd`` some final steps are to be implemented.
 CamAdapter Addons
 -----------------
 
-By default JetPack Linux OS image has not built-in CAN bus and GadgetFS support needed for running ``camadapterd``. Therefore one need to rebuild Linux Kernel with correspondent modules.
+By default JetPack Linux OS image has not built-in CAN bus and GadgetFS support needed for running ``camadapterd``. Therefore, one need to rebuild Linux kernel with correspondent modules.
 
-Linuk Kernel building description is out of scope of this guide but you may download prebuild binaries here:
+Linux kernel building description is out of scope of this guide but you may download prebuild binaries here (for kernel version 3.10.40):
 
 `github.com/airmast/camadapterd/releases/download/addons/camadapter-addons.tar.gz <https://github.com/airmast/camadapterd/releases/download/addons/camadapter-addons.tar.gz>`__
 
@@ -82,7 +82,7 @@ Install driver and setup device (being logged in as root user or using ``sudo``)
 USB OTG Configuration
 ---------------------
 
-Jetson TK1 USB OTG should be switched to Device mode::
+Jetson TK1 USB OTG should be switched to Device mode (by root user)::
 
    echo 0 > /sys/devices/platform/tegra-otg/enable_host
    echo 1 > /sys/devices/platform/tegra-otg/enable_device
@@ -94,7 +94,7 @@ In order to get information about available options run::
 
    camadapterd --help
 
-By default one may run application without any parameter::
+By default one may run application without any parameter (by root user)::
 
    camadapterd 
 
@@ -106,5 +106,7 @@ You should see something like following:
    :width: 85%
    :align: center
    :alt: CamAdapter Application Trial
+
+   Trial Version Start Page
 
 It is the right time to activate your copy of the application.
