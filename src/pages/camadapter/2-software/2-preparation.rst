@@ -36,7 +36,7 @@ Firstly install `snapd <https://www.ubuntu.com/desktop/snappy>`__ if it is not y
 
 Now you may install the CamAdapter application::
 
-   sudo snap install camadapterd
+   sudo snap install camadapterd --devmode
 
 Test whether the software installed succesfully::
 

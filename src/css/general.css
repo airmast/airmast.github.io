@@ -62,6 +62,7 @@ tr,td,th {
   vertical-align: middle;
 }
 .footnote th, .footnote td {
+  vertical-align: top;
   border-width: 0;
   padding: 0.3em;
 }
