@@ -3,7 +3,7 @@ Software User Guide
 
 Thank you for purchasing the CamAdapter activation code!
 
-Be sure to read carefully and agree the `End-User License Agreement`_ before using CamAdapter application.
+Be sure to read carefully and agree to the `End-User License Agreement`_ before using CamAdapter application.
 
 .. <html>
 .. _`End-User License Agreement`: /camadapter/software/license/
@@ -13,7 +13,7 @@ In order to run the CamAdapter software, some preparations are to be implemented
 
 Also you will find here useful information about activation and using web-application, processing video stream etc.
 
-**Note:** It assumed `NVIDIA Jetson TK1 <http://www.nvidia.com/object/jetson-tk1-embedded-dev-kit.html>`__ with stock version of `JetPack <https://developer.nvidia.com/embedded/jetpack>`__ is used.
+**Note:** It assumed `NVIDIA Jetson TK1 <http://www.nvidia.com/object/jetson-tk1-embedded-dev-kit.html>`__ with the stock version of `JetPack <https://developer.nvidia.com/embedded/jetpack>`__ is used.
 
 * L4T Version: **21.5**
 * OS: **32-bit Ubuntu 14.04 LTS**
@@ -22,7 +22,7 @@ Also you will find here useful information about activation and using web-applic
 Trial vs. Full Version
 ----------------------
 
-You are free to try the CamAdapter software before buy an activation code. There are some limitations while using trial version.
+You are free to try the CamAdapter software before buying an activation code. There are some limitations while using the trial version.
 
 .. table::
    :widths: 40 30 30
@@ -40,5 +40,5 @@ You are free to try the CamAdapter software before buy an activation code. There
    +------------------------------+---------------+---------------------------+
 
 .. [1] Some models support is in progress. See `CamAdapter product page <https://airmast.github.io/camadapter/>`__ for details. 
-.. [2] Depends on end user video player and hardware. 
+.. [2] Depends on end-user video player and hardware. 
 

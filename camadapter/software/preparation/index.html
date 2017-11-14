@@ -2,10 +2,10 @@
     <h1>Preparing Embedded Computer</h1>
     <section id="initial-setup">
         <h2>Initial Setup</h2>
-        <p>Connect your Jetson TK1 to router using Ethernet cable. Router should be connected to Internet. Power up the board.</p>
-        <p>Become aware about Jetson TK1’s IP-address using standard access to your router. There is a good practice to make IP-address fixed. Let us assume IP address to be <code>192.168.0.17</code> for example.</p>
-        <p>We assume Ubuntu Linux is used on host computer. You may use any other host OS that supports SSH/SCP protocol and FFMPEG.</p>
-        <p>In order to connect to Jetson TK1 use remote access over SSH. Default user has username <code>ubuntu</code> and password <code>ubuntu</code>. Run on host (substitute IP address with your one):</p>
+        <p>Connect your Jetson TK1 to a router using Ethernet cable. The router should be connected to the Internet. Power up the board.</p>
+        <p>Become aware of Jetson TK1’s IP-address using standard access to your router. There is a good practice to make IP-address fixed. Let us assume IP address to be <code>192.168.0.17</code> for example.</p>
+        <p>We assume Ubuntu Linux is used on a host computer. You may use any other host OS that supports SSH/SCP protocol and FFMPEG.</p>
+        <p>In order to connect to Jetson TK1 use remote access over SSH. Default user has username <code>ubuntu</code> and password <code>ubuntu</code>. Run on the host (substitute IP address with your one):</p>
         <pre>ssh ubuntu@192.168.0.17</pre>
         <p>You should see something like following:</p>
         <pre>The authenticity of host '192.168.0.17 (192.168.0.17)' can't be established.
@@ -22,20 +22,20 @@ sudo apt upgrade -y</pre>
         <pre>sudo apt install snapd</pre>
         <p>Now you may install the CamAdapter application:</p>
         <pre>sudo snap install camadapterd --devmode</pre>
-        <p>Test whether the software installed succesfully:</p>
+        <p>Test whether the software installed successfully:</p>
         <pre>camadapterd --version</pre>
         <p>Before running <code>camadapterd</code> some final steps are to be implemented.</p>
     </section>
     <section id="camadapter-addons">
         <h2>CamAdapter Addons</h2>
-        <p>By default JetPack Linux OS image has not built-in CAN bus and GadgetFS support needed for running <code>camadapterd</code>. Therefore, one need to rebuild Linux kernel with correspondent modules.</p>
-        <p>Linux kernel building description is out of scope of this guide but you may download prebuild binaries here (for kernel version 3.10.40):</p>
+        <p>By default JetPack Linux OS image has not built-in CAN bus and GadgetFS support needed for running <code>camadapterd</code>. Therefore, one needs to rebuild Linux kernel with correspondent modules.</p>
+        <p>Linux kernel building description is out of the scope of this guide but you may download prebuild binaries here (for kernel version 3.10.40):</p>
         <p><a class="ext" href="https://github.com/airmast/camadapterd/releases/download/addons/camadapter-addons.tar.gz" target="_blank">github.com/airmast/camadapterd/releases/download/addons/camadapter-addons.tar.gz</a></p>
         <p>This package contains required kernel objects and a startup script that combine all commands mentioned below.</p>
     </section>
     <section id="can-bus-configuration">
         <h2>CAN Bus Configuration</h2>
-        <p>Install drivers needed (being logged in as root user or using <code>sudo</code>):</p>
+        <p>Install drivers needed (being logged in as the root user or using <code>sudo</code>):</p>
         <pre>insmod can.ko
 insmod can-raw.ko
 insmod can-dev.ko</pre>
@@ -48,7 +48,7 @@ insmod can-dev.ko</pre>
     </section>
     <section id="gadgetfs-configuration">
         <h2>GadgetFS Configuration</h2>
-        <p>Install driver and setup device (being logged in as root user or using <code>sudo</code>):</p>
+        <p>Install driver and setup device (being logged in as the root user or using <code>sudo</code>):</p>
         <pre>insmod gadgetfs.ko
 mkdir /dev/camgadget
 mount -t gadgetfs none /dev/camgadget</pre>
@@ -63,7 +63,7 @@ echo 1 &gt; /sys/devices/platform/tegra-otg/enable_device</pre>
         <h2>Usage</h2>
         <p>In order to get information about available options run:</p>
         <pre>camadapterd --help</pre>
-        <p>By default one may run application without any parameter (by root user):</p>
+        <p>By default one may run the application without any parameter (by root user):</p>
         <pre>camadapterd</pre>
         <p>Open in your browser: <a class="ext" href="http://192.168.0.17:8123" target="_blank">http://192.168.0.17:8123</a></p>
         <p>You should see something like following:</p>

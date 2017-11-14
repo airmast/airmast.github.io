@@ -21,7 +21,7 @@ CamAdapter consists of:
 * DJI Zenmuse connection: Mounting board from `Zenmuse Gimbal Mounting Bracket <http://store.dji.com/product/matrice-600-zenmuse-x3-x5-gimbal-mounting-bracket>`__
 * AHRS device: `Pixhawk <http://pixhawk.org/modules/pixhawk>`__ with ArduPilot or similar
 * DC-DC converter: LM2596 based, +12VDC, 3A output
-* M3 screws, bars and nuts
+* M3 screws, bars, and nuts
 
 Also you need to manufacture some case parts:
 
@@ -51,7 +51,7 @@ Schematic
 Step-by-step assembling
 -----------------------
 
-1. Desolder COM and audio connectors from Jetson TK1 and solder fan wires directly to receptacle in order to reduce overall board height. 
+1. Desolder COM and audio connectors from Jetson TK1 and solder fan wires directly to the receptacle in order to reduce overall board height. 
 
    .. figure:: /img/camadapter/assembly/jetson.svg
       :width: 50%
@@ -79,7 +79,7 @@ Step-by-step assembling
       :align: center
       :alt: Mounting Jetson TK1
 
-5. Insert EMUC-B202 board to mPCIe slot. Fix it with M3 screws and nuts inserting EMUC spacer between EMUC and the bottom board. Connect video cable to micro-USB connector on Jetson and CAN-bus cable to the top connector on EMUC-B202.
+5. Insert EMUC-B202 board to the mPCIe slot. Fix it with M3 screws and nuts inserting EMUC spacer between EMUC and the bottom board. Connect the video cable to micro-USB connector on Jetson and CAN-bus cable to the top connector on EMUC-B202.
 
    .. figure:: /img/camadapter/assembly/bottom-emuc.svg
       :width: 50%
@@ -102,5 +102,5 @@ Step-by-step assembling
 Stabilization
 -------------
 
-In order to stabilize the gimbal against drone inclination one need to use separate AHRS device. One may use a flight controller for that purposes. There is a special software which gets attitude information from autopilot and sends it to CamAdater. See `attitude-feeder
+In order to stabilize the gimbal against drone inclination one need to use separate AHRS device. One may use a flight controller for that purposes. There is a special software which gets attitude information from autopilot and sends it to CamAdapter. See `attitude-feeder
 application <https://github.com/airmast/attitude-feeder>`__ for details.

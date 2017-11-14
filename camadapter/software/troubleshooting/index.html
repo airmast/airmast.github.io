@@ -2,17 +2,17 @@
     <h1>Troubleshooting</h1>
     <section id="unable-to-connect-to-web-application">
         <h2>Unable to connect to web application</h2>
-        <p><strong>Solution:</strong> Check whether application is run on the board:</p>
+        <p><strong>Solution:</strong> Check whether the application is run on the board:</p>
         <pre>pgrep -a camadapterd</pre>
         <p>If you see nothing try to run it manually (by root user):</p>
         <pre>camadapterd</pre>
         <p>Check for error messages and send them to our support team.</p>
     </section>
-    <section id="gimbal-controls-does-not-work">
-        <h2>Gimbal controls does not work</h2>
+    <section id="gimbal-controls-do-not-work">
+        <h2>Gimbal controls do not work</h2>
         <p><strong>Solution:</strong> Check CAN connection on the board (<a class="ext" href="https://github.com/linux-can/can-utils" target="_blank">CAN utils</a> are to be installed):</p>
         <pre>candump can0</pre>
-        <p>You should see CAN stream. If not please contact to our support team.</p>
+        <p>You should see CAN stream. If not please contact our support team.</p>
     </section>
     <section id="there-is-a-lag-in-video-stream">
         <h2>There is a lag in video stream</h2>

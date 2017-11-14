@@ -3,7 +3,7 @@ Video Processing
 
 Firstly install `FFMPEG <https://ffmpeg.org/>`__ on your host computer.
 
-In order to view live video stream from Zenmuse camera run on host::
+In order to view live video stream from Zenmuse camera run on the host::
 
    ffplay tcp://192.168.0.17:9123 -flags2 showall -fflags nobuffer
 

@@ -1,7 +1,7 @@
 CamAdapter
 ==========
 
-AirMast CamAdapter is a device for operating with DJI Zenmuse series gimbals via Ethernet interface. CamAdapter allows to control gimbal and camera using embedded web-application via browser as well as via API requests. Also CamAdapter implements video streaming from camera by TCP/IP.
+AirMast CamAdapter is a device for operating with DJI Zenmuse series gimbals via Ethernet interface. CamAdapter allows controlling gimbal and camera using embedded web-application via browser as well as via API requests. Also, CamAdapter implements video streaming from the camera by TCP/IP.
 
 .. figure:: /img/camadapter/camadapter.svg
    :width: 50%
@@ -41,7 +41,7 @@ Supported Gimbals
 | Z30               | Yes            | Yes          | Partially       | Yes                  |
 +-------------------+----------------+--------------+-----------------+----------------------+
 
-.. [1] Photo/Video features are not available for these cameras because they do not have embedded processing unit which is moved on the drone (DJI Inspire 2, Matrice 200 Series).
+.. [1] Photo/Video features are not available for these cameras because they do not have embedded processing unit which has been moved on to the drone (DJI Inspire 2, Matrice 200 Series).
 
 Specifications
 --------------
@@ -89,7 +89,7 @@ Specifications
 +----------------------------------------+------------------------------+
 | Protocol                               | **TCP**                      |
 +----------------------------------------+------------------------------+
-| Embedded preview                       | **WebP**                     |
+| Embedded preview                       | **WebM**                     |
 +----------------------------------------+------------------------------+
 | Resolution (depends on camera model)   | **1280x720 max.**            |
 +----------------------------------------+------------------------------+
@@ -106,7 +106,7 @@ FAQ
 
 |q| **Is it possible to output video stream through HDMI?**
 
-|a| *Yes, by running video player on embedded computer (e.g. FFMPEG).*
+|a| *Yes, by running video player on the embedded computer (e.g., FFMPEG).*
 
 
 Getting Started

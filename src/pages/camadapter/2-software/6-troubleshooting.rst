@@ -4,7 +4,7 @@ Troubleshooting
 Unable to connect to web application
 ------------------------------------
 
-**Solution:** Check whether application is run on the board::
+**Solution:** Check whether the application is run on the board::
 
    pgrep -a camadapterd
 
@@ -14,14 +14,14 @@ If you see nothing try to run it manually (by root user)::
 
 Check for error messages and send them to our support team.
 
-Gimbal controls does not work
------------------------------
+Gimbal controls do not work
+---------------------------
 
 **Solution:** Check CAN connection on the board (`CAN utils <https://github.com/linux-can/can-utils>`__ are to be installed)::
 
    candump can0
 
-You should see CAN stream. If not please contact to our support team.
+You should see CAN stream. If not please contact our support team.
 
 There is a lag in video stream
 ------------------------------

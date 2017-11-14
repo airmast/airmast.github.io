@@ -5,7 +5,7 @@ You may run CamAdapter demo application in order to debug your own client softwa
 
 Demo application requires `Node.js <https://nodejs.org>`__ installed.
 
-Run in command line (``sudo`` may be required in some operating systems)::
+Run in a command line (``sudo`` may be required in some operating systems)::
 
     npm install -g camadapter-demo
 

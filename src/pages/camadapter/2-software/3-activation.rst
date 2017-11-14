@@ -1,13 +1,13 @@
 Activation
 ==========
 
-In order to get an activation code please visit `ugcs.com <http://ugcs.com>`__ web-site and purchase CamAdapter license.
+In order to get an activation code please visit `ugcs.com <http://ugcs.com>`__ website and purchase CamAdapter license.
 
 After receiving an activation code complete several steps in order to make your software copy fully functional.
 
-1. Click to the **Application** tab.
+1. Click on the **Application** tab.
 
-2. Enter the activation code to corresponding input field.
+2. Enter the activation code in the corresponding input field.
 
 3. Press the **Activate** button.
 

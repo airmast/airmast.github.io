@@ -4,13 +4,13 @@ Preparing Embedded Computer
 Initial Setup
 -------------
 
-Connect your Jetson TK1 to router using Ethernet cable. Router should be connected to Internet. Power up the board.
+Connect your Jetson TK1 to a router using Ethernet cable. The router should be connected to the Internet. Power up the board.
 
-Become aware about Jetson TK1’s IP-address using standard access to your router. There is a good practice to make IP-address fixed. Let us assume IP address to be ``192.168.0.17`` for example.
+Become aware of Jetson TK1’s IP-address using standard access to your router. There is a good practice to make IP-address fixed. Let us assume IP address to be ``192.168.0.17`` for example.
 
-We assume Ubuntu Linux is used on host computer. You may use any other host OS that supports SSH/SCP protocol and FFMPEG.
+We assume Ubuntu Linux is used on a host computer. You may use any other host OS that supports SSH/SCP protocol and FFMPEG.
 
-In order to connect to Jetson TK1 use remote access over SSH. Default user has username ``ubuntu`` and password ``ubuntu``. Run on host (substitute IP address with your one)::
+In order to connect to Jetson TK1 use remote access over SSH. Default user has username ``ubuntu`` and password ``ubuntu``. Run on the host (substitute IP address with your one)::
 
    ssh ubuntu@192.168.0.17
 
@@ -38,7 +38,7 @@ Now you may install the CamAdapter application::
 
    sudo snap install camadapterd --devmode
 
-Test whether the software installed succesfully::
+Test whether the software installed successfully::
 
    camadapterd --version
 
@@ -47,9 +47,9 @@ Before running ``camadapterd`` some final steps are to be implemented.
 CamAdapter Addons
 -----------------
 
-By default JetPack Linux OS image has not built-in CAN bus and GadgetFS support needed for running ``camadapterd``. Therefore, one need to rebuild Linux kernel with correspondent modules.
+By default JetPack Linux OS image has not built-in CAN bus and GadgetFS support needed for running ``camadapterd``. Therefore, one needs to rebuild Linux kernel with correspondent modules.
 
-Linux kernel building description is out of scope of this guide but you may download prebuild binaries here (for kernel version 3.10.40):
+Linux kernel building description is out of the scope of this guide but you may download prebuild binaries here (for kernel version 3.10.40):
 
 `github.com/airmast/camadapterd/releases/download/addons/camadapter-addons.tar.gz <https://github.com/airmast/camadapterd/releases/download/addons/camadapter-addons.tar.gz>`__
 
@@ -58,7 +58,7 @@ This package contains required kernel objects and a startup script that combine 
 CAN Bus Configuration
 ---------------------
 
-Install drivers needed (being logged in as root user or using ``sudo``)::
+Install drivers needed (being logged in as the root user or using ``sudo``)::
 
    insmod can.ko
    insmod can-raw.ko
@@ -73,7 +73,7 @@ Then setup CAN bus device according to its instructions.
 GadgetFS Configuration
 ----------------------
 
-Install driver and setup device (being logged in as root user or using ``sudo``)::
+Install driver and setup device (being logged in as the root user or using ``sudo``)::
 
    insmod gadgetfs.ko
    mkdir /dev/camgadget
@@ -94,7 +94,7 @@ In order to get information about available options run::
 
    camadapterd --help
 
-By default one may run application without any parameter (by root user)::
+By default one may run the application without any parameter (by root user)::
 
    camadapterd 
 

@@ -1,7 +1,7 @@
 Web-application
 ===============
 
-Gimbal and camera control are accesible both by API and web-application.
+Gimbal and camera control are accessible both by API and web-application.
 
 The main objective of web-application is to check DJI Zenmuse operation and to demonstrate API capabilities.
 
@@ -19,7 +19,7 @@ Features
 Change Zenmuse Model
 --------------------
 
-When started the application automatically detects connected gimbal and opens correspondent page. But gimbal model may be overriden manually in **Application** section.
+When started the application automatically detects connected gimbal and opens the correspondent page. But gimbal model may be overridden manually in the **Application** section.
 
 .. figure:: /img/camadapter/software/zenmuse-model.svg
    :width: 85%
@@ -28,7 +28,7 @@ When started the application automatically detects connected gimbal and opens co
 
    Gimbal Model Choosing
 
-**Note:** In order to simulate various gimbals in ``camadapter-demo`` one should manually switch Zenmuse model in **Application** section.
+**Note:** In order to simulate various gimbals in ``camadapter-demo`` one should manually switch Zenmuse model in the **Application** section.
 
 Gimbal Control
 --------------
@@ -111,7 +111,7 @@ General camera control allows to set date and time (which will be written to res
 Camera Settings
 ---------------
 
-Camera settings section depends on model of camera. They allow to set individual parameters of the camera. 
+Camera settings section depends on a model of camera. They allow setting individual parameters of the camera. 
 
 The badge near to the parameter name shows the actual value. One may change the value using controls. Changes are applied immediately.
 
