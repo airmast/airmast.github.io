@@ -14,7 +14,7 @@ html(lang="en")
           | <strong>AirMast</strong> Documentation
         .nav-lists
           ul.nav-site.nav-site-internal
-            - var items = {camadapter : 'CamAdapter', head : 'Head'}
+            - var items = {camadapter : 'CamAdapter', head : 'Head Unit'}
             for name,item in items
               li(class=section == item ? 'nav-site-internal-element--current' : '')
                 a(href='/'+item)= name

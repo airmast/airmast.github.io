@@ -24,14 +24,14 @@ CamAdapter
    :align: center
    :alt: AirMast CamAdapter
 
-Head
-----
+Head Unit
+---------
 
-**AirMast Head** is an electronic unit for the tethered drone.
+**AirMast Head Unit** is an electronic unit for the tethered drone.
 
 `Read more → </head/>`__
 
 .. figure:: /img/head/head.svg
    :width: 50%
    :align: center
-   :alt: AirMast Head
+   :alt: AirMast Head Unit
