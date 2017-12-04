@@ -34,6 +34,8 @@ You are free to try the CamAdapter software before buying an activation code. Th
    +------------------------------+---------------+---------------------------+
    | Photo/video shooting support | No            | Yes                       |
    +------------------------------+---------------+---------------------------+
+   | Storage management           | No            | Coming soon               |
+   +------------------------------+---------------+---------------------------+
    | Watermark on video stream    | Yes           | No                        |
    +------------------------------+---------------+---------------------------+
    | Video stream latency         | 2...3 s       | 500 ms min.\ [2]_         |

@@ -38,10 +38,11 @@ Supported Gimbals
 +-------------------+----------------+--------------+-----------------+----------------------+
 | Z3                | Yes            | Yes          | Yes             | Yes                  |
 +-------------------+----------------+--------------+-----------------+----------------------+
-| Z30               | Yes            | Yes          | Partially       | Yes                  |
+| Z30\ [2]_         | Yes            | Yes          | Partially       | Yes                  |
 +-------------------+----------------+--------------+-----------------+----------------------+
 
 .. [1] Photo/Video features are not available for these cameras because they do not have embedded processing unit which has been moved on to the drone (DJI Inspire 2, Matrice 200 Series).
+.. [2] **DJI Zenmuse Z30** is supported using a `special adapter <https://www.adorama.com/djiz30gam600.html>`__. Note that the current hardware design does not suppose this adapter to be mounted. One needs to develop a custom design in order to connect Z30.
 
 Specifications
 --------------

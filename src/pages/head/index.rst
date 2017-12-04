@@ -14,4 +14,3 @@ Features
 * Built-in 5-channel 100 Mbit Ethernet switch
 * Power outlet for connecting additional payload
 * Battery and flight controller heating
-* 
