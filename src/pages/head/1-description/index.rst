@@ -1,4 +1,0 @@
-Description
-===========
-
-*Coming soon...*

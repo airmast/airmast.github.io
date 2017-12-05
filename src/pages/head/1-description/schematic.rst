@@ -1,4 +1,0 @@
-Schematic
-=========
-
-*Coming soon.*
