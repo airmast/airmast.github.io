@@ -6,7 +6,7 @@ This edition of CamAdapter is based on `NVIDIA Jetson TK1 <http://www.nvidia.com
 Important notice
 ----------------
 
-* The software is compatible **only with NVIDIA K1** platform at the moment.
+* The software is compatible **only with NVIDIA Tegra K1** platform at the moment.
 * This version of CamAdapter supports **DJI Zenmuse X3/X5/X5R/XT/Z3 only.**
 * **DJI Zenmuse Z30** is supported using a `special adapter <https://www.adorama.com/djiz30gam600.html>`__. Note that the current hardware design does not suppose this adapter to be mounted. One needs to develop a custom design in order to connect Z30.
 * Tested with **DJI Zenmuse X3/XT/Z3**. 

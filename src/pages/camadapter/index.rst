@@ -24,25 +24,20 @@ Supported Gimbals
 +===================+================+==============+=================+======================+
 | X3                | Yes            | Yes          | Yes             | Yes                  |
 +-------------------+----------------+--------------+-----------------+----------------------+
-| X4S\ [1]_         | Not tested     | No           | No              | No                   |
-+-------------------+----------------+--------------+-----------------+----------------------+
 | X5                | Not tested     | Not tested   | Partially       | Not tested           |
 +-------------------+----------------+--------------+-----------------+----------------------+
 | X5R               | Not tested     | Not tested   | Partially       | Not tested           |
-+-------------------+----------------+--------------+-----------------+----------------------+
-| X5S\ [1]_         | Not tested     | No           | No              | No                   |
-+-------------------+----------------+--------------+-----------------+----------------------+
-| X7\ [1]_          | Not tested     | No           | No              | No                   |
 +-------------------+----------------+--------------+-----------------+----------------------+
 | XT                | Yes            | Yes          | Yes             | Yes                  |
 +-------------------+----------------+--------------+-----------------+----------------------+
 | Z3                | Yes            | Yes          | Yes             | Yes                  |
 +-------------------+----------------+--------------+-----------------+----------------------+
-| Z30\ [2]_         | Yes            | Yes          | Partially       | Yes                  |
+| Z30\ [1]_         | Yes            | Yes          | Partially       | Yes                  |
 +-------------------+----------------+--------------+-----------------+----------------------+
 
-.. [1] Photo/Video features are not available for these cameras because they do not have embedded processing unit which has been moved on to the drone (DJI Inspire 2, Matrice 200 Series).
-.. [2] **DJI Zenmuse Z30** is supported using a `special adapter <https://www.adorama.com/djiz30gam600.html>`__. Note that the current hardware design does not suppose this adapter to be mounted. One needs to develop a custom design in order to connect Z30.
+.. [1] **DJI Zenmuse Z30** is supported using a `special adapter <https://www.adorama.com/djiz30gam600.html>`__. Note that the current hardware design does not suppose this adapter to be mounted. One needs to develop a custom design in order to connect Z30.
+
+**Zenmuse X4S, X5S, X7** cameras not supported because they do not have embedded processing unit which has been moved on to the drone (DJI Inspire 2, Matrice 200 Series).
 
 Specifications
 --------------
@@ -152,7 +147,7 @@ API Reference
    :height: 25px
    :align: middle
    :class: icon
-   :alt: 
+   :alt: Q
    
 .. |a| image:: /img/a.svg
    :height: 25px

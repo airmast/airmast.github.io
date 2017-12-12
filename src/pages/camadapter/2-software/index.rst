@@ -30,17 +30,14 @@ You are free to try the CamAdapter software before buying an activation code. Th
    +------------------------------+---------------+---------------------------+
    |           Feature            | Trial Version |       Full Version        |
    +==============================+===============+===========================+
-   | Supported DJI Zenmuse        | X3 only       | X3/X5/X5R/XT/Z3/Z30\ [1]_ |
-   +------------------------------+---------------+---------------------------+
    | Photo/video shooting support | No            | Yes                       |
    +------------------------------+---------------+---------------------------+
    | Storage management           | No            | Coming soon               |
    +------------------------------+---------------+---------------------------+
    | Watermark on video stream    | Yes           | No                        |
    +------------------------------+---------------+---------------------------+
-   | Video stream latency         | 2...3 s       | 500 ms min.\ [2]_         |
+   | Video stream latency         | 2...3 s       | 500 ms min.\ [1]_         |
    +------------------------------+---------------+---------------------------+
 
-.. [1] Some models support is in progress. See `CamAdapter product page <https://airmast.github.io/camadapter/>`__ for details. 
-.. [2] Depends on end-user video player and hardware. 
+.. [1] Depends on end-user video player and hardware. 
 
