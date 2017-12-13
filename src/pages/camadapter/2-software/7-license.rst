@@ -3,22 +3,20 @@ End-User License Agreement
 
 **NOTICE TO END-USER: PLEASE READ THESE TERMS AND CONDITIONS CAREFULLY. BY INSTALLING AND/OR OTHERWISE USING ALL OR ANY PART OF THE SOFTWARE AS DEFINED HEREIN YOU ACCEPT AND UNDERTAKE TO BE BOUND BY ALL THE TERMS AND CONDITIONS OF THIS AGREEMENT IF YOU DO NOT AGREE, DO NOT USE THIS SOFTWARE.**
 
-This End User Software License Agreement (the "Agreement") is entered into between You as the person purchasing a license to use the Software and whose details are contained below (the "End-User" or "You"), and Smart Projects Holding, Ltd., a company organized and existing under the laws of the Republic of Malta, with offices located at 85 St. John Street, Valletta, Malta (the "Licensor");
+This End User Software License Agreement (the "Agreement") is entered into between You as the person purchasing a license to use the Software and whose details are contained below (the "End-User" or "You"), and SIA SPH Engineering, a company organized and existing under the laws of the Latvian Republic, with offices located at Daugavgrivas 140, Aerodrome "Spilve", Riga, Latvia (the "Licensor");
 
 1. Grant of License.
 --------------------
 
 **1a.** Subject to the terms of this Agreement, the Licensor grants You a limited, personal, non-exclusive, non-transferable, non-sublicensable license to use the Software as provided herein, solely for using the Software according with its documentation (the "License").
 
-**1b.** Each License allows You to install Software on two (2) different Computers and allows one (1) user at a time. Use of the Software by two or more users requires a separate License for each such user. 
+**1b.** Each License allows You to install Software on one (1) camera adapter and allows one (1) user at a time. Use of the Software by two or more users requires a separate License for each such user. 
 
-**1c.** For network deployment of the Software each user connected to the same Software's server requires to have same Licence Type.
+**1c.** The End-User acknowledges that updates may be licensed by the Licensor with additional or distinct terms and conditions. 
 
-**1d.** The End-User acknowledges that updates may be licensed by the Licensor with additional or distinct terms and conditions. 
+**1d.** The License given pursuant to this Agreement is without prejudice to any additional user policies, rules or instructions which may be supplied with the Software or published by the Licensor from time to time. The End-User hereby agrees to comply with all such policies, rules or instructions and failure to do so shall be deemed to be a material breach of this Agreement.
 
-**1e.** The License given pursuant to this Agreement is without prejudice to any additional user policies, rules or instructions which may be supplied with the Software or published by the Licensor from time to time. The End-User hereby agrees to comply with all such policies, rules or instructions and failure to do so shall be deemed to be a material breach of this Agreement.
-
-**1f.** The Licensor reserves the right to amend the terms of the License given to the End-User pursuant to this Agreement. Continued Use of the Software by the End-User following the date of notification by the Licensor of the new terms shall be deemed to be an acceptance by the End-User of the new terms. The new terms shall supersede the terms of the original License and shall thereafter be deemed to be binding and enforceable.
+**1e.** The Licensor reserves the right to amend the terms of the License given to the End-User pursuant to this Agreement. Continued Use of the Software by the End-User following the date of notification by the Licensor of the new terms shall be deemed to be an acceptance by the End-User of the new terms. The new terms shall supersede the terms of the original License and shall thereafter be deemed to be binding and enforceable.
 
 2. Other Rights and Limitations.
 --------------------------------
@@ -59,7 +57,7 @@ Notwithstanding anything stated herein to the contrary, the Licensor's cumulativ
 8. Governing Law.
 -----------------
 
-This Agreement shall be governed by and construed in accordance with the English law and the United Kingdom Courts shall have the exclusive jurisdiction over all disputes relating to this Agreement.
+This Agreement shall be governed by and construed in accordance with the Latvian law and the Latvian Republic Courts shall have the exclusive jurisdiction over all disputes relating to this Agreement.
 
 9. Miscellaneous Provisions.
 ----------------------------
@@ -71,10 +69,10 @@ If any Clause of this Agreement, or part thereof, is deemed to be null, void and
 
 For the purpose of this Agreement the following terms shall have the following meaning:
 
+"Camera adapter" means and refers to any embedded computing platform that aims to control gimbal and camera.
+
 "Computer" means and refers to any programmable electronic device or technical mechanism or terminal that, amongst other things, accepts, reads and/or utilizes information in digital or similar form and converts or otherwise manipulates it for a specific result based on a sequence of instructions and/or which may respond to new instructions which it is given.
 
 "Software" means and includes all the software, all documentation and other computer information (whether stored on disk, read only memory or any other media) with which this Agreement is provided including any modified versions, updates, upgrades and additions which may become available from the Licensor to the End-User.
 
-"Use" or "Using" means and refers to any and all access, installation, running, download, copy, transfer, sharing, uploading or any other type of benefit from or use of the Software and its functionality and any other utilization, operation, manipulation or interfacing of the Software. 
-
-"License Type" means variation of License which allows End-User to use different set of Software's functionality.
+"Use" or "Using" means and refers to any and all access, installation, running, download, copy, transfer, sharing, uploading or any other type of benefit from or use of the Software and its functionality and any other utilization, operation, manipulation or interfacing of the Software.
