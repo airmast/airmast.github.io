@@ -1,7 +1,7 @@
 Activation
 ==========
 
-In order to get an activation code please visit `ugcs.com <http://ugcs.com>`__ website and purchase CamAdapter license.
+In order to get an activation code, please visit the `CamAdapter section on ugcs.com <https://www.ugcs.com/en/page/airmast-camadapter>`__ and purchase CamAdapter license.
 
 After receiving an activation code complete several steps in order to make your software copy fully functional.
 
