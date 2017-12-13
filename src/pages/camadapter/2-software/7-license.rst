@@ -3,7 +3,7 @@ End-User License Agreement
 
 **NOTICE TO END-USER: PLEASE READ THESE TERMS AND CONDITIONS CAREFULLY. BY INSTALLING AND/OR OTHERWISE USING ALL OR ANY PART OF THE SOFTWARE AS DEFINED HEREIN YOU ACCEPT AND UNDERTAKE TO BE BOUND BY ALL THE TERMS AND CONDITIONS OF THIS AGREEMENT IF YOU DO NOT AGREE, DO NOT USE THIS SOFTWARE.**
 
-This End User Software License Agreement (the "Agreement") is entered into between You as the person purchasing a license to use the Software and whose details are contained below (the "End-User" or "You"), and SIA SPH Engineering, a company organized and existing under the laws of the Latvian Republic, with offices located at Daugavgrivas 140, Aerodrome "Spilve", Riga, Latvia (the "Licensor");
+This End User Software License Agreement (the "Agreement") is entered into between You as the person purchasing a license to use the Software and whose details are contained below (the "End-User", "User" or "You"), and SPH Engineering, a company organized and existing under the laws of the Latvian Republic, with legal address Dzirnavu iela 62-9, Riga, LV-1050, Latvia (the "Licensor");
 
 1. Grant of License.
 --------------------
@@ -57,7 +57,7 @@ Notwithstanding anything stated herein to the contrary, the Licensor's cumulativ
 8. Governing Law.
 -----------------
 
-This Agreement shall be governed by and construed in accordance with the Latvian law and the Latvian Republic Courts shall have the exclusive jurisdiction over all disputes relating to this Agreement.
+This Agreement shall be governed by and construed in accordance with the legislation of Latvia and the Courts of Republic of Latvia shall have the exclusive jurisdiction over all disputes relating to this Agreement.
 
 9. Miscellaneous Provisions.
 ----------------------------
