@@ -24,7 +24,8 @@ html(lang="en")
               a(href='http://airmast.com/') Back to main site
           ul.nav-site.nav-site-external
             li
-              a(href='https://github.com/airmast/airmast.github.io') GitHub
+              - var gitHubLink = 'https://github.com/airmast/airmast.github.io/tree/master/' + src
+              a(href=gitHubLink) GitHub
 
     main.container
       article.chapter

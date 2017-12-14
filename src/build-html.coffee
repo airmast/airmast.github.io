@@ -156,6 +156,7 @@ render = (page, pages) ->
   html = pugRender
     section: SECTION_REGEX.exec(page.path)[1]
     title: page.title
+    src: page.src
     body: pageBody
     toc: tableOfContents page, pages
   fd = fs.openSync "#{page.path}/index.html", 'w'
