@@ -25,7 +25,7 @@ Document License
 
 .. class:: final-center
 
-Latest documentation is available on `docs.airmast.com <http://docs.airmast.com>`__
+Latest documentation is available on `doc.airma.st <http://doc.airma.st>`__
 
 .. list-table::
    :class: final-table

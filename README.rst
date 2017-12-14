@@ -7,7 +7,7 @@ Documentation
 
 Documentation for AirMast products. Source files written on reStructuredText_ serve both for online (HTML) and offline (PDF) documentation.
 
-Available on: http://docs.airmast.com
+Available on: http://doc.airma.st
 
 Building 
 ========
