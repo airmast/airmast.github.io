@@ -39,6 +39,10 @@ pageTreeBranch = (tree, dir, level, list) ->
       list.push obj
       children.push obj
 
+  for v, i in children
+    if i then v.previous = children[i-1]
+    if children[i+1]? then v.next = children[i+1]
+
   children
 
 pagesList = (tree, dir, level, list, children) ->
@@ -139,6 +143,16 @@ render = (page, pages) ->
     for child in page.children
       pageBody += "<li><a href=\"/#{child.path}/\">#{child.title}</a></li>"
     pageBody += '</ul>'
+
+  if page.previous? or page.next?  
+    pageBody += '<br/><center>'
+    if page.previous?
+      pageBody += "<a href=\"/#{page.previous.path}/\">← #{page.previous.title}</a>"
+      if page.next? then pageBody += ' | '
+    if page.next?
+      pageBody += "<a href=\"/#{page.next.path}/\">#{page.next.title} →</a>"
+    pageBody += '</center>'
+
   html = pugRender
     section: SECTION_REGEX.exec(page.path)[1]
     title: page.title
