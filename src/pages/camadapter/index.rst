@@ -116,20 +116,20 @@ Assembly instructions
 ~~~~~~~~~~~~~~~~~~~~~
 
 * |html| `HTML </camadapter/assembly/>`__                                                                                             
-* |pdf| `PDF <https://github.com/airmast/airmast.github.io/releases/download/r1/camadapter-assembly-v0.pdf>`__ **V0** *(18.10.2017)* 
+* |pdf| `PDF <https://github.com/airmast/airmast.github.io/releases/download/r2/camadapter-assembly-v1.pdf>`__ **V1** *(15.12.2017)* 
 
 Software User Guide
 ~~~~~~~~~~~~~~~~~~~
 
 * |html| `HTML </camadapter/software/>`__
-* |pdf| `PDF <https://github.com/airmast/airmast.github.io/releases/download/r1/camadapter-software-v0.pdf>`__ **V0** *(31.10.2017)*
+* |pdf| `PDF <https://github.com/airmast/airmast.github.io/releases/download/r2/camadapter-software-v1.pdf>`__ **V1** *(15.12.2017)*
 
 
 API Reference
 ~~~~~~~~~~~~~
 
 * |html| `HTML </camadapter/api/>`__
-* |pdf| `PDF <https://github.com/airmast/airmast.github.io/releases/download/r1/camadapter-api-v0.pdf>`__ **V0** *(18.10.2017)*
+* |pdf| `PDF <https://github.com/airmast/airmast.github.io/releases/download/r2/camadapter-api-v1.pdf>`__ **V1** *(15.12.2017)*
 
 .. |html| image:: /img/html.svg
    :height: 30px
