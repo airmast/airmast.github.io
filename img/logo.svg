@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg id="svg4171" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="310mm" width="310mm" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
- <metadata id="metadata4209">
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="1323.3" width="926.2" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <metadata>
   <rdf:RDF>
    <cc:Work rdf:about="">
     <dc:format>image/svg+xml</dc:format>
@@ -9,15 +9,27 @@
    </cc:Work>
   </rdf:RDF>
  </metadata>
- <g id="g4189" transform="translate(177.16 347.22)">
-  <path id="path4191" d="m159.54 95.73v0" stroke="#000" stroke-linecap="round" fill="none"/>
-  <path id="path4195" d="m212.64 201.95v0" stroke="#000" stroke-linecap="round" fill="none"/>
-  <path id="path4193" d="m478.36 95.73h-212.62l-53.1 106.22-53.1-106.22 212.4-425.32 212.62 425.32-53.1 106.22-53.12-106.18"/>
+ <desc>/home/syakupov/devel/airmast/www/airmast.github.io/img/logo2.dxf - scale = 88.920317, origin = (0.394205, 0.393420), method = auto</desc>
+ <g transform="translate(132.48 200.72)">
+  <path d="m66.096 328.68v0" stroke="#000" stroke-linecap="round" fill="none"/>
+  <path fill="#373737" d="m462.95 328.68h-264.66l-66.1 132.22-66.094-132.22 264.38-529.4 264.66 529.4-66.1 132.22-66.12-132.17"/>
+  <path d="m132.19 460.9v0" stroke="#000" stroke-linecap="round" fill="none"/>
+  <path fill="#373737" d="m727.62 1122.5-66.39-132.2h-264.38l-66.37 132.2-66.1-132.2h-264.4l-66.367 132.2-66.093-132.2 264.67-529.4 198.29 396.92 198.56-396.92 264.68 529.4z"/>
  </g>
- <g id="layer1" transform="translate(177.16 347.22)">
-  <path id="path4197" d="m690.99 733.49-53.336-106.23h-212.4l-53.319 106.23-53.101-106.23h-212.42l-53.31 106.23-53.1-106.23 212.64-425.31 159.3 318.88 159.52-318.88 212.63 425.31-53.1 106.23z"/>
+ <g transform="translate(132.48 200.72)">
+  <path fill="#f60" d="m198.29 328.68-66.1 132.22 198.29 396.92 198.56-396.92-66.12-132.17z"/>
  </g>
- <g id="g4199" transform="translate(177.16 347.22)">
-  <path id="path4201" fill="#f60" d="m265.74 95.73-53.1 106.22 159.3 318.88 159.52-318.88-53.12-106.18-212.6-0.04z"/>
+ <g opacity=".25" transform="translate(-.559 -1.1186)">
+  <path d="m463.59 1059.6 132.4-529.18h-264.66z" fill="#fc0"/>
+ </g>
+ <g transform="translate(132.48 200.72)" fill="#191919">
+  <path d="m330.48-200.72 0.0696 264.56 198.49 397.06 66.093-132.22z"/>
+  <path d="m529.04 460.9 0.0696 264.56 198.49 397.06 66.093-132.22z"/>
+  <path d="m132.19 460.9 0.0696 264.56 198.49 397.06l-0.20696-264.8z"/>
+ </g>
+ <g transform="translate(132.48 200.72)" fill="#282828">
+  <path d="m330.55 63.841 132.4 264.84h-264.66z"/>
+  <path d="m529.11 725.46 132.4 264.84h-264.66z"/>
+  <path d="m132.26 725.46 132.4 264.84h-264.66z"/>
  </g>
 </svg>
