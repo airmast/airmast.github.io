@@ -97,11 +97,6 @@
 	vertical-align:middle;
 	display:inline-block
 }
-@media only screen and (max-width: 53.75em) {
-	.nav-main .nav-logo {
-		width: 3em;
-	}
-}
 .nav-main ul {
 	display: inline-block;
 	vertical-align: top;
