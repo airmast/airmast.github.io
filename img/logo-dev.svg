@@ -29,12 +29,12 @@
      id="namedview42"
      showgrid="false"
      inkscape:zoom="0.17834202"
-     inkscape:cx="159.36172"
+     inkscape:cx="131.3257"
      inkscape:cy="1106.0131"
      inkscape:window-x="55"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer3" />
+     inkscape:current-layer="layer1" />
   <metadata
      id="metadata2">
     <rdf:RDF>
@@ -56,13 +56,13 @@
      style="display:inline">
     <path
        transform="translate(132.48,200.72)"
-       style="fill:#4b4b4b;fill-opacity:1"
+       style="fill:#646464;fill-opacity:1"
        d="M 462.95,328.68 H 198.29 l -66.1,132.22 -66.094,-132.22 264.38,-529.4 264.66,529.4 -66.1,132.22 -66.12,-132.17"
        id="path8"
        inkscape:connector-curvature="0" />
     <path
        transform="translate(132.48,200.72)"
-       style="fill:#4b4b4b;fill-opacity:1"
+       style="fill:#646464;fill-opacity:1"
        d="M 727.62,1122.5 661.23,990.3 H 396.85 l -66.37,132.2 -66.1,-132.2 H -0.02 L -66.387,1122.5 -132.48,990.3 132.19,460.9 330.48,857.82 529.04,460.9 793.72,990.3 Z"
        id="path12"
        inkscape:connector-curvature="0" />
@@ -77,21 +77,21 @@
        d="M 330.476,-200.72 462.95,328.681 H 198.29 Z"
        id="path32"
        inkscape:connector-curvature="0"
-       style="fill:#323232;fill-opacity:1"
+       style="fill:#3c3c3c;fill-opacity:1"
        sodipodi:nodetypes="cccc" />
     <path
        transform="translate(132.48,200.72)"
        d="M 529.036,460.9 661.51,990.3 H 396.85 Z"
        id="path34"
        inkscape:connector-curvature="0"
-       style="fill:#323232;fill-opacity:1"
+       style="fill:#3c3c3c;fill-opacity:1"
        sodipodi:nodetypes="cccc" />
     <path
        transform="translate(132.48,200.72)"
        d="M 132.19,460.9 264.66,990.3 H 0 Z"
        id="path36"
        inkscape:connector-curvature="0"
-       style="fill:#323232;fill-opacity:1"
+       style="fill:#3c3c3c;fill-opacity:1"
        sodipodi:nodetypes="cccc" />
   </g>
   <g
@@ -104,14 +104,14 @@
        d="M 330.48,-200.72 462.951,328.5814 529.0396,460.9 595.1326,328.68 Z"
        id="path24"
        inkscape:connector-curvature="0"
-       style="fill:#191919;fill-opacity:1"
+       style="fill:#141414;fill-opacity:1"
        sodipodi:nodetypes="ccccc" />
     <path
        transform="translate(132.48,200.72)"
        d="m 529.04,460.9 132.47,529.4 66.0896,132.22 66.093,-132.22 z"
        id="path26"
        inkscape:connector-curvature="0"
-       style="fill:#191919;fill-opacity:1"
+       style="fill:#141414;fill-opacity:1"
        sodipodi:nodetypes="ccccc" />
     <path
        transform="translate(132.48,200.72)"
