@@ -16,33 +16,18 @@ install:
   - sudo -H pip install rst2pdf
   - sudo -H pip install svglib
 # Install fonts
-  - wget https://www.paratype.com/uni/public/PTSans.zip
-  - wget https://www.paratype.com/uni/public/PTSerif.zip
-  - wget https://www.paratype.com/uni/public/PTMono.zip
-  - unzip PTSans.zip -d PTSans
-  - unzip PTSerif.zip -d PTSerif
-  - unzip PTMono.zip -d PTMono
-  - ls
-# Rename fonts
-  - mv PTSans/PTN57F.ttf PTSans/PT_Sans-Narrow-Web-Regular.ttf
-  - mv PTSans/PTN77F.ttf PTSans/PT_Sans-Narrow-Web-Bold.ttf
-  - mv PTSans/PTS55F.ttf PTSans/PT_Sans-Web-Regular.ttf
-  - mv PTSans/PTS56F.ttf PTSans/PT_Sans-Web-Italic.ttf
-  - mv PTSans/PTS75F.ttf PTSans/PT_Sans-Web-Bold.ttf
-  - mv PTSans/PTS76F.ttf PTSans/PT_Sans-Web-BoldItalic.ttf
-  - mv PTSerif/PTF55F.ttf PTSerif/PT_Serif-Web-Regular.ttf
-  - mv PTSerif/PTF56F.ttf PTSerif/PT_Serif-Web-Italic.ttf
-  - mv PTSerif/PTF75F.ttf PTSerif/PT_Serif-Web-Bold.ttf
-  - mv PTSerif/PTF76F.ttf PTSerif/PT_Serif-Web-BoldItalic.ttf
-  - mv PTMono/PTM55F.ttf PTMono/PTM55FT.ttf
-# Copy fonts
-  - sudo cp PTSans/*.ttf /usr/share/fonts/
-  - sudo cp PTSerif/*.ttf /usr/share/fonts/
-  - sudo cp PTMono/*.ttf /usr/share/fonts/
+  - wget https://github.com/google/fonts/raw/master/ofl/ptmono/PTM55FT.ttf -P /usr/share/fonts/
+  - wget https://github.com/google/fonts/raw/master/ofl/ptsans/PT_Sans-Web-Bold.ttf -P /usr/share/fonts/
+  - wget https://github.com/google/fonts/raw/master/ofl/ptsans/PT_Sans-Web-BoldItalic.ttf -P /usr/share/fonts/
+  - wget https://github.com/google/fonts/raw/master/ofl/ptsans/PT_Sans-Web-Italic.ttf -P /usr/share/fonts/
+  - wget https://github.com/google/fonts/raw/master/ofl/ptsans/PT_Sans-Web-Regular.ttf -P /usr/share/fonts/
+  - wget https://github.com/google/fonts/raw/master/ofl/ptsansnarrow/PT_Sans-Narrow-Web-Bold.ttf -P /usr/share/fonts/
+  - wget https://github.com/google/fonts/raw/master/ofl/ptsansnarrow/PT_Sans-Narrow-Web-Regular.ttf -P /usr/share/fonts/
+  - wget https://github.com/google/fonts/raw/master/ofl/ptserif/PT_Serif-Web-Bold.ttf -P /usr/share/fonts/
+  - wget https://github.com/google/fonts/raw/master/ofl/ptserif/PT_Serif-Web-BoldItalic.ttf -P /usr/share/fonts/
+  - wget https://github.com/google/fonts/raw/master/ofl/ptserif/PT_Serif-Web-Italic.ttf -P /usr/share/fonts/
+  - wget https://github.com/google/fonts/raw/master/ofl/ptserif/PT_Serif-Web-Regular.ttf -P /usr/share/fonts/
   - fc-cache -f -v
-# Clean-up
-  - rm PTSans.zip PTMono.zip PTSerif.zip
-  - rm -r PTMono PTSans PTSerif
 
 script:
   - git checkout $TRAVIS_BRANCH
@@ -83,7 +68,7 @@ deploy:
   api_key: $GITHUB_TOKEN
   file_glob: true
   file: pdf/*
-  skip_cleanup: true 
+  skip_cleanup: true
   on:
     tags: true
-    
+
