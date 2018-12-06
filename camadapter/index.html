@@ -1,231 +1,233 @@
 <!DOCTYPE html><html lang="en"><head><title>CamAdapter</title><meta name="viewport" content="initial-scale=1"><link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" sizes="16x16 32x32 48x48"><link href="/css/airmast.min.css" rel="stylesheet"></head><body><div class="nav-main"><div class="navbar"><a class="nav-home" href="/"><img class="nav-logo" src="/img/logo.svg" height="65"><strong>AirMast</strong> Documentation</a><div class="nav-lists"><ul class="nav-site nav-site-internal"><li class="nav-site-internal-element--current"><a href="/camadapter">CamAdapter</a></li><li><a href="/head">Head Unit</a></li></ul></div><div class="nav-lists nav-right"><ul class="nav-site nav-site-internal"><li><a href="http://airmast.com/">Back to main site</a></li></ul><ul class="nav-site nav-site-external"><li><a href="https://github.com/airmast/airmast.github.io/tree/master/src/pages/camadapter/index.rst">GitHub</a></li></ul></div></div></div><main class="container"><article class="chapter"><div class="toc-toggle" id="top"><a href="#toc">Table of Contents</a></div><div class="contents">
-    <h1>CamAdapter</h1>
-    <p>AirMast CamAdapter is a device for operating with DJI Zenmuse series gimbals via Ethernet interface. CamAdapter allows controlling gimbal and camera using embedded web-application via browser as well as via API requests. Also, CamAdapter implements video streaming from the camera by TCP/IP.</p>
-    <figure align="center">
-        <img src="/img/camadapter/camadapter.svg" alt="AirMast CamAdapter" width="50%" />
-    </figure>
-    <section id="applications">
-        <h2>Applications</h2>
-        <ul>
-            <li>Video surveillance</li>
-            <li>Gimbal wired remote control</li>
-            <li>Computer vision</li>
-            <li>Gimbal demonstration</li>
-        </ul>
-    </section>
-    <section id="supported-gimbals">
-        <h2>Supported Gimbals</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>DJI Zenmuse Model</th>
-                    <th>Gimbal control</th>
-                    <th>Video stream</th>
-                    <th>Camera settings</th>
-                    <th>Photo/Video Shooting</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>X3</td>
-                    <td>Yes</td>
-                    <td>Yes</td>
-                    <td>Yes</td>
-                    <td>Yes</td>
-                </tr>
-                <tr>
-                    <td>X5</td>
-                    <td>Not tested</td>
-                    <td>Not tested</td>
-                    <td>Partially</td>
-                    <td>Not tested</td>
-                </tr>
-                <tr>
-                    <td>X5R</td>
-                    <td>Not tested</td>
-                    <td>Not tested</td>
-                    <td>Partially</td>
-                    <td>Not tested</td>
-                </tr>
-                <tr>
-                    <td>XT</td>
-                    <td>Yes</td>
-                    <td>Yes</td>
-                    <td>Yes</td>
-                    <td>Yes</td>
-                </tr>
-                <tr>
-                    <td>Z3</td>
-                    <td>Yes</td>
-                    <td>Yes</td>
-                    <td>Yes</td>
-                    <td>Yes</td>
-                </tr>
-                <tr>
-                    <td>Z30<a href="#id2" id="id1" class="footnote_reference">1</a></td>
-                    <td>Yes</td>
-                    <td>Yes</td>
-                    <td>Partially</td>
-                    <td>Yes</td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="footnote" id="id2">
-            <tbody>
-                <tr>
-                    <th>1</th>
-                    <td><strong>DJI Zenmuse Z30</strong> is supported using a <a class="ext" href="https://www.adorama.com/djiz30gam600.html" target="_blank">special adapter</a>. Note that the current hardware design does not suppose this adapter to be mounted. One needs to develop a custom design in order to connect Z30.</td>
-                </tr>
-            </tbody>
-        </table>
-        <p><strong>Zenmuse X4S, X5S, X7</strong> cameras not supported because they do not have embedded processing unit which has been moved on to the drone (DJI Inspire 2, Matrice 200 Series).</p>
-    </section>
-    <section id="specifications">
-        <h2>Specifications</h2>
-        <table>
-            <tbody>
-                <tr>
-                    <td colspan="2"><strong>General Specifications</strong></td>
-                </tr>
-                <tr>
-                    <td>Dimensions (case only)</td>
-                    <td><strong>185 x 150 x 20 mm</strong></td>
-                </tr>
-                <tr>
-                    <td>Dimensions (without gimbal, with ears and spacers)</td>
-                    <td><strong>211 x 180 x 35 mm</strong></td>
-                </tr>
-                <tr>
-                    <td>Weight (without gimbal)</td>
-                    <td><strong>360 g</strong></td>
-                </tr>
-                <tr>
-                    <td>Operating temperature</td>
-                    <td><strong>−10° to +40°C</strong></td>
-                </tr>
-                <tr>
-                    <td>Storage temperature</td>
-                    <td><strong>−20° to +60°C</strong></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><strong>Electrical Specifications</strong></td>
-                </tr>
-                <tr>
-                    <td>Power voltage</td>
-                    <td><strong>16V to 48V</strong></td>
-                </tr>
-                <tr>
-                    <td>Power consumption</td>
-                    <td><strong>50W max.</strong></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><strong>Embedded Computer Specifications</strong></td>
-                </tr>
-                <tr>
-                    <td>Name</td>
-                    <td><strong>NVIDIA Jetson TK1</strong></td>
-                </tr>
-                <tr>
-                    <td>CPU</td>
-                    <td><strong>NVIDIA Tegra K1 (quad-core ARM Cortex-A15)</strong></td>
-                </tr>
-                <tr>
-                    <td>Frequency</td>
-                    <td><strong>2.07 GHz max.</strong></td>
-                </tr>
-                <tr>
-                    <td>RAM</td>
-                    <td><strong>2 GB</strong></td>
-                </tr>
-                <tr>
-                    <td>eMMC</td>
-                    <td><strong>16 GB</strong></td>
-                </tr>
-                <tr>
-                    <td>Ethernet</td>
-                    <td><strong>1 Gbit/s</strong></td>
-                </tr>
-                <tr>
-                    <td>OS</td>
-                    <td><strong>Linux (Ubuntu 14.04 LTS)</strong></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><strong>Video Stream Specifications</strong></td>
-                </tr>
-                <tr>
-                    <td>Format</td>
-                    <td><strong>H.264 (without keyframes)</strong></td>
-                </tr>
-                <tr>
-                    <td>Protocol</td>
-                    <td><strong>TCP</strong></td>
-                </tr>
-                <tr>
-                    <td>Embedded preview</td>
-                    <td><strong>WebM</strong></td>
-                </tr>
-                <tr>
-                    <td>Resolution (depends on camera model)</td>
-                    <td><strong>1280x720 max.</strong></td>
-                </tr>
-                <tr>
-                    <td>Latency (depends on player hardware)</td>
-                    <td><strong>500 ms min.</strong></td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-    <section id="faq">
-        <h2>FAQ</h2>
-        <p>
-            <img src="/img/q.svg" align="middle" class="icon" alt="Q" height="25px" />
-         <strong>Which CPU the CamAdapter software is compatible with?</strong></p>
-        <p>
-            <img src="/img/a.svg" align="middle" class="icon" alt="A" height="25px" />
-         <em>NVIDIA Tegra K1 at the moment.</em></p>
-        <p>
-            <img src="/img/q.svg" align="middle" class="icon" alt="Q" height="25px" />
-         <strong>Is it possible to output video stream through HDMI?</strong></p>
-        <p>
-            <img src="/img/a.svg" align="middle" class="icon" alt="A" height="25px" />
-         <em>Yes, by running video player on the embedded computer (e.g., FFMPEG).</em></p>
-    </section>
-    <section id="getting-started">
-        <h2>Getting Started</h2>
-        <p>The device is assumed to be assembled by the user. Here you will find all required information.</p>
-        <p>Documentation consists of:</p>
-        <section id="assembly-instructions">
-            <h3>Assembly instructions</h3>
+    <section id="camadapter">
+        <h1>CamAdapter</h1>
+        <p>AirMast CamAdapter is a device for operating with DJI Zenmuse series gimbals via Ethernet interface. CamAdapter allows controlling gimbal and camera using embedded web-application via browser as well as via API requests. Also, CamAdapter implements video streaming from the camera by TCP/IP.</p>
+        <figure align="center">
+            <img src="/img/camadapter/camadapter.svg" alt="AirMast CamAdapter" width="50%" />
+        </figure>
+        <section id="applications">
+            <h2>Applications</h2>
             <ul>
-                <li>
-                    <img src="/img/html.svg" align="middle" class="icon" alt="HTML" height="30px" />
-                 <a href="/camadapter/assembly/">HTML</a></li>
-                <li>
-                    <img src="/img/pdf.svg" align="middle" class="icon" alt="PDF" height="30px" />
-                 <a class="ext" href="https://github.com/airmast/airmast.github.io/releases/download/r2/camadapter-assembly-v1.pdf" target="_blank">PDF</a> <strong>V1</strong> <em>(15.12.2017)</em></li>
+                <li>Video surveillance</li>
+                <li>Gimbal wired remote control</li>
+                <li>Computer vision</li>
+                <li>Gimbal demonstration</li>
             </ul>
         </section>
-        <section id="software-user-guide">
-            <h3>Software User Guide</h3>
-            <ul>
-                <li>
-                    <img src="/img/html.svg" align="middle" class="icon" alt="HTML" height="30px" />
-                 <a href="/camadapter/software/">HTML</a></li>
-                <li>
-                    <img src="/img/pdf.svg" align="middle" class="icon" alt="PDF" height="30px" />
-                 <a class="ext" href="https://github.com/airmast/airmast.github.io/releases/download/r2/camadapter-software-v1.pdf" target="_blank">PDF</a> <strong>V1</strong> <em>(15.12.2017)</em></li>
-            </ul>
+        <section id="supported-gimbals">
+            <h2>Supported Gimbals</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>DJI Zenmuse Model</th>
+                        <th>Gimbal control</th>
+                        <th>Video stream</th>
+                        <th>Camera settings</th>
+                        <th>Photo/Video Shooting</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>X3</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>X5</td>
+                        <td>Not tested</td>
+                        <td>Not tested</td>
+                        <td>Partially</td>
+                        <td>Not tested</td>
+                    </tr>
+                    <tr>
+                        <td>X5R</td>
+                        <td>Not tested</td>
+                        <td>Not tested</td>
+                        <td>Partially</td>
+                        <td>Not tested</td>
+                    </tr>
+                    <tr>
+                        <td>XT</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Z3</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Z30<a href="#id2" id="id1" class="footnote_reference">1</a></td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>Partially</td>
+                        <td>Yes</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="footnote" id="id2">
+                <tbody>
+                    <tr>
+                        <th>1</th>
+                        <td><strong>DJI Zenmuse Z30</strong> is supported using a <a class="ext" href="https://www.adorama.com/djiz30gam600.html" target="_blank">special adapter</a>. Note that the current hardware design does not suppose this adapter to be mounted. One needs to develop a custom design in order to connect Z30.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><strong>Zenmuse X4S, X5S, X7</strong> cameras not supported because they do not have embedded processing unit which has been moved on to the drone (DJI Inspire 2, Matrice 200 Series).</p>
         </section>
-        <section id="api-reference">
-            <h3>API Reference</h3>
-            <ul>
-                <li>
-                    <img src="/img/html.svg" align="middle" class="icon" alt="HTML" height="30px" />
-                 <a href="/camadapter/api/">HTML</a></li>
-                <li>
-                    <img src="/img/pdf.svg" align="middle" class="icon" alt="PDF" height="30px" />
-                 <a class="ext" href="https://github.com/airmast/airmast.github.io/releases/download/r2/camadapter-api-v1.pdf" target="_blank">PDF</a> <strong>V1</strong> <em>(15.12.2017)</em></li>
-            </ul>
+        <section id="specifications">
+            <h2>Specifications</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <td colspan="2"><strong>General Specifications</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Dimensions (case only)</td>
+                        <td><strong>185 x 150 x 20 mm</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Dimensions (without gimbal, with ears and spacers)</td>
+                        <td><strong>211 x 180 x 35 mm</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Weight (without gimbal)</td>
+                        <td><strong>360 g</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Operating temperature</td>
+                        <td><strong>−10° to +40°C</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Storage temperature</td>
+                        <td><strong>−20° to +60°C</strong></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><strong>Electrical Specifications</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Power voltage</td>
+                        <td><strong>16V to 48V</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Power consumption</td>
+                        <td><strong>50W max.</strong></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><strong>Embedded Computer Specifications</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td><strong>Toradex Apalis TK1</strong></td>
+                    </tr>
+                    <tr>
+                        <td>CPU</td>
+                        <td><strong>NVIDIA Tegra K1 (quad-core ARM Cortex-A15)</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Frequency</td>
+                        <td><strong>2.07 GHz max.</strong></td>
+                    </tr>
+                    <tr>
+                        <td>RAM</td>
+                        <td><strong>2 GB</strong></td>
+                    </tr>
+                    <tr>
+                        <td>eMMC</td>
+                        <td><strong>16 GB</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Ethernet</td>
+                        <td><strong>1 Gbit/s</strong></td>
+                    </tr>
+                    <tr>
+                        <td>OS</td>
+                        <td><strong>Linux (Ubuntu 14.04 LTS)</strong></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><strong>Video Stream Specifications</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Format</td>
+                        <td><strong>H.264 (without keyframes)</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Protocol</td>
+                        <td><strong>TCP</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Embedded preview</td>
+                        <td><strong>WebM</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Resolution (depends on camera model)</td>
+                        <td><strong>1280x720 max.</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Latency (depends on player hardware)</td>
+                        <td><strong>500 ms min.</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="faq">
+            <h2>FAQ</h2>
+            <p>
+                <img src="/img/q.svg" align="middle" class="icon" alt="Q" height="25px" />
+             <strong>Which CPU the CamAdapter software is compatible with?</strong></p>
+            <p>
+                <img src="/img/a.svg" align="middle" class="icon" alt="A" height="25px" />
+             <em>NVIDIA Tegra K1 at the moment.</em></p>
+            <p>
+                <img src="/img/q.svg" align="middle" class="icon" alt="Q" height="25px" />
+             <strong>Is it possible to output video stream through HDMI?</strong></p>
+            <p>
+                <img src="/img/a.svg" align="middle" class="icon" alt="A" height="25px" />
+             <em>Yes, by running video player on the embedded computer (e.g., FFMPEG).</em></p>
+        </section>
+        <section id="getting-started">
+            <h2>Getting Started</h2>
+            <p>The device is assumed to be assembled by the user. Here you will find all required information.</p>
+            <p>Documentation consists of:</p>
+            <section id="assembly-instructions">
+                <h3>Assembly instructions</h3>
+                <ul>
+                    <li>
+                        <img src="/img/html.svg" align="middle" class="icon" alt="HTML" height="30px" />
+                     <a href="/camadapter/assembly/">HTML</a></li>
+                    <li>
+                        <img src="/img/pdf.svg" align="middle" class="icon" alt="PDF" height="30px" />
+                     <a class="ext" href="https://github.com/airmast/airmast.github.io/releases/download/r2/camadapter-assembly-v1.pdf" target="_blank">PDF</a> <strong>V1</strong> <em>(15.12.2017)</em></li>
+                </ul>
+            </section>
+            <section id="software-user-guide">
+                <h3>Software User Guide</h3>
+                <ul>
+                    <li>
+                        <img src="/img/html.svg" align="middle" class="icon" alt="HTML" height="30px" />
+                     <a href="/camadapter/software/">HTML</a></li>
+                    <li>
+                        <img src="/img/pdf.svg" align="middle" class="icon" alt="PDF" height="30px" />
+                     <a class="ext" href="https://github.com/airmast/airmast.github.io/releases/download/r2/camadapter-software-v1.pdf" target="_blank">PDF</a> <strong>V1</strong> <em>(15.12.2017)</em></li>
+                </ul>
+            </section>
+            <section id="api-reference">
+                <h3>API Reference</h3>
+                <ul>
+                    <li>
+                        <img src="/img/html.svg" align="middle" class="icon" alt="HTML" height="30px" />
+                     <a href="/camadapter/api/">HTML</a></li>
+                    <li>
+                        <img src="/img/pdf.svg" align="middle" class="icon" alt="PDF" height="30px" />
+                     <a class="ext" href="https://github.com/airmast/airmast.github.io/releases/download/r2/camadapter-api-v1.pdf" target="_blank">PDF</a> <strong>V1</strong> <em>(15.12.2017)</em></li>
+                </ul>
+            </section>
         </section>
     </section>
-</div></article><aside class="sidebar"><div class="toc-toggle" id="toc"><a href="#top">Back to Top</a></div><div class="toc-container"><ol class="toc-level-0"><li class="toc-level-0"><a href="/camadapter/assembly/"><strong>1.</strong>&nbsp;Assembly Instructions</a></li><ol class="toc-level-1"><li class="toc-level-1"><a href="/camadapter/assembly/jetson/"><strong>1.1.</strong>&nbsp;Jetson Edition</a></li></ol><li class="toc-level-0"><a href="/camadapter/software/"><strong>2.</strong>&nbsp;Software User Guide</a></li><ol class="toc-level-1"><li class="toc-level-1"><a href="/camadapter/software/demo/"><strong>2.1.</strong>&nbsp;Web-application Demo</a></li><li class="toc-level-1"><a href="/camadapter/software/preparation/"><strong>2.2.</strong>&nbsp;Preparing Embedded Computer</a></li><li class="toc-level-1"><a href="/camadapter/software/activation/"><strong>2.3.</strong>&nbsp;Activation</a></li><li class="toc-level-1"><a href="/camadapter/software/webapp/"><strong>2.4.</strong>&nbsp;Web-application</a></li><li class="toc-level-1"><a href="/camadapter/software/video/"><strong>2.5.</strong>&nbsp;Video Processing</a></li><li class="toc-level-1"><a href="/camadapter/software/troubleshooting/"><strong>2.6.</strong>&nbsp;Troubleshooting</a></li><li class="toc-level-1"><a href="/camadapter/software/license/"><strong>2.7.</strong>&nbsp;End-User License Agreement</a></li></ol><li class="toc-level-0"><a href="/camadapter/api/"><strong>3.</strong>&nbsp;API Reference</a></li><ol class="toc-level-1"><li class="toc-level-1"><a href="/camadapter/api/aperture/"><strong>3.1.</strong>&nbsp;aperture</a></li><li class="toc-level-1"><a href="/camadapter/api/app/"><strong>3.2.</strong>&nbsp;app</a></li><li class="toc-level-1"><a href="/camadapter/api/attitude/"><strong>3.3.</strong>&nbsp;attitude</a></li><li class="toc-level-1"><a href="/camadapter/api/camera/"><strong>3.4.</strong>&nbsp;camera</a></li><li class="toc-level-1"><a href="/camadapter/api/color/"><strong>3.5.</strong>&nbsp;color</a></li><li class="toc-level-1"><a href="/camadapter/api/color_system/"><strong>3.6.</strong>&nbsp;color_system</a></li><li class="toc-level-1"><a href="/camadapter/api/color_temperature/"><strong>3.7.</strong>&nbsp;color_temperature</a></li><li class="toc-level-1"><a href="/camadapter/api/date_time/"><strong>3.8.</strong>&nbsp;date_time</a></li><li class="toc-level-1"><a href="/camadapter/api/ev/"><strong>3.9.</strong>&nbsp;ev</a></li><li class="toc-level-1"><a href="/camadapter/api/exposure_mode/"><strong>3.10.</strong>&nbsp;exposure_mode</a></li><li class="toc-level-1"><a href="/camadapter/api/ffc_mode/"><strong>3.11.</strong>&nbsp;ffc_mode</a></li><li class="toc-level-1"><a href="/camadapter/api/gain_mode/"><strong>3.12.</strong>&nbsp;gain_mode</a></li><li class="toc-level-1"><a href="/camadapter/api/gimbal/"><strong>3.13.</strong>&nbsp;gimbal</a></li><li class="toc-level-1"><a href="/camadapter/api/gimbal_mode/"><strong>3.14.</strong>&nbsp;gimbal_mode</a></li><li class="toc-level-1"><a href="/camadapter/api/gimbal_velocity/"><strong>3.15.</strong>&nbsp;gimbal_velocity</a></li><li class="toc-level-1"><a href="/camadapter/api/image_format/"><strong>3.16.</strong>&nbsp;image_format</a></li><li class="toc-level-1"><a href="/camadapter/api/iso/"><strong>3.17.</strong>&nbsp;iso</a></li><li class="toc-level-1"><a href="/camadapter/api/isotherm/"><strong>3.18.</strong>&nbsp;isotherm</a></li><li class="toc-level-1"><a href="/camadapter/api/isotherm_lower/"><strong>3.19.</strong>&nbsp;isotherm_lower</a></li><li class="toc-level-1"><a href="/camadapter/api/isotherm_middle/"><strong>3.20.</strong>&nbsp;isotherm_middle</a></li><li class="toc-level-1"><a href="/camadapter/api/isotherm_units/"><strong>3.21.</strong>&nbsp;isotherm_units</a></li><li class="toc-level-1"><a href="/camadapter/api/isotherm_upper/"><strong>3.22.</strong>&nbsp;isotherm_upper</a></li><li class="toc-level-1"><a href="/camadapter/api/magnification/"><strong>3.23.</strong>&nbsp;magnification</a></li><li class="toc-level-1"><a href="/camadapter/api/measure_temperature/"><strong>3.24.</strong>&nbsp;measure_temperature</a></li><li class="toc-level-1"><a href="/camadapter/api/mode/"><strong>3.25.</strong>&nbsp;mode</a></li><li class="toc-level-1"><a href="/camadapter/api/roi/"><strong>3.26.</strong>&nbsp;roi</a></li><li class="toc-level-1"><a href="/camadapter/api/scene/"><strong>3.27.</strong>&nbsp;scene</a></li><li class="toc-level-1"><a href="/camadapter/api/scene_ace/"><strong>3.28.</strong>&nbsp;scene_ace</a></li><li class="toc-level-1"><a href="/camadapter/api/scene_brightness/"><strong>3.29.</strong>&nbsp;scene_brightness</a></li><li class="toc-level-1"><a href="/camadapter/api/scene_contrast/"><strong>3.30.</strong>&nbsp;scene_contrast</a></li><li class="toc-level-1"><a href="/camadapter/api/scene_dde/"><strong>3.31.</strong>&nbsp;scene_dde</a></li><li class="toc-level-1"><a href="/camadapter/api/scene_sso/"><strong>3.32.</strong>&nbsp;scene_sso</a></li><li class="toc-level-1"><a href="/camadapter/api/shooting/"><strong>3.33.</strong>&nbsp;shooting</a></li><li class="toc-level-1"><a href="/camadapter/api/shutter/"><strong>3.34.</strong>&nbsp;shutter</a></li><li class="toc-level-1"><a href="/camadapter/api/video_format/"><strong>3.35.</strong>&nbsp;video_format</a></li><li class="toc-level-1"><a href="/camadapter/api/video_size/"><strong>3.36.</strong>&nbsp;video_size</a></li><li class="toc-level-1"><a href="/camadapter/api/white_balance/"><strong>3.37.</strong>&nbsp;white_balance</a></li><li class="toc-level-1"><a href="/camadapter/api/zenmuse/"><strong>3.38.</strong>&nbsp;zenmuse</a></li><li class="toc-level-1"><a href="/camadapter/api/zoom/"><strong>3.39.</strong>&nbsp;zoom</a></li></ol><ol class="toc-level-0"><ol class="toc-level-1"></ol></ol></ol></div></aside></main></body></html>
+</div></article><aside class="sidebar"><div class="toc-toggle" id="toc"><a href="#top">Back to Top</a></div><div class="toc-container"><ol class="toc-level-0"><li class="toc-level-0"><a href="/camadapter/assembly/"><strong>1.</strong>&nbsp;Assembly Instructions</a></li><ol class="toc-level-1"><li class="toc-level-1"><a href="/camadapter/assembly/jetson/"><strong>1.1.</strong>&nbsp;Jetson Edition (obsolete)</a></li><li class="toc-level-1"><a href="/camadapter/assembly/apalis/"><strong>1.2.</strong>&nbsp;Apalis Edition</a></li><li class="toc-level-1"><a href="/camadapter/assembly/beaglebone/"><strong>1.3.</strong>&nbsp;BeagleBone Edition (experimental)</a></li></ol><li class="toc-level-0"><a href="/camadapter/software/"><strong>2.</strong>&nbsp;Software User Guide</a></li><ol class="toc-level-1"><li class="toc-level-1"><a href="/camadapter/software/demo/"><strong>2.1.</strong>&nbsp;Web-application Demo</a></li><li class="toc-level-1"><a href="/camadapter/software/preparation/"><strong>2.2.</strong>&nbsp;Preparing Embedded Computer</a></li><li class="toc-level-1"><a href="/camadapter/software/activation/"><strong>2.3.</strong>&nbsp;Activation</a></li><li class="toc-level-1"><a href="/camadapter/software/webapp/"><strong>2.4.</strong>&nbsp;Web-application</a></li><li class="toc-level-1"><a href="/camadapter/software/video/"><strong>2.5.</strong>&nbsp;Video Processing</a></li><li class="toc-level-1"><a href="/camadapter/software/troubleshooting/"><strong>2.6.</strong>&nbsp;Troubleshooting</a></li><li class="toc-level-1"><a href="/camadapter/software/license/"><strong>2.7.</strong>&nbsp;End-User License Agreement</a></li></ol><li class="toc-level-0"><a href="/camadapter/api/"><strong>3.</strong>&nbsp;API Reference</a></li><ol class="toc-level-1"><li class="toc-level-1"><a href="/camadapter/api/aperture/"><strong>3.1.</strong>&nbsp;aperture</a></li><li class="toc-level-1"><a href="/camadapter/api/app/"><strong>3.2.</strong>&nbsp;app</a></li><li class="toc-level-1"><a href="/camadapter/api/attitude/"><strong>3.3.</strong>&nbsp;attitude</a></li><li class="toc-level-1"><a href="/camadapter/api/camera/"><strong>3.4.</strong>&nbsp;camera</a></li><li class="toc-level-1"><a href="/camadapter/api/color/"><strong>3.5.</strong>&nbsp;color</a></li><li class="toc-level-1"><a href="/camadapter/api/color_system/"><strong>3.6.</strong>&nbsp;color_system</a></li><li class="toc-level-1"><a href="/camadapter/api/color_temperature/"><strong>3.7.</strong>&nbsp;color_temperature</a></li><li class="toc-level-1"><a href="/camadapter/api/date_time/"><strong>3.8.</strong>&nbsp;date_time</a></li><li class="toc-level-1"><a href="/camadapter/api/ev/"><strong>3.9.</strong>&nbsp;ev</a></li><li class="toc-level-1"><a href="/camadapter/api/exposure_mode/"><strong>3.10.</strong>&nbsp;exposure_mode</a></li><li class="toc-level-1"><a href="/camadapter/api/ffc_mode/"><strong>3.11.</strong>&nbsp;ffc_mode</a></li><li class="toc-level-1"><a href="/camadapter/api/gain_mode/"><strong>3.12.</strong>&nbsp;gain_mode</a></li><li class="toc-level-1"><a href="/camadapter/api/gimbal/"><strong>3.13.</strong>&nbsp;gimbal</a></li><li class="toc-level-1"><a href="/camadapter/api/gimbal_mode/"><strong>3.14.</strong>&nbsp;gimbal_mode</a></li><li class="toc-level-1"><a href="/camadapter/api/gimbal_velocity/"><strong>3.15.</strong>&nbsp;gimbal_velocity</a></li><li class="toc-level-1"><a href="/camadapter/api/image_format/"><strong>3.16.</strong>&nbsp;image_format</a></li><li class="toc-level-1"><a href="/camadapter/api/iso/"><strong>3.17.</strong>&nbsp;iso</a></li><li class="toc-level-1"><a href="/camadapter/api/isotherm/"><strong>3.18.</strong>&nbsp;isotherm</a></li><li class="toc-level-1"><a href="/camadapter/api/isotherm_lower/"><strong>3.19.</strong>&nbsp;isotherm_lower</a></li><li class="toc-level-1"><a href="/camadapter/api/isotherm_middle/"><strong>3.20.</strong>&nbsp;isotherm_middle</a></li><li class="toc-level-1"><a href="/camadapter/api/isotherm_units/"><strong>3.21.</strong>&nbsp;isotherm_units</a></li><li class="toc-level-1"><a href="/camadapter/api/isotherm_upper/"><strong>3.22.</strong>&nbsp;isotherm_upper</a></li><li class="toc-level-1"><a href="/camadapter/api/magnification/"><strong>3.23.</strong>&nbsp;magnification</a></li><li class="toc-level-1"><a href="/camadapter/api/measure_temperature/"><strong>3.24.</strong>&nbsp;measure_temperature</a></li><li class="toc-level-1"><a href="/camadapter/api/mode/"><strong>3.25.</strong>&nbsp;mode</a></li><li class="toc-level-1"><a href="/camadapter/api/roi/"><strong>3.26.</strong>&nbsp;roi</a></li><li class="toc-level-1"><a href="/camadapter/api/scene/"><strong>3.27.</strong>&nbsp;scene</a></li><li class="toc-level-1"><a href="/camadapter/api/scene_ace/"><strong>3.28.</strong>&nbsp;scene_ace</a></li><li class="toc-level-1"><a href="/camadapter/api/scene_brightness/"><strong>3.29.</strong>&nbsp;scene_brightness</a></li><li class="toc-level-1"><a href="/camadapter/api/scene_contrast/"><strong>3.30.</strong>&nbsp;scene_contrast</a></li><li class="toc-level-1"><a href="/camadapter/api/scene_dde/"><strong>3.31.</strong>&nbsp;scene_dde</a></li><li class="toc-level-1"><a href="/camadapter/api/scene_sso/"><strong>3.32.</strong>&nbsp;scene_sso</a></li><li class="toc-level-1"><a href="/camadapter/api/shooting/"><strong>3.33.</strong>&nbsp;shooting</a></li><li class="toc-level-1"><a href="/camadapter/api/shutter/"><strong>3.34.</strong>&nbsp;shutter</a></li><li class="toc-level-1"><a href="/camadapter/api/video_format/"><strong>3.35.</strong>&nbsp;video_format</a></li><li class="toc-level-1"><a href="/camadapter/api/video_size/"><strong>3.36.</strong>&nbsp;video_size</a></li><li class="toc-level-1"><a href="/camadapter/api/white_balance/"><strong>3.37.</strong>&nbsp;white_balance</a></li><li class="toc-level-1"><a href="/camadapter/api/zenmuse/"><strong>3.38.</strong>&nbsp;zenmuse</a></li><li class="toc-level-1"><a href="/camadapter/api/zoom/"><strong>3.39.</strong>&nbsp;zoom</a></li></ol><ol class="toc-level-0"><ol class="toc-level-1"></ol></ol></ol></div></aside></main></body></html>
