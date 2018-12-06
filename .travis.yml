@@ -16,17 +16,17 @@ install:
   - sudo -H pip install rst2pdf
   - sudo -H pip install svglib
 # Install fonts
-  - wget https://github.com/google/fonts/raw/master/ofl/ptmono/PTM55FT.ttf -P /usr/share/fonts/
-  - wget https://github.com/google/fonts/raw/master/ofl/ptsans/PT_Sans-Web-Bold.ttf -P /usr/share/fonts/
-  - wget https://github.com/google/fonts/raw/master/ofl/ptsans/PT_Sans-Web-BoldItalic.ttf -P /usr/share/fonts/
-  - wget https://github.com/google/fonts/raw/master/ofl/ptsans/PT_Sans-Web-Italic.ttf -P /usr/share/fonts/
-  - wget https://github.com/google/fonts/raw/master/ofl/ptsans/PT_Sans-Web-Regular.ttf -P /usr/share/fonts/
-  - wget https://github.com/google/fonts/raw/master/ofl/ptsansnarrow/PT_Sans-Narrow-Web-Bold.ttf -P /usr/share/fonts/
-  - wget https://github.com/google/fonts/raw/master/ofl/ptsansnarrow/PT_Sans-Narrow-Web-Regular.ttf -P /usr/share/fonts/
-  - wget https://github.com/google/fonts/raw/master/ofl/ptserif/PT_Serif-Web-Bold.ttf -P /usr/share/fonts/
-  - wget https://github.com/google/fonts/raw/master/ofl/ptserif/PT_Serif-Web-BoldItalic.ttf -P /usr/share/fonts/
-  - wget https://github.com/google/fonts/raw/master/ofl/ptserif/PT_Serif-Web-Italic.ttf -P /usr/share/fonts/
-  - wget https://github.com/google/fonts/raw/master/ofl/ptserif/PT_Serif-Web-Regular.ttf -P /usr/share/fonts/
+  - sudo wget https://github.com/google/fonts/raw/master/ofl/ptmono/PTM55FT.ttf -P /usr/share/fonts/
+  - sudo wget https://github.com/google/fonts/raw/master/ofl/ptsans/PT_Sans-Web-Bold.ttf -P /usr/share/fonts/
+  - sudo wget https://github.com/google/fonts/raw/master/ofl/ptsans/PT_Sans-Web-BoldItalic.ttf -P /usr/share/fonts/
+  - sudo wget https://github.com/google/fonts/raw/master/ofl/ptsans/PT_Sans-Web-Italic.ttf -P /usr/share/fonts/
+  - sudo wget https://github.com/google/fonts/raw/master/ofl/ptsans/PT_Sans-Web-Regular.ttf -P /usr/share/fonts/
+  - sudo wget https://github.com/google/fonts/raw/master/ofl/ptsansnarrow/PT_Sans-Narrow-Web-Bold.ttf -P /usr/share/fonts/
+  - sudo wget https://github.com/google/fonts/raw/master/ofl/ptsansnarrow/PT_Sans-Narrow-Web-Regular.ttf -P /usr/share/fonts/
+  - sudo wget https://github.com/google/fonts/raw/master/ofl/ptserif/PT_Serif-Web-Bold.ttf -P /usr/share/fonts/
+  - sudo wget https://github.com/google/fonts/raw/master/ofl/ptserif/PT_Serif-Web-BoldItalic.ttf -P /usr/share/fonts/
+  - sudo wget https://github.com/google/fonts/raw/master/ofl/ptserif/PT_Serif-Web-Italic.ttf -P /usr/share/fonts/
+  - sudo wget https://github.com/google/fonts/raw/master/ofl/ptserif/PT_Serif-Web-Regular.ttf -P /usr/share/fonts/
   - fc-cache -f -v
 
 script:
