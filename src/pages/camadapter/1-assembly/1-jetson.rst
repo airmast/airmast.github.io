@@ -1,7 +1,9 @@
-Jetson Edition
-==============
+Jetson Edition (obsolete)
+=========================
 
 This edition of CamAdapter is based on `NVIDIA Jetson TK1 <http://www.nvidia.com/object/jetson-tk1-embedded-dev-kit.html>`__.
+
+**Warning: This edition is not supported at the moment. Please use Toradex Apalis TK1 or BeagleBone Black edition instead.**
 
 Important notice
 ----------------
@@ -9,7 +11,7 @@ Important notice
 * The software is compatible **only with NVIDIA Tegra K1** platform at the moment.
 * This version of CamAdapter supports **DJI Zenmuse X3/X5/X5R/XT/Z3 only.**
 * **DJI Zenmuse Z30** is supported using a `special adapter <https://www.adorama.com/djiz30gam600.html>`__. Note that the current hardware design does not suppose this adapter to be mounted. One needs to develop a custom design in order to connect Z30.
-* Tested with **DJI Zenmuse X3/XT/Z3**. 
+* Tested with **DJI Zenmuse X3/XT/Z3**.
 
 Contents
 --------
@@ -51,7 +53,7 @@ Schematic
 Step-by-step assembling
 -----------------------
 
-1. Desolder COM and audio connectors from Jetson TK1 and solder fan wires directly to the receptacle in order to reduce overall board height. 
+1. Desolder COM and audio connectors from Jetson TK1 and solder fan wires directly to the receptacle in order to reduce overall board height.
 
    .. figure:: /img/camadapter/assembly/jetson.svg
       :width: 50%
@@ -97,7 +99,7 @@ Step-by-step assembling
 
 8. Fix ear boards under the bottom board inserting rubber dampeners.
 
-9. Mount assembled device on DJI S900 frame inserting ear spacers and connect power and Ethernet cables. 
+9. Mount assembled device on DJI S900 frame inserting ear spacers and connect power and Ethernet cables.
 
 Stabilization
 -------------
