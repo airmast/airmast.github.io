@@ -1,13 +1,9 @@
-.. image:: https://travis-ci.org/airmast/airmast.github.io.svg?branch=master
-   :target: https://travis-ci.org/airmast/airmast.github.io
-   :alt: Travis CI Build Status
-
 Documentation
 =============
 
 Documentation for AirMast products. Source files written on reStructuredText_ serve both for online (HTML) and offline (PDF) documentation.
 
-Available on: http://doc.airma.st
+Available on: https://airmast.github.io
 
 Building 
 ========
